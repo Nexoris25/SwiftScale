@@ -6,7 +6,8 @@ import DarkMode from '@/asset/svg/dark-mode.svg';
 import Logo from '@/asset/svg/logo.svg';
 import CaretDownWhite from '@/asset/svg/caret-down-white.svg';
 import CaretDownBlack from '@/asset/svg/caret-down-black.svg';
-import Menu from '@/asset/svg/menu.svg';
+import MenuLight from '@/asset/svg/menu.svg';
+import MenuDark from '@/asset/svg/menu-dark.svg';
 
 function Header({ className, style }: { className?: string; style?: React.CSSProperties }) {
   const { theme, setTheme } = useTheme()
@@ -32,7 +33,20 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
           <div className='font-poppins cursor-pointer my-auto'>About Us</div>
           <div className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative'>
             <div className='my-auto'>Services</div>
-            {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' /> : <CaretDownWhite className='h-6 w-6 my-auto' />}
+            <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300'>
+              {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' /> : <CaretDownWhite className='h-6 w-6 my-auto' />}
+            </div>
+            {(isDropdownOpen && !isMobileMenuOpen) && (
+              <div className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
+                <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
+                  <li className='cursor-pointer hover:text-primary'>HR Consultation</li>
+                  <li className='cursor-pointer hover:text-primary'>Software Development</li>
+                  <li className='cursor-pointer hover:text-primary'>Design</li>
+                  <li className='cursor-pointer hover:text-primary'>Legal Services</li>
+                  <li className='cursor-pointer hover:text-primary'>SEO Consultations</li>
+                </ul>
+              </div>
+            )}
           </div>
           <div className='font-poppins cursor-pointer my-auto bg-primary text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300'>
             Get in Touch
@@ -49,7 +63,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             className='p-2'
             aria-label='Toggle mobile menu'
           >
-            <Menu className='h-8 w-8' />
+            {theme === 'light' ? <MenuDark className='h-8 w-8' /> : <MenuLight className='h-8 w-8'/>}
           </div>
         </div>
 
