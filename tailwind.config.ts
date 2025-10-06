@@ -8,12 +8,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'custom-black': '#222529',
-        'custom-white': '#fff00'
+        'custom-black': '#212121',
+        'custom-white': '#FFFFFF',
+        'primary': '#6A01E1',
       },
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
         serif: ['Merriweather', 'serif'],
+        monument: ['Monument Extended', 'sans-serif'],
+      },
+      fontWeight: {
+        'monument-regular': '400',
+        'monument-bold': '700',
+        'monument-ultrabold': '900',
       }
     },
   },
