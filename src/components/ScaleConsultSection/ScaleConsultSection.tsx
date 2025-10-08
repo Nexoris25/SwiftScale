@@ -28,7 +28,7 @@ const features = [
 export default function ScaleConsultSection() {
   return (
     <section className="w-full py-20 px-2 flex flex-col items-center">
-      <h2 className="font-monument-regular text-4xl max-w-4xl mx-auto mb-16 text-center tracking-wide text-black dark:text-white">
+      <h2 className="font-monument-ultrabold text-4xl max-w-4xl mx-auto mb-16 text-center tracking-wide text-black dark:text-white">
         How can SwiftScale Consult scale and help your business
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mx-auto">

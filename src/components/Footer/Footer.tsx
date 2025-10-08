@@ -8,11 +8,13 @@ import EmailFooter from '@/asset/svg/email-footer-white.svg';
 import LocationFooter from '@/asset/svg/location-footer-white.svg';
 import X from '@/asset/svg/x.svg';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export interface IFooterProps { }
 
 export function Footer(props: IFooterProps) {
     const year = new Date().getFullYear()
+    const navigate = useRouter();
     return (
         <div className='w-full bg-custom-white flex flex-col items-start justify-center'>
             <div className='w-full flex bg-[#6A01E1] text-white py-8 lg:py-14 px-4 lg:px-0'>
@@ -20,7 +22,7 @@ export function Footer(props: IFooterProps) {
                     {/* Logo and Social Media Section */}
                     <div className='flex flex-col items-start justify-start w-full lg:w-5/12'>
                         <div className='flex items-start max-lg:mx-auto justify-start flex-col gap-6 lg:gap-4'>
-                            <div className='flex cursor-pointer max-lg:mx-auto items-center justify-center flex-row gap-2'>
+                            <div onClick={() => navigate.push('/')} className='flex cursor-pointer max-lg:mx-auto items-center justify-center flex-row gap-2'>
                                 <Logo className='h-14 w-14' />
                                 <div className='flex flex-col justify-start items-start'>
                                     <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>SwiftScale</div>

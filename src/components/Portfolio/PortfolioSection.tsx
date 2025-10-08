@@ -46,7 +46,7 @@ export default function PortfolioSection() {
 
     return (
         <section className="w-full py-20 px-2 bg-custom-white dark:bg-custom-black  flex flex-col items-center">
-            <h2 className="text-black dark:text-white font-monument-regular text-4xl mb-8 text-center tracking-wide">
+            <h2 className="text-black dark:text-white font-monument-ultrabold text-4xl mb-8 text-center tracking-wide">
                 Our Portfolio
             </h2>
             <div className="flex flex-row flex-wrap justify-center gap-4 mb-10">

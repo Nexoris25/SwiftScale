@@ -75,7 +75,7 @@ export default async function Page() {
                 {/* services section */}
                 <div className="py-20 flex flex-col w-full">
                     <div className=" flex flex-row w-full justify-start items-center">
-                        <h2 className="font-monument-bold text-4xl text-center mb-10 px-5">
+                        <h2 className="font-monument-ultrabold text-4xl text-center mb-10 px-5">
                             Our Services
                         </h2>
                     </div>

@@ -35,7 +35,7 @@ export default function FAQSection() {
             <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left Side */}
                 <div>
-                    <h2 className="font-monument-regular text-4xl mb-8 leading-tight text-black dark:text-white">
+                    <h2 className="font-monument-ultrabold text-4xl mb-8 leading-tight text-black dark:text-white">
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
                     <p className="font-poppins text-xl mb-8 text-black dark:text-white">

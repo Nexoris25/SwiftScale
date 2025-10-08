@@ -36,7 +36,7 @@ export default function TestimonialsCarousel() {
 
     return (
         <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2">
-            <h2 className="text-white font-monument-regular text-4xl md:text-5xl mb-12 text-center tracking-wide">
+            <h2 className="text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
                 What They Say About Us
             </h2>
             <div className="flex items-center justify-center gap-10 w-full mx-auto p-4">
