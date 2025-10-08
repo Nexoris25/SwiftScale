@@ -57,10 +57,10 @@ export default function RootLayout({ children, ...props }: PropsWithChildren) {
                         className="bg-white text-black dark:bg-custom-black dark:text-white bg-cover w-screen h-auto overflow-x-hidden"
                     >
                         <Header />
-                        <div id="main-content" tabIndex={-1} className="outline-none min-h-screen overflow-y-auto">
-                            {children}
+                        <div id="main-content" tabIndex={-1} className="outline-none w-screen h-screen overflow-y-auto  pt-14">
+                            <div className="w-screen overflow-x-hidden h-auto block py-10">{children}</div>
+                            <Footer />
                         </div>
-                        <Footer />
                     </div>
                 </ThemeProvider>
             </body>

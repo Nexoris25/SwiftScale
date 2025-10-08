@@ -8,6 +8,7 @@ import CaretDownWhite from '@/asset/svg/caret-down-white.svg';
 import CaretDownBlack from '@/asset/svg/caret-down-black.svg';
 import MenuLight from '@/asset/svg/menu.svg';
 import MenuDark from '@/asset/svg/menu-dark.svg';
+import Link from 'next/link';
 
 function Header({ className, style }: { className?: string; style?: React.CSSProperties }) {
   const { theme, setTheme } = useTheme()
@@ -15,7 +16,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <div id="header-top" className={`w-full fixed top-0 right-0 bg-custom-white dark:bg-custom-black text-black dark:text-white flex flex-row items-center justify-center ${className}`} style={style}>
+    <div id="header-top" className={`w-full fixed z-20 top-0 right-0 bg-custom-white dark:bg-custom-black text-black dark:text-white flex flex-row items-center justify-center ${className}`} style={style}>
       <div className={`container mx-auto flex flex-grow flex-row items-center justify-between py-4 px-4`}>
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
@@ -39,11 +40,11 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
-                  <li className='cursor-pointer hover:text-primary'>HR Consultation</li>
-                  <li className='cursor-pointer hover:text-primary'>Software Development</li>
-                  <li className='cursor-pointer hover:text-primary'>Design</li>
-                  <li className='cursor-pointer hover:text-primary'>Legal Services</li>
-                  <li className='cursor-pointer hover:text-primary'>SEO Consultations</li>
+                  <li className='cursor-pointer hover:text-primary'><Link href="/services/hr-consultation">HR Consultation</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link href="/services/software-development">Software Development</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link href="/services/design">Design</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link href="/services/legal-services">Legal Services</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link href="/services/seo-consultations">SEO Consultations</Link></li>
                 </ul>
               </div>
             )}
@@ -79,16 +80,16 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                 </div>
                 {isDropdownOpen && (
                   <ul className='mt-2 ml-4 list-none flex flex-col gap-4'>
-                    <li className='cursor-pointer hover:text-primary'>HR Consultation</li>
-                    <li className='cursor-pointer hover:text-primary'>Software Development</li>
-                    <li className='cursor-pointer hover:text-primary'>Design</li>
-                    <li className='cursor-pointer hover:text-primary'>Legal Services</li>
-                    <li className='cursor-pointer hover:text-primary'>SEO Consultations</li>
+                    <li className='cursor-pointer hover:text-primary'><Link href="/services/hr-consultation">HR Consultation</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link href="/services/software-development">Software Development</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link href="/services/design">Design</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link href="/services/legal-services">Legal Services</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link href="/services/seo-consultations">SEO Consultations</Link></li>
                   </ul>
                 )}
               </div>
               <div className='font-poppins cursor-pointer bg-primary text-white px-4 py-2 rounded-full text-center'>
-                Get in Touch
+                <Link href="/contact">Get in Touch</Link>
               </div>
               <div className='flex justify-center'>
                 <div
