@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import OurMissionImage from '@/asset/image/our-mission.jpg';
+import { useRouter } from "next/navigation";
 
 export default function OurMission() {
+    const navigate = useRouter();
     return (
         <section className="w-full py-12  flex flex-col items-start justify-start gap-4 my-10">
             <h2 className="font-monument-ultrabold text-5xl max-lg:text-2xl text-black dark:text-white mb-6">
@@ -29,7 +32,7 @@ export default function OurMission() {
                             Swiftscale — Powering Businesses with People, Technology, & Identity
                         </p>
                     </div>
-                    <div className='font-poppins cursor-pointer my-auto border border-white bg-primary text-white px-10 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300'>
+                    <div onClick={() => navigate.push("/contact")} className='font-poppins cursor-pointer my-auto border border-white bg-primary text-white px-10 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300'>
                         Get in Touch
                     </div>
                 </div>

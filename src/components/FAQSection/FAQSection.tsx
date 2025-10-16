@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import CaretRightWhite from '@/asset/svg/caret-right-white.svg';
-import { useTheme } from "next-themes";
 
 const faqs = [
     {
@@ -27,7 +26,6 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-    const { theme, setTheme } = useTheme()
     const [openIdx, setOpenIdx] = useState<number | null>(null);
 
     return (
