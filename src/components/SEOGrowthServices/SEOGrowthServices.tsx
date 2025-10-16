@@ -8,13 +8,13 @@ export const SEOGrowthServices: React.FC = () => (
       <span className="block text-black dark:text-white text-sm font-semibold mb-2">
         See What Makes SwiftScale Unique
       </span>
-      <h2 className="text-black dark:text-white text-3xl md:text-5xl font-monument-ultrabold mb-8 leading-tight">
-        Beyond SEO: Unlock the Next<br className="hidden md:block" /> Level of Growth
+      <h2 className="text-black dark:text-white text-3xl lg:text-5xl font-monument-ultrabold mb-8 leading-tight">
+        Beyond SEO: Unlock the Next<br className="hidden lg:block" /> Level of Growth
       </h2>
     </div>
-    <div className="flex flex-col md:flex-row w-full mx-auto gap-0">
+    <div className="flex flex-col lg:flex-row w-full mx-auto gap-0">
       {/* Left: SEO image */}
-      <div className="lg:w-1/3 w-full flex items-center justify-center mb-8 md:mb-0">
+      <div className="lg:w-1/3 w-full flex items-center justify-center mb-8 lg:mb-0">
         <img
           src={typeof Seo === 'string' ? Seo : Seo.src}
           alt="SEO Rocket"

@@ -16,7 +16,7 @@ export const DesignServices: React.FC = () => {
             <img
                 src={typeof HrBg === 'string' ? HrBg : HrBg.src}
                 alt=""
-                className="absolute w-[80%] -bottom-48 aspect-square z-0 pointer-events-none"
+                className="absolute w-[80%] -bottom-48 max-lg:hidden aspect-square z-0 pointer-events-none"
             />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">
