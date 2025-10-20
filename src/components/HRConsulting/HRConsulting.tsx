@@ -20,10 +20,10 @@ export const HRConsulting: React.FC = () => {
             />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">
-                <h1 className="text-white dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
+                <h1 className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
                     HR Consulting
                 </h1>
-                <p className="text-white dark:text-white/80 text-center mb-8">
+                <p className="text-black dark:text-white/80 text-center mb-8">
                     We provide tailored HR strategies that align people, culture, and business goals
                     <br />
                     —helping your organization attract, retain, and grow top talent.

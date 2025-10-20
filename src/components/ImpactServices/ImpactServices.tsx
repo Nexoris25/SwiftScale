@@ -3,10 +3,10 @@ import DesignX from '@/asset/svg/design-x.svg';
 
 export const ImpactServices: React.FC = () => (
   <section className="w-full py-12 px-4 flex flex-col items-center bg-transparent">
-    <h2 className="text-white text-3xl md:text-5xl text-center font-monument-ultrabold mb-2">
+    <h2 className="text-black dark:text-white text-3xl md:text-5xl text-center font-monument-ultrabold mb-2">
       Proven Result, Real Impact
     </h2>
-    <p className="text-white/80 text-center max-w-2xl mb-10 leading-relaxed">
+    <p className="text-black dark:text-white/80 text-center max-w-2xl mb-10 leading-relaxed">
       Our designs don’t just look good—they solve real problems, enhance user experiences, and
       deliver measurable results that move your business forward.
     </p>
@@ -14,15 +14,15 @@ export const ImpactServices: React.FC = () => (
       {/* Top Row */}
       <div className="flex flex-col lg:flex-row gap-8 w-full">
         {/* UI/UX Design */}
-        <div className="bg-[#0000D2] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-white overflow-hidden">
-          <div className="flex flex-col w-2/3 py-10 justify-end h-full items-start">
+        <div className="bg-[#0000D2] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden">
+          <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">UI/UX Design</span>
-            <p className="text-white/90 text-base mt-2">
+            <p className="text-black dark:text-white/90 text-base mt-2">
               Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor urna tincidunt pulvinar.
             </p>
           </div>
           {/* Decorative pattern */}
-          <div className="flex w-1/3 pointer-events-none">
+          <div className="flex w-1/3 max-lg:hidden pointer-events-none">
             <DesignX />
           </div>
         </div>
@@ -44,15 +44,15 @@ export const ImpactServices: React.FC = () => (
           </p>
         </div>
         {/* Branding */}
-        <div className="bg-[#D779BB] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-white overflow-hidden">
-          <div className="flex flex-col w-2/3 py-10 justify-end h-full items-start">
+        <div className="bg-[#D779BB] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden">
+          <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">Branding</span>
             <p className="text-white/90 text-base mt-2">
               Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor urna tincidunt pulvinar.
             </p>
           </div>
           {/* Decorative pattern */}
-          <div className="flex w-1/3 pointer-events-none">
+          <div className="flex w-1/3 max-lg:hidden pointer-events-none">
             <DesignX />
           </div>
         </div>

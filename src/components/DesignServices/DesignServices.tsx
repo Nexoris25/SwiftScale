@@ -36,7 +36,7 @@ export const DesignServices: React.FC = () => {
                     <X className="w-12 lg:w-16 h-12 lg:h-16" />
                 </div>
                 {/* Images */}
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-2 p-10">
+                <div className="flex lg:grid max-lg:hidden lg:grid-cols-4 gap-10 mt-2 p-10">
                     <video
                         // controls
                         src='/assets/design-service-1.mp4'
@@ -66,7 +66,79 @@ export const DesignServices: React.FC = () => {
                         playsInline
                     />
                 </div>
+                <DesignSlider />
             </div>
         </section>
+    );
+};
+
+
+const DesignSlider: React.FC = () => {
+    const [current, setCurrent] = React.useState(0);
+
+    const prevSlide = () => setCurrent((prev) => (prev === 0 ? 3 : prev - 1));
+    const nextSlide = () => setCurrent((prev) => (prev === 3 ? 0 : prev + 1));
+
+    return (
+        <div className="relative w-full mx-auto hidden max-lg:block rounded-2xl overflow-hidden bg-black">
+            {/* Image */}
+            {current == 0 &&<video
+                // controls
+                src='/assets/design-service-1.mp4'
+                className="rounded-xl aspect-[3/4] w-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+            />}
+            {current == 1 && <img
+                src={typeof DImage2 === 'string' ? DImage2 : DImage2.src}
+                alt="Design Service 2"
+                className="rounded-xl aspect-[3/4] w-full object-cover"
+            />}
+            {current == 2 && <img
+                src={typeof DImage3 === 'string' ? DImage3 : DImage3.src}
+                alt="Design Service 3"
+                className="rounded-xl aspect-[3/4] w-full object-cover"
+            />}
+            {current == 3 && <video
+                // controls
+                src='/assets/design-service-4.mp4'
+                className="rounded-xl aspect-[3/4] w-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+            />}
+
+            {/* Left Arrow */}
+            <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-transparent border-0 rounded-full p-2 text-2xl"
+                aria-label="Previous"
+            >
+                <span className="text-white text-5xl max-md:text-3xl">&#60;</span>
+            </button>
+            {/* Right Arrow */}
+            <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white  bg-transparent border-0 rounded-full p-2 text-2xl"
+                aria-label="Next"
+            >
+                <span className="text-white text-5xl max-md:text-3xl">&#62;</span>
+            </button>
+
+            {/* Dots */}
+            <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3">
+                {[0, 1, 2, 3].map((_, idx) => (
+                    <button
+                        key={idx}
+                        onClick={() => setCurrent(idx)}
+                        className={`w-5 h-5 border-0 rounded-full ${current === idx ? "bg-purple-600" : "bg-white"}`}
+                        aria-label={`Go to slide ${idx + 1}`}
+                    />
+                ))}
+            </div>
+        </div>
     );
 };

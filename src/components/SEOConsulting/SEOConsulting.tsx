@@ -35,11 +35,11 @@ export const SEOConsulting: React.FC = () => {
                     <X className="w-12 lg:w-16 h-12 lg:h-16" />
                 </div>
                 {/* Images */}
-                <div className="w-full flex flex-row mt-2 p-10">
+                <div className="w-full flex flex-row mt-2 p-10 max-lg:px-4 justify-center items-center">
                     <img
                         src={typeof DImage2 === 'string' ? DImage2 : DImage2.src}
                         alt="Design Service 2"
-                        className="rounded-xl aspect-video max-h-[600px] w-full object-cover"
+                        className="rounded-xl aspect-video max-h-[600px] max-lg:max-h-auto w-full object-cover"
                     />
                 </div>
             </div>

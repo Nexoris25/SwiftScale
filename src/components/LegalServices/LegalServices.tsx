@@ -60,7 +60,7 @@ export const LegalServices: React.FC = () => {
           <X className="w-12 lg:w-16 h-12 lg:h-16" />
         </div>
         {/* Images */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-2 p-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-2 p-10 max-lg:px-4">
           {services.map((item, index) => (
             <div
               key={index}
