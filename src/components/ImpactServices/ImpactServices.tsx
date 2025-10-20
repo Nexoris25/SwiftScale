@@ -33,7 +33,7 @@ export const ImpactServices: React.FC = () => (
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span id="uiux-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">UI/UX Design</span>
             <p className="text-black dark:text-white/90 text-base mt-2">
-              Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor urna tincidunt pulvinar.
+              Research-driven interfaces and seamless flows that reduce friction, improve task success, and boost conversions.
             </p>
           </div>
           {/* Decorative pattern */}
@@ -45,7 +45,7 @@ export const ImpactServices: React.FC = () => (
         <article id="graphics" className="bg-[#EDEDED] rounded-xl p-8 lg:w-1/3 flex flex-col justify-end h-full pt-auto items-start min-h-[350px] text-[#363636]" role="listitem" aria-labelledby="graphics-title">
           <span id="graphics-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">Graphics Design</span>
           <p className="text-[#363636]/90 text-base mt-2">
-            Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor
+            Campaign-ready visuals, social media kits, and marketing assets designed to communicate clearly and stand out.
           </p>
         </article>
       </div>
@@ -55,7 +55,7 @@ export const ImpactServices: React.FC = () => (
         <article id="3d" className="bg-[#EDEDED] rounded-xl p-8 lg:w-1/3 flex flex-col justify-end pt-auto h-full items-start min-h-[350px] text-[#363636]" role="listitem" aria-labelledby="threed-title">
           <span id="threed-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">3D Design</span>
           <p className="text-[#363636]/90 text-base mt-2">
-            Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor.
+            Product renders, motion, and interactive 3D elements that explain complex ideas and elevate brand perception.
           </p>
         </article>
         {/* Branding */}
@@ -63,7 +63,7 @@ export const ImpactServices: React.FC = () => (
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span id="branding-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">Branding</span>
             <p className="text-white/90 text-base mt-2">
-              Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor urna tincidunt pulvinar.
+              A complete visual system—logos, typography, color, and guidelines—that scales across every touchpoint.
             </p>
           </div>
           {/* Decorative pattern */}

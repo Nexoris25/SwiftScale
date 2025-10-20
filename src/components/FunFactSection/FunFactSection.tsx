@@ -9,7 +9,7 @@ export default function FunFactSection() {
             <div className="flex-1">
                 <h2 id="fun-fact-heading" className="font-monument-ultrabold text-3xl md:text-4xl text-black dark:text-white mb-6 px-10">Fun Fact</h2>
                 <p className="font-poppins text-lg px-10 text-black dark:text-white">
-                    Lorem ipsum dolor sit amet consectetur. Urna ac pharetra cras nisi sem faucibus. Adipiscing mi sed vitae ullamcorper. Ante bibendum aliquam sed adipiscing id.
+                    We blend strategy, design, and engineering to deliver outcomes—not just outputs. Here are a few numbers were proud of.
                 </p>
             </div>
             {/* Right Side */}

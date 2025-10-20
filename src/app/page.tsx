@@ -76,7 +76,7 @@ export default async function Page() {
         { name: 'HR Consultation', content: "Offering tailored solutions, from recruitment and staffing to specialized legal and administrative services." },
         { name: 'Software Development', content: "Building mobile apps, web apps, and websites that are functional, beautiful, and user-friendly." },
         { name: 'Design', content: "Creating brand identities that stand out, with services ranging from logo design and social media templates to full corporate and personal branding packages." },
-        { name: 'Legal Services', content: "Lorem ipsum dolor sit amet consectetur. Ornare dis nisl vel platea quam vitae scelerisque faucibus. Lorem ipsum dolor sit amet consectetur. Ornare dis nisl vel platea quam vitae scelerisque faucibus." },
+    { name: 'Legal Services', content: "Company incorporation and filings, contract drafting and review, regulatory compliance, and ongoing corporate legal advisory." },
         { name: 'SEO Consultations', content: "We offer Content & Writing Services – Producing SEO-rich articles, Press Releases, Blog Posts, website copy, and engaging content that connects with audiences." },
     ];
     return (
@@ -121,7 +121,7 @@ export default async function Page() {
                             <div className="font-poppins">Helping you find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.</div>
                             <Link
                                 href="/contact"
-                                className="mt-4 bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                                className="mt-4 bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 no-underline transition-colors duration-300 cursor-pointer text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                                 aria-label="Get in touch with SwiftScale"
                             >
                                 Get in Touch
