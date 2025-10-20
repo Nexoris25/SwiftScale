@@ -70,8 +70,8 @@ export default function PortfolioSection() {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`font-poppins text-lg max-lg:text-sm px-8 max-lg:px-2 cursor-pointer py-2 max-lg:py-1 text-nowrap rounded-full border-[1px] dark:border-white border-black  transition-all duration-200 ${activeTab === tab
-                                ? "bg-[#6A01E1] text-white"
-                                : "bg-transparent text-black dark:text-white"
+                            ? "bg-[#6A01E1] text-white"
+                            : "bg-transparent text-black dark:text-white"
                             }`}
                         role="tab"
                         aria-selected={activeTab === tab}

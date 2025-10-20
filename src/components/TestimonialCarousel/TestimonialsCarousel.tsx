@@ -50,15 +50,16 @@ export default function TestimonialsCarousel() {
     }), []);
 
     return (
-        <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2" role="region" aria-roledescription="carousel" aria-label="Testimonials carousel">
+        <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2" role="region" aria-roledescription="carousel" aria-label="Testimonials carousel" aria-live="off">
             <JsonLd id="ld-reviews" data={reviewLd} />
+            <p className="sr-only" aria-live="polite" aria-atomic="true">{`Showing testimonial ${active + 1} of ${testimonials.length}`}</p>
             <h2 className="text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
                 What They Say About Us
             </h2>
             <div className="flex items-center justify-center gap-10 w-full mx-auto p-4">
                 {/* Left Arrow */}
                 <button
-                    className="bg-transparent border-none mr-2 max-sm:hidden"
+                    className="bg-transparent border-none mr-2 max-sm:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                     onClick={() => setActive((prev) => (prev > 0 ? prev - 1 : prev))}
                     aria-label="Previous testimonial"
                 >
@@ -131,7 +132,7 @@ export default function TestimonialsCarousel() {
                 </div>
                 {/* Right Arrow */}
                 <button
-                    className="bg-transparent border-none ml-2 max-sm:hidden"
+                    className="bg-transparent border-none ml-2 max-sm:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                     onClick={() =>
                         setActive((prev) => (prev < testimonials.length - 1 ? prev + 1 : prev))
                     }
@@ -145,7 +146,7 @@ export default function TestimonialsCarousel() {
                 {testimonials.map((_, idx) => (
                     <button
                         key={idx}
-                        className={`w-3 h-3 rounded-full ${idx === active ? "bg-white" : "bg-white/40"}`}
+                        className={`w-3 h-3 rounded-full ${idx === active ? "bg-white" : "bg-white/40"} focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white`}
                         onClick={() => setActive(idx)}
                         aria-label={`Go to testimonial ${idx + 1}`}
                         role="tab"

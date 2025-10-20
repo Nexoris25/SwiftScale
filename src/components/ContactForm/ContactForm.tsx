@@ -62,8 +62,11 @@ export default function ContactFormSection() {
                 placeholder="Your name"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0"
                 required
+                aria-required="true"
                 aria-invalid={formData.name.trim() === ''}
+                aria-describedby="name-help"
               />
+              <span id="name-help" className="sr-only">Enter your full name.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">👤</span>
             </div>
             <div className="relative border-b border-white">
@@ -77,8 +80,11 @@ export default function ContactFormSection() {
                 placeholder="Your Email"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0"
                 required
+                aria-required="true"
                 aria-invalid={formData.email.trim() === ''}
+                aria-describedby="email-help"
               />
+              <span id="email-help" className="sr-only">Use a valid email address so we can reply.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📧</span>
             </div>
             <div className="relative border-b border-white">
@@ -92,8 +98,11 @@ export default function ContactFormSection() {
                 placeholder="Subject"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0"
                 required
+                aria-required="true"
                 aria-invalid={formData.subject.trim() === ''}
+                aria-describedby="subject-help"
               />
+              <span id="subject-help" className="sr-only">Briefly describe your request or topic.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📄</span>
             </div>
             <div className="relative border-b border-white">
@@ -106,9 +115,15 @@ export default function ContactFormSection() {
                 placeholder="Your Message (optional)"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0 resize-none"
                 rows={4}
+                aria-describedby="message-help"
               />
+              <span id="message-help" className="sr-only">Provide any extra details that will help us assist you.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📝</span>
             </div>
+            {/* Simple error announcer example (extend with real validation if needed) */}
+            <p className="sr-only" role="status" aria-live="polite">
+              {formData.name.trim() === '' || formData.email.trim() === '' || formData.subject.trim() === '' ? 'Please complete required fields: name, email, and subject.' : ''}
+            </p>
             <button
               type="submit"
               className="bg-[#6A01E1] text-white font-poppins px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300"

@@ -41,7 +41,7 @@ export const SEOConsulting: React.FC = () => {
                     Seo Consulting
                 </h1>
                 <p className="text-black dark:text-white/80 text-center mb-8">
-                   Have a consultation with us, Let us know how we can help you boost your online 
+                    Have a consultation with us, Let us know how we can help you boost your online
                     <br />
                     presence and drive sales to your Business.
                 </p>

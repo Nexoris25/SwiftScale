@@ -118,7 +118,7 @@ const images = [
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-transparent border-0 rounded-full p-2 text-2xl"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-transparent border-0 rounded-full p-2 text-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
         aria-label="Previous"
       >
         <span className="text-white text-5xl max-md:text-3xl">&#60;</span>
@@ -126,7 +126,7 @@ const images = [
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white  bg-transparent border-0 rounded-full p-2 text-2xl"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white  bg-transparent border-0 rounded-full p-2 text-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
         aria-label="Next"
       >
         <span className="text-white text-5xl max-md:text-3xl">&#62;</span>
@@ -138,7 +138,7 @@ const images = [
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-5 h-5 border-0 rounded-full ${current === idx ? "bg-purple-600" : "bg-white"}`}
+            className={`w-5 h-5 border-0 rounded-full ${current === idx ? "bg-purple-600" : "bg-white"} focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white`}
             aria-label={`Go to slide ${idx + 1}`}
             role="tab"
             aria-selected={current === idx}

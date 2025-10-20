@@ -28,24 +28,24 @@ export const SoftwareDevelopmentServices: React.FC = () => {
     return (
         <>
             <section className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16" role="region" aria-labelledby="sd-heading">
-                                <JsonLd
-                                    id="ld-service-software-development"
-                                    data={{
-                                        "@context": "https://schema.org",
-                                        "@type": "Service",
-                                        name: "Software Development",
-                                        serviceType: "Custom software, web and mobile app development",
-                                        description: "End-to-end product development for web and mobile: discovery, design, development, QA, and launch.",
-                                        url: "https://example.com/services/software-development",
-                                        provider: { "@id": "https://example.com/#organization" },
-                                        areaServed: [
-                                            { "@type": "Country", name: "United States" },
-                                            { "@type": "Country", name: "United Kingdom" },
-                                            { "@type": "Country", name: "Nigeria" }
-                                        ],
-                                        serviceAudience: { "@type": "Audience", audienceType: "Product teams and founders" }
-                                    }}
-                                />
+                <JsonLd
+                    id="ld-service-software-development"
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        name: "Software Development",
+                        serviceType: "Custom software, web and mobile app development",
+                        description: "End-to-end product development for web and mobile: discovery, design, development, QA, and launch.",
+                        url: "https://example.com/services/software-development",
+                        provider: { "@id": "https://example.com/#organization" },
+                        areaServed: [
+                            { "@type": "Country", name: "United States" },
+                            { "@type": "Country", name: "United Kingdom" },
+                            { "@type": "Country", name: "Nigeria" }
+                        ],
+                        serviceAudience: { "@type": "Audience", audienceType: "Product teams and founders" }
+                    }}
+                />
                 {/* Decorative Blob */}
                 <img
                     src={typeof HrBg === 'string' ? HrBg : HrBg.src}

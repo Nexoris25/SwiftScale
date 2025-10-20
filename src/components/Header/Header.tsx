@@ -42,13 +42,13 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         />
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
-          <div onClick={() => navigate.push('/')} className='flex cursor-pointer items-center justify-center flex-row gap-2 text-xs'>
+          <Link href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
             <Logo className='h-10 w-10 lg:h-14 lg:w-14' aria-hidden="true" />
             <div className='flex flex-col justify-start items-start'>
               <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>SwiftScale</div>
               <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>Consult</div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Desktop Navigation - Hidden on mobile */}

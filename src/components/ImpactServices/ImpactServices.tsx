@@ -11,10 +11,10 @@ export const ImpactServices: React.FC = () => (
         "@type": "ItemList",
         name: "Design Service Categories",
         itemListElement: [
-          { "@type": "Service", name: "UI/UX Design" },
-          { "@type": "Service", name: "Graphics Design" },
-          { "@type": "Service", name: "3D Design" },
-          { "@type": "Service", name: "Branding" }
+          { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "UI/UX Design", url: "https://example.com/services/design#uiux" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Graphics Design", url: "https://example.com/services/design#graphics" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "3D Design", url: "https://example.com/services/design#3d" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Branding", url: "https://example.com/services/design#branding" } }
         ]
       }}
     />
@@ -25,11 +25,11 @@ export const ImpactServices: React.FC = () => (
       Our designs don’t just look good—they solve real problems, enhance user experiences, and
       deliver measurable results that move your business forward.
     </p>
-  <div className="flex flex-col w-full gap-4 justify-start items-start" role="list" aria-label="Design impact service categories">
+    <div className="flex flex-col w-full gap-4 justify-start items-start" role="list" aria-label="Design impact service categories">
       {/* Top Row */}
       <div className="flex flex-col lg:flex-row gap-8 w-full">
         {/* UI/UX Design */}
-        <article className="bg-[#0000D2] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden" role="listitem" aria-labelledby="uiux-title">
+        <article id="uiux" className="bg-[#0000D2] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden" role="listitem" aria-labelledby="uiux-title">
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span id="uiux-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">UI/UX Design</span>
             <p className="text-black dark:text-white/90 text-base mt-2">
@@ -42,7 +42,7 @@ export const ImpactServices: React.FC = () => (
           </div>
         </article>
         {/* Graphics Design */}
-        <article className="bg-[#EDEDED] rounded-xl p-8 lg:w-1/3 flex flex-col justify-end h-full pt-auto items-start min-h-[350px] text-[#363636]" role="listitem" aria-labelledby="graphics-title">
+        <article id="graphics" className="bg-[#EDEDED] rounded-xl p-8 lg:w-1/3 flex flex-col justify-end h-full pt-auto items-start min-h-[350px] text-[#363636]" role="listitem" aria-labelledby="graphics-title">
           <span id="graphics-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">Graphics Design</span>
           <p className="text-[#363636]/90 text-base mt-2">
             Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor
@@ -52,14 +52,14 @@ export const ImpactServices: React.FC = () => (
       {/* Bottom Row */}
       <div className="flex flex-col lg:flex-row gap-8 w-full mt-0">
         {/* 3D Design */}
-        <article className="bg-[#EDEDED] rounded-xl p-8 lg:w-1/3 flex flex-col justify-end pt-auto h-full items-start min-h-[350px] text-[#363636]" role="listitem" aria-labelledby="threed-title">
+        <article id="3d" className="bg-[#EDEDED] rounded-xl p-8 lg:w-1/3 flex flex-col justify-end pt-auto h-full items-start min-h-[350px] text-[#363636]" role="listitem" aria-labelledby="threed-title">
           <span id="threed-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">3D Design</span>
           <p className="text-[#363636]/90 text-base mt-2">
             Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum nam mattis non. Suspendisse aliquet auctor.
           </p>
         </article>
         {/* Branding */}
-        <article className="bg-[#D779BB] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden" role="listitem" aria-labelledby="branding-title">
+        <article id="branding" className="bg-[#D779BB] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden" role="listitem" aria-labelledby="branding-title">
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span id="branding-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">Branding</span>
             <p className="text-white/90 text-base mt-2">

@@ -15,12 +15,12 @@ export const SEOGrowthServices: React.FC = () => (
         "@type": "ItemList",
         name: "Growth and Content Services",
         itemListElement: [
-          { "@type": "Service", name: "Content Writing" },
-          { "@type": "Service", name: "SEO Writing" },
-          { "@type": "Service", name: "Article Writing" },
-          { "@type": "Service", name: "Ghostwriting" },
-          { "@type": "Service", name: "Writer Outsourcing" },
-          { "@type": "Service", name: "Content Team Management" }
+          { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "Content Writing", url: "https://example.com/services/seo-consultations#content-writing" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "SEO Writing", url: "https://example.com/services/seo-consultations#seo-writing" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "Article Writing", url: "https://example.com/services/seo-consultations#article-writing" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Ghostwriting", url: "https://example.com/services/seo-consultations#ghostwriting" } },
+          { "@type": "ListItem", position: 5, item: { "@type": "Service", name: "Writer Outsourcing", url: "https://example.com/services/seo-consultations#writer-outsourcing" } },
+          { "@type": "ListItem", position: 6, item: { "@type": "Service", name: "Content Team Management", url: "https://example.com/services/seo-consultations#content-team-management" } }
         ]
       }}
     />
@@ -45,7 +45,7 @@ export const SEOGrowthServices: React.FC = () => (
       {/* Right: Service grid */}
       <div className="lg:w-2/3 w-full grid grid-cols-2 gap-y-10 gap-x-8" role="list" aria-label="SEO and content services list">
         {/* Content Writing */}
-        <div className="flex items-start gap-4" role="listitem">
+        <div id="content-writing" className="flex items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FF7F2E] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Content Writing</h3>
@@ -55,7 +55,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* SEO Writing */}
-        <div className="flex items-start gap-4" role="listitem">
+        <div id="seo-writing" className="flex items-start gap-4" role="listitem">
           <span className="w-10 h-6 rounded-full bg-[#00C97B] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">SEO Writing</h3>
@@ -65,7 +65,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Article Writing */}
-        <div className="flex items-start gap-4" role="listitem">
+        <div id="article-writing" className="flex items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FFE600] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Article Writing</h3>
@@ -75,7 +75,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Ghostwriting */}
-        <div className="flex items-start gap-4" role="listitem">
+        <div id="ghostwriting" className="flex items-start gap-4" role="listitem">
           <span className="w-5 h-5 rounded-md bg-[#7B2FF2] inline-block mt-2" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Ghostwriting</h3>
@@ -85,7 +85,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Writer Outsourcing */}
-        <div className="flex items-start gap-4" role="listitem">
+        <div id="writer-outsourcing" className="flex items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-md bg-[#8ED6DF] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg  mb-1">Writer Outsourcing</h3>
@@ -95,7 +95,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Content Team Management */}
-        <div className="flex items-start gap-4" role="listitem">
+        <div id="content-team-management" className="flex items-start gap-4" role="listitem">
           <span className="w-5 h-5 rounded-md bg-[#7B2FF2] inline-block mt-2" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Content Team Management</h3>

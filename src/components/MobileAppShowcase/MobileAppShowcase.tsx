@@ -14,8 +14,8 @@ const MobileAppShowcase: React.FC = () => {
                     Mobile Development
                 </h1>
                 <p className="text-black flex dark:text-white/80 text-start mb-8">
-                   Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum
-                   <br /> nam mattis non. Suspendisse aliquet auctor urna tincidunt pulvinar.
+                    Lorem ipsum dolor sit amet consectetur. Vulputate cras orci interdum
+                    <br /> nam mattis non. Suspendisse aliquet auctor urna tincidunt pulvinar.
                 </p>
                 <button type="button" className=" bg-primary flex-shrink max-w-[300px] text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center" aria-label="Get in touch about mobile development">Get in Touch</button>
             </div>

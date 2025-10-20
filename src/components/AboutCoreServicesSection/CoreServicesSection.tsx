@@ -55,9 +55,8 @@ export default function CoreServicesSection() {
           return (
             <div
               key={idx}
-              className={`relative cursor-pointer rounded-3xl overflow-hidden flex flex-col justify-end shadow-lg transition-all duration-300 ${
-                expanded ? "w-[25%] max-lg:w-full h-[520px] z-10" : "w-[15.5%] max-lg:w-full h-[520px]"
-              }`}
+              className={`relative cursor-pointer rounded-3xl overflow-hidden flex flex-col justify-end shadow-lg transition-all duration-300 ${expanded ? "w-[25%] max-lg:w-full h-[520px] z-10" : "w-[15.5%] max-lg:w-full h-[520px]"
+                }`}
               onClick={() => setExpandedIdx(expanded ? null : idx)}
               role="listitem"
               aria-expanded={expanded}
@@ -74,9 +73,8 @@ export default function CoreServicesSection() {
                   {service.title}
                 </h3>
                 <p
-                  className={`font-poppins text-white text-base text-wrap max-h-24 transition-all duration-300 ${
-                    expanded ? "whitespace-normal" : "truncate whitespace-normal"
-                  }`}
+                  className={`font-poppins text-white text-base text-wrap max-h-24 transition-all duration-300 ${expanded ? "whitespace-normal" : "truncate whitespace-normal"
+                    }`}
                 >
                   {service.description}
                 </p>
