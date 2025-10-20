@@ -31,8 +31,8 @@ export const ImpactServices: React.FC = () => (
         {/* UI/UX Design */}
         <article id="uiux" className="bg-[#0000D2] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden" role="listitem" aria-labelledby="uiux-title">
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
-            <span id="uiux-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">UI/UX Design</span>
-            <p className="text-black dark:text-white/90 text-base mt-2">
+            <span id="uiux-title" className="text-2xl lg:text-3xl text-white font-monument-ultrabold mb-2">UI/UX Design</span>
+            <p className="text-white/90 text-base mt-2">
               Research-driven interfaces and seamless flows that reduce friction, improve task success, and boost conversions.
             </p>
           </div>
@@ -61,7 +61,7 @@ export const ImpactServices: React.FC = () => (
         {/* Branding */}
         <article id="branding" className="bg-[#D779BB] w-full lg:w-2/3 relative rounded-xl px-8 flex flex-row items-center justify-between min-h-[350px] text-black dark:text-white overflow-hidden" role="listitem" aria-labelledby="branding-title">
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
-            <span id="branding-title" className="text-2xl lg:text-3xl font-monument-ultrabold mb-2">Branding</span>
+            <span id="branding-title" className="text-2xl text-white lg:text-3xl font-monument-ultrabold mb-2">Branding</span>
             <p className="text-white/90 text-base mt-2">
               A complete visual system—logos, typography, color, and guidelines—that scales across every touchpoint.
             </p>
