@@ -7,15 +7,20 @@ import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Title",
-        description: "Decription",
+        title: "Legal Services | SwiftScale",
+        description: "Business formation, contracts, compliance, and corporate legal support.",
+        alternates: { canonical: "https://example.com/services/legal-services" },
         openGraph: {
-            title: "Title",
-            description: "Decription",
+            type: "article",
+            url: "https://example.com/services/legal-services",
+            siteName: "SwiftScale Consult",
+            title: "Legal Services | SwiftScale",
+            description: "Contracts, compliance, and ongoing legal support.",
         },
         twitter: {
-            title: "Title",
-            description: "Decription",
+            card: "summary",
+            title: "Legal Services | SwiftScale",
+            description: "Simple, reliable legal support for your business.",
         },
     }
 };

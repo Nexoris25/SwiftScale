@@ -20,16 +20,53 @@ import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Title",
-        description: "Decription",
+        title: {
+            default: "SwiftScale Consult — People, Technology & Identity",
+            template: "%s | SwiftScale Consult"
+        },
+        description: "SwiftScale helps businesses scale with HR consulting, software development, design, legal services, and SEO growth.",
+        keywords: [
+            "SwiftScale", "HR consulting", "software development", "UI/UX design", "branding", "legal services", "SEO consultations",
+            "content writing", "startup", "SMB", "enterprise"
+        ],
+        applicationName: "SwiftScale Consult",
+        authors: [{ name: "SwiftScale" }],
+        creator: "SwiftScale",
+        publisher: "SwiftScale",
+        alternates: { canonical: "https://example.com/" },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-image-preview': "large",
+                'max-snippet': -1,
+                'max-video-preview': -1
+            }
+        },
         openGraph: {
-            title: "Title",
-            description: "Decription",
+            type: "website",
+            url: "https://example.com/",
+            siteName: "SwiftScale Consult",
+            title: "SwiftScale Consult — People, Technology & Identity",
+            description: "SwiftScale helps businesses scale with HR consulting, software development, design, legal services, and SEO growth.",
+            images: [
+                {
+                    url: "https://example.com/android-chrome-512x512.png",
+                    width: 512,
+                    height: 512,
+                    alt: "SwiftScale logo"
+                }
+            ]
         },
         twitter: {
-            title: "Title",
-            description: "Decription",
-        },
+            card: "summary_large_image",
+            title: "SwiftScale Consult — People, Technology & Identity",
+            description: "SwiftScale helps businesses scale with HR consulting, software development, design, legal services, and SEO growth.",
+            images: ["https://example.com/android-chrome-512x512.png"],
+            creator: "@SwiftScale"
+        }
     }
 };
 

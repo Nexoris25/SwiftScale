@@ -7,15 +7,20 @@ import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Title",
-        description: "Decription",
+        title: "HR Consultation Services | SwiftScale",
+        description: "Strategic HR advisory: talent acquisition, performance management, and compliance.",
+        alternates: { canonical: "https://example.com/services/hr-consultation" },
         openGraph: {
-            title: "Title",
-            description: "Decription",
+            type: "article",
+            url: "https://example.com/services/hr-consultation",
+            siteName: "SwiftScale Consult",
+            title: "HR Consultation Services | SwiftScale",
+            description: "Tailored HR strategies for teams and organizations.",
         },
         twitter: {
-            title: "Title",
-            description: "Decription",
+            card: "summary",
+            title: "HR Consultation Services | SwiftScale",
+            description: "HR support that aligns people, culture, and business goals.",
         },
     }
 };

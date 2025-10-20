@@ -8,15 +8,20 @@ import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Title",
-        description: "Decription",
+        title: "Design Services | SwiftScale",
+        description: "Brand identity, UI/UX, and graphic design services that drive recognition and conversions.",
+        alternates: { canonical: "https://example.com/services/design" },
         openGraph: {
-            title: "Title",
-            description: "Decription",
+            type: "article",
+            url: "https://example.com/services/design",
+            siteName: "SwiftScale Consult",
+            title: "Design Services | SwiftScale",
+            description: "Brand identity, UI/UX, and graphics for standout products.",
         },
         twitter: {
-            title: "Title",
-            description: "Decription",
+            card: "summary_large_image",
+            title: "Design Services | SwiftScale",
+            description: "Memorable, conversion-focused design services.",
         },
     }
 };
