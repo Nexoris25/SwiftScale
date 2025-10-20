@@ -1,4 +1,5 @@
 "use server";
+import JsonLd from "@/components/SEO/JsonLd";
 import ConsultationBanner from "@/components/AboutConsultationBanner/ConsultationBanner";
 import CoreServicesSection from "@/components/AboutCoreServicesSection/CoreServicesSection";
 import HeroSection from "@/components/AboutHero/HeroSection";
@@ -29,6 +30,17 @@ export default async function Page() {
     return (
         <div className="bg-white text-black dark:bg-custom-black dark:text-white flex flex-col items-center justify-center w-screen py-2">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
+                <JsonLd
+                    id="ld-breadcrumbs-about"
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        itemListElement: [
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
+                            { "@type": "ListItem", position: 2, name: "About", item: "https://example.com/about" }
+                        ]
+                    }}
+                />
                 <HeroSection />
                 <AboutIntroSection />
                 <CoreServicesSection />

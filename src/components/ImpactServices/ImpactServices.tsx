@@ -1,8 +1,23 @@
 import React from "react";
 import DesignX from '@/asset/svg/design-x.svg';
+import JsonLd from "@/components/SEO/JsonLd";
 
 export const ImpactServices: React.FC = () => (
   <section className="w-full py-12 px-4 flex flex-col items-center bg-transparent" role="region" aria-labelledby="impact-services-heading">
+    <JsonLd
+      id="ld-impact-services"
+      data={{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Design Service Categories",
+        itemListElement: [
+          { "@type": "Service", name: "UI/UX Design" },
+          { "@type": "Service", name: "Graphics Design" },
+          { "@type": "Service", name: "3D Design" },
+          { "@type": "Service", name: "Branding" }
+        ]
+      }}
+    />
     <h2 id="impact-services-heading" className="text-black dark:text-white text-3xl md:text-5xl text-center font-monument-ultrabold mb-2">
       Proven Result, Real Impact
     </h2>

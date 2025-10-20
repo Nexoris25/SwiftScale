@@ -1,9 +1,11 @@
 import React from "react";
+import JsonLd from "@/components/SEO/JsonLd";
 import AboutImage from '@/asset/image/about-image-1.png';
 
 export default function AboutIntroSection() {
   return (
     <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-16 gap-10" role="region" aria-labelledby="about-intro-heading">
+      <JsonLd id="ld-about-intro" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "About Intro" }} />
       {/* Left Content */}
       <div className="flex-1 flex flex-col items-start justify-center">
         <h4 className="font-poppins text-lg text-black dark:text-white mb-2">About Swiftscale Consult</h4>

@@ -1,9 +1,11 @@
 import React from 'react';
+import JsonLd from "@/components/SEO/JsonLd";
 import WebDashboardImage from '@/asset/image/web-dev-dashboard.png';
 
 const WebDashboard: React.FC = () => {
     return (
         <section className="relative w-full min-h-[600px] flex gap-10 flex-col lg:flex-row items-center rounded-lg justify-center px-4 py-16">
+            <JsonLd id="ld-web-dashboard" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Web Dashboard Showcase" }} />
             {/* Images */}
             <div className="w-full flex justify-center h-full items-center py-10">
                 <img

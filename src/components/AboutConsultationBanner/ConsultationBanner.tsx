@@ -1,9 +1,11 @@
 import React from "react";
+import JsonLd from "@/components/SEO/JsonLd";
 import ApplyConsultImage from '@/asset/image/apply-consult.jpg';
 
 export default function ConsultationBanner() {
     return (
         <section className="relative w-full h-[400px] flex items-center justify-center rounded-3xl overflow-hidden" role="region" aria-labelledby="consult-banner-heading">
+            <JsonLd id="ld-consultation-banner" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Consultation Banner" }} />
             {/* Background Image */}
             <img
                 src={typeof ApplyConsultImage === "string" ? ApplyConsultImage : ApplyConsultImage.src}

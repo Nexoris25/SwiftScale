@@ -1,4 +1,5 @@
 import React from 'react';
+import JsonLd from "@/components/SEO/JsonLd";
 import MobileAppShowcaseImage from '@/asset/image/dev-service-phones.png';
 
 const MobileAppShowcase: React.FC = () => {
@@ -6,6 +7,7 @@ const MobileAppShowcase: React.FC = () => {
 
     return (
         <section className="relative w-full min-h-[600px] flex gap-10 flex-col lg:flex-row items-center rounded-lg justify-center px-4 py-16" role="region" aria-labelledby="mobile-dev-heading">
+            <JsonLd id="ld-mobile-app-showcase" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Mobile App Showcase" }} />
             {/* Content */}
             <div className="py-10 flex flex-grow flex-col h-full items-start justify-start gap-4 w-full">
                 <h1 id="mobile-dev-heading" className="text-black dark:text-white w-full flex text-4xl md:text-5xl mb-4 text-start font-monument-ultrabold">

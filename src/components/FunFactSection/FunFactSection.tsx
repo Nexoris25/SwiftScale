@@ -1,8 +1,10 @@
 import React from "react";
+import JsonLd from "@/components/SEO/JsonLd";
 
 export default function FunFactSection() {
     return (
         <section className="w-full bg-[#fafafa] dark:bg-[#363636] m-auto rounded-xl py-12 px-6 flex flex-col md:flex-row items-center justify-between gap-10 my-20" role="region" aria-labelledby="fun-fact-heading">
+            <JsonLd id="ld-fun-fact" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Fun Fact" }} />
             {/* Left Side */}
             <div className="flex-1">
                 <h2 id="fun-fact-heading" className="font-monument-ultrabold text-3xl md:text-4xl text-black dark:text-white mb-6 px-10">Fun Fact</h2>

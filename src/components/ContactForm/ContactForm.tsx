@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import JsonLd from "@/components/SEO/JsonLd";
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -22,6 +23,19 @@ export default function ContactFormSection() {
 
   return (
     <section className="w-full bg-custom-white dark:bg-custom-black py-20 px-4 flex flex-col items-center" role="region" aria-labelledby="contact-form-heading">
+      <JsonLd
+        id="ld-contact-point"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "SwiftScale",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            availableLanguage: ["English"],
+          }
+        }}
+      />
       <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Left Side */}
         <div>

@@ -8,6 +8,7 @@ import Facebook from '@/asset/svg/facebook.svg';
 import Linkedin from '@/asset/svg/linkedin.svg';
 import HrBg from '@/asset/image/hr-consulting-bg-purple.png';
 import X from '@/asset/svg/x.svg';
+import JsonLd from "@/components/SEO/JsonLd";
 
 export const HRConsulting: React.FC = () => {
     return (
@@ -16,6 +17,24 @@ export const HRConsulting: React.FC = () => {
       role="region"
       aria-labelledby="hr-consulting-heading"
     >
+            <JsonLd
+              id="ld-service-hr-consulting"
+              data={{
+                "@context": "https://schema.org",
+                "@type": "Service",
+                name: "HR Consulting",
+                serviceType: "HR Consulting",
+                description: "Strategic HR advisory including talent acquisition, performance management, and compliance.",
+                url: "https://example.com/services/hr-consultation",
+                provider: { "@id": "https://example.com/#organization" },
+                areaServed: [
+                  { "@type": "Country", name: "United States" },
+                  { "@type": "Country", name: "United Kingdom" },
+                  { "@type": "Country", name: "Nigeria" }
+                ],
+                serviceAudience: { "@type": "Audience", audienceType: "SMBs and enterprises" }
+              }}
+            />
             {/* Decorative Blob */}
             <img
                 src={typeof HrBg === 'string' ? HrBg : HrBg.src}
@@ -82,6 +101,10 @@ const images = [
       aria-label="HR Consulting photos carousel"
       aria-live="off"
     >
+      {/* Live region for screen readers to announce slide changes */}
+      <p className="sr-only" aria-live="polite" aria-atomic="true">
+        {`Showing slide ${current + 1} of ${images.length}`}
+      </p>
       {/* Image */}
       <img
         src={images[current]}

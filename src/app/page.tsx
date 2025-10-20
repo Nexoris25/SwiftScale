@@ -15,6 +15,8 @@ import TestimonialsCarousel from "@/components/TestimonialCarousel/TestimonialsC
 import PortfolioSection from "@/components/Portfolio/PortfolioSection";
 import ScaleConsultSection from "@/components/ScaleConsultSection/ScaleConsultSection";
 import FAQSection from "@/components/FAQSection/FAQSection";
+import JsonLd from "@/components/SEO/JsonLd";
+import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -43,13 +45,50 @@ export default async function Page() {
     return (
         <div className="bg-white text-black dark:bg-custom-black dark:text-white flex flex-col items-center justify-center w-screen py-2">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
+                {/* JSON-LD: Home WebPage and Services ItemList */}
+                <JsonLd
+                    id="ld-home-webpage"
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "@id": "https://example.com/#webpage",
+                        url: "https://example.com/",
+                        name: "SwiftScale Home",
+                        isPartOf: { "@id": "https://example.com/#website" },
+                        about: { "@id": "https://example.com/#organization" }
+                    }}
+                />
+                <JsonLd
+                    id="ld-home-services"
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        name: "SwiftScale Services",
+                        itemListElement: services.map((s, idx) => ({
+                            "@type": "ListItem",
+                            position: idx + 1,
+                            item: {
+                                "@type": "Service",
+                                name: s.name,
+                                description: s.content,
+                                provider: { "@id": "https://example.com/#organization" }
+                            }
+                        }))
+                    }}
+                />
                 {/* Hero Section */}
                 <div className="p-10 max-lg:p-4 dark:bg-[#363636] bg-[#F8F8F8] text-black dark:text-white rounded-lg flex flex-col items-center justify-center w-full">
                     <div className="flex flex-row max-lg:flex-col w-full justify-start items-center">
                         <div className="text-black dark:text-white font-monument-bold text-5xl max-lg:text-2xl w-7/12 ma p-12 pl-0 pr-22 max-lg:w-full">Powering Businesses with People, Technology & Identity</div>
                         <div className="w-5/12 max-lg:w-full flex flex-col items-start justify-start">
                             <div className="font-poppins">Helping you find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.</div>
-                            <div className="mt-4 bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center">Get in Touch</div>
+                            <Link
+                                href="/contact"
+                                className="mt-4 bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                                aria-label="Get in touch with SwiftScale"
+                            >
+                                Get in Touch
+                            </Link>
                         </div>
                     </div>
                     <div className="flex flex-row w-full max-lg:hidden justify-end items-center">

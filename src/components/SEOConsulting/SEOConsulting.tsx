@@ -6,11 +6,28 @@ import Facebook from '@/asset/svg/facebook.svg';
 import Linkedin from '@/asset/svg/linkedin.svg';
 import HrBg from '@/asset/image/hr-consulting-bg-purple.png';
 import X from '@/asset/svg/x.svg';
+import JsonLd from "@/components/SEO/JsonLd";
 
 
 export const SEOConsulting: React.FC = () => {
     return (
         <section className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16" role="region" aria-labelledby="seo-consulting-heading">
+            <JsonLd
+                id="ld-service-seo-consulting"
+                data={
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        name: "SEO Consulting",
+                        serviceType: "SEO Consulting",
+                        description: "Consulting to improve search visibility, traffic, and conversions through SEO strategy and content.",
+                        url: "https://example.com/services/seo-consultations",
+                        provider: { "@id": "https://example.com/#organization" },
+                        areaServed: "Worldwide",
+                        serviceAudience: { "@type": "Audience", audienceType: "Businesses and startups" }
+                    }
+                }
+            />
             {/* Decorative Blob */}
             <img
                 src={typeof HrBg === 'string' ? HrBg : HrBg.src}
@@ -39,7 +56,7 @@ export const SEOConsulting: React.FC = () => {
                 <div className="w-full flex flex-row mt-2 p-10 max-lg:px-4 justify-center items-center">
                     <img
                         src={typeof DImage2 === 'string' ? DImage2 : DImage2.src}
-                        alt="Design Service 2"
+                        alt="SEO consulting banner"
                         className="rounded-xl aspect-video max-h-[600px] max-lg:max-h-auto w-full object-cover"
                     />
                 </div>

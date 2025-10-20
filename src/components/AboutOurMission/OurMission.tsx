@@ -2,11 +2,13 @@
 import React from "react";
 import OurMissionImage from '@/asset/image/our-mission.jpg';
 import { useRouter } from "next/navigation";
+import JsonLd from "@/components/SEO/JsonLd";
 
 export default function OurMission() {
     const navigate = useRouter();
     return (
         <section className="w-full py-12  flex flex-col items-start justify-start gap-4 my-10" role="region" aria-labelledby="our-mission-heading">
+            <JsonLd id="ld-our-mission" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Our Mission" }} />
             <h2 id="our-mission-heading" className="font-monument-ultrabold text-5xl max-lg:text-2xl text-black dark:text-white mb-6">
                 Our Mission
             </h2>

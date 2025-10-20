@@ -1,4 +1,5 @@
 import React from "react";
+import JsonLd from "@/components/SEO/JsonLd";
 import Seo from '@/asset/image/seo.png';
 
 export const SEOGrowthServices: React.FC = () => (
@@ -7,6 +8,22 @@ export const SEOGrowthServices: React.FC = () => (
     role="region"
     aria-labelledby="seo-growth-heading"
   >
+    <JsonLd
+      id="ld-seo-growth-services"
+      data={{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Growth and Content Services",
+        itemListElement: [
+          { "@type": "Service", name: "Content Writing" },
+          { "@type": "Service", name: "SEO Writing" },
+          { "@type": "Service", name: "Article Writing" },
+          { "@type": "Service", name: "Ghostwriting" },
+          { "@type": "Service", name: "Writer Outsourcing" },
+          { "@type": "Service", name: "Content Team Management" }
+        ]
+      }}
+    />
     {/* Small heading */}
     <div className="w-full">
       <span className="block text-black dark:text-white text-sm font-semibold mb-2">

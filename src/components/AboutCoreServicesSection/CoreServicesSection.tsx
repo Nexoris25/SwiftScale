@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Core1 from '@/asset/image/core-1.png';
+import JsonLd from "@/components/SEO/JsonLd";
 import Core2 from '@/asset/image/core-2.jpg';
 import Core3 from '@/asset/image/core-3.jpg';
 import Core4 from '@/asset/image/core-4.jpg';
@@ -44,6 +45,7 @@ export default function CoreServicesSection() {
 
   return (
     <section className="w-full py-16 flex flex-col items-center" role="region" aria-labelledby="core-services-heading">
+      <JsonLd id="ld-core-services" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Core Services" }} />
       <h2 id="core-services-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
         5 Core Services
       </h2>

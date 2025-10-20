@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import JsonLd from "@/components/SEO/JsonLd";
 import { useTheme } from 'next-themes';
 import LightMode from '@/asset/svg/light-mode.svg';
 import DarkMode from '@/asset/svg/dark-mode.svg';
@@ -20,6 +21,25 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
   return (
     <div id="header-top" className={`w-full fixed z-20 top-0 right-0 bg-custom-white dark:bg-custom-black text-black dark:text-white flex flex-row items-center justify-center ${className}`} style={style}>
       <div className={`container mx-auto flex flex-grow flex-row items-center justify-between py-4 px-4`}>
+        <JsonLd
+          id="ld-org-website"
+          data={[
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": "https://example.com/#organization",
+              name: "SwiftScale",
+              url: "https://example.com/"
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://example.com/#website",
+              url: "https://example.com/",
+              name: "SwiftScale"
+            }
+          ]}
+        />
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
           <div onClick={() => navigate.push('/')} className='flex cursor-pointer items-center justify-center flex-row gap-2 text-xs'>

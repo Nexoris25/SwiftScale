@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import CaretRightWhite from '@/asset/svg/caret-right-white.svg';
+import JsonLd from "@/components/SEO/JsonLd";
 
 const faqs = [
     {
@@ -27,9 +28,19 @@ const faqs = [
 
 export default function FAQSection() {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
+    const faqJsonLd = useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+    }), []);
 
     return (
         <section className="w-full py-20 px-2 flex flex-col items-center" role="region" aria-labelledby="faq-heading">
+            <JsonLd id="ld-faq" data={faqJsonLd} />
             <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left Side */}
                 <div>

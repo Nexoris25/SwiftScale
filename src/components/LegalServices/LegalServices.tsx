@@ -9,6 +9,7 @@ import Jvf from '@/asset/svg/jvf.svg';
 import Cac from '@/asset/svg/cac.svg';
 import Son from '@/asset/svg/son.svg';
 import Nda from '@/asset/svg/nda.svg';
+import JsonLd from "@/components/SEO/JsonLd";
 
 
 export const LegalServices: React.FC = () => {
@@ -40,6 +41,24 @@ export const LegalServices: React.FC = () => {
       role="region"
       aria-labelledby="legal-services-heading"
     >
+      <JsonLd
+        id="ld-service-legal-services"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Legal Services",
+          serviceType: "Business and Corporate Legal Services",
+          description: "Business formation, contracts, compliance, and ongoing corporate legal support.",
+          url: "https://example.com/services/legal-services",
+          provider: { "@id": "https://example.com/#organization" },
+          areaServed: [
+            { "@type": "Country", name: "United States" },
+            { "@type": "Country", name: "United Kingdom" },
+            { "@type": "Country", name: "Nigeria" }
+          ],
+          serviceAudience: { "@type": "Audience", audienceType: "Startups and established businesses" }
+        }}
+      />
       {/* Decorative Blob */}
       <img
         src={typeof HrBg === 'string' ? HrBg : HrBg.src}

@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import CaretLeftWhite from '@/asset/svg/caret-left-white.svg';
 import CaretRightWhite from '@/asset/svg/caret-right-white.svg';
 import Sunday from '@/asset/image/sunday.jpg';
 import Mabel from '@/asset/image/mabel.jpg';
 import Chioma from '@/asset/image/chioma.jpg';
 import Quote from '@/asset/svg/quote.svg';
+import JsonLd from "@/components/SEO/JsonLd";
 
 const testimonials = [
     {
@@ -33,9 +34,24 @@ const testimonials = [
 
 export default function TestimonialsCarousel() {
     const [active, setActive] = useState(1);
+    const reviewLd = useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        itemListElement: testimonials.map((t, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+                "@type": "Review",
+                reviewBody: t.quote,
+                author: { "@type": "Person", name: t.name },
+                itemReviewed: { "@type": "Organization", name: "SwiftScale" }
+            }
+        }))
+    }), []);
 
     return (
         <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2" role="region" aria-roledescription="carousel" aria-label="Testimonials carousel">
+            <JsonLd id="ld-reviews" data={reviewLd} />
             <h2 className="text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
                 What They Say About Us
             </h2>

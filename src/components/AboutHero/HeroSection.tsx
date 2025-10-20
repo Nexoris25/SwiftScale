@@ -2,12 +2,14 @@
 import React from "react";
 import AboutHero from '@/asset/image/about-hero.png';
 import { useRouter } from "next/navigation";
+import JsonLd from "@/components/SEO/JsonLd";
 
 
 export default function HeroSection() {
   const navigate = useRouter();
   return (
     <section className="relative w-full h-[600px] flex items-center justify-start overflow-hidden" role="region" aria-labelledby="about-hero-heading">
+      <JsonLd id="ld-about-hero" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "About Hero" }} />
       {/* Background Image */}
       <img
         src={typeof AboutHero === "string" ? AboutHero : AboutHero.src}

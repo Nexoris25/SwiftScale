@@ -6,6 +6,7 @@ import React, { PropsWithChildren } from "react";
 import { ThemeProvider } from 'next-themes';
 import Header from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import JsonLd from "@/components/SEO/JsonLd";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,7 @@ const monumentExtended = localFont({
 });
 
 export default function RootLayout({ children, ...props }: PropsWithChildren) {
-
+    const origin = 'https://example.com';
 
     return (
         <html lang="en">
@@ -56,6 +57,38 @@ export default function RootLayout({ children, ...props }: PropsWithChildren) {
                     <div
                         className="bg-white text-black dark:bg-custom-black dark:text-white bg-cover w-screen h-auto overflow-x-hidden"
                     >
+                        <JsonLd
+                            id="ld-site"
+                            data={[
+                                {
+                                    "@context": "https://schema.org",
+                                    "@type": "Organization",
+                                    "@id": `${origin}/#organization`,
+                                    name: "SwiftScale",
+                                    url: `${origin}/`,
+                                    logo: `${origin}/favicon-32x32.png`,
+                                    sameAs: [
+                                        "https://www.linkedin.com/company/swiftscale",
+                                        "https://instagram.com/swiftscale",
+                                        "https://x.com/swiftscale",
+                                        "https://facebook.com/swiftscale"
+                                    ],
+                                    contactPoint: {
+                                        "@type": "ContactPoint",
+                                        contactType: "customer support",
+                                        availableLanguage: ["English"],
+                                        url: `${origin}/contact`
+                                    },
+                                    address: {
+                                        "@type": "PostalAddress",
+                                        streetAddress: "Plot 952B Idejo Street",
+                                        addressLocality: "Lagos",
+                                        addressRegion: "LA",
+                                        addressCountry: "NG"
+                                    }
+                                },
+                            ]}
+                        />
                         <Header />
                         <div id="main-content" tabIndex={-1} className="outline-none w-screen h-screen overflow-y-auto  pt-14">
                             <div className="w-screen overflow-x-hidden h-auto block py-10">{children}</div>

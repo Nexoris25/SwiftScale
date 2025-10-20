@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Image1 from '@/asset/image/image1.png';
 import Image2 from '@/asset/image/image2.png';
 import Image3 from '@/asset/image/image3.png';
+import JsonLd from "@/components/SEO/JsonLd";
 
 const tabs = [
     "HR Consulting",
@@ -43,9 +44,23 @@ const images: any = {
 export default function PortfolioSection() {
     const [activeTab, setActiveTab] = useState(tabs[0]);
     const imgs: any = images[activeTab];
+    const itemListLd = useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `Portfolio - ${activeTab}`,
+        itemListElement: imgs.map((img: any, idx: number) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            item: {
+                "@type": "CreativeWork",
+                name: `${activeTab} Project ${idx + 1}`
+            }
+        }))
+    }), [activeTab, imgs]);
 
     return (
         <section className="w-full py-20 px-2 bg-custom-white dark:bg-custom-black  flex flex-col items-center" role="region" aria-labelledby="portfolio-heading">
+            <JsonLd id="ld-portfolio" data={itemListLd} />
             <h2 id="portfolio-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl mb-8 text-center tracking-wide">
                 Our Portfolio
             </h2>

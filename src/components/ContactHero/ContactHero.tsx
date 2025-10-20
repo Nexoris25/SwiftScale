@@ -1,9 +1,19 @@
 import React from "react";
+import JsonLd from "@/components/SEO/JsonLd";
 import AboutHero from '@/asset/image/about-hero.png';
 
 export default function ContactHero() {
     return (
         <section className="relative w-full h-[600px] flex flex-col items-center justify-center overflow-hidden" role="region" aria-labelledby="contact-hero-heading">
+            <JsonLd
+                id="ld-contact-page"
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    name: "Contact SwiftScale",
+                    about: { "@type": "Organization", name: "SwiftScale" }
+                }}
+            />
             {/* Background Image */}
             <img
                 src={typeof AboutHero === "string" ? AboutHero : AboutHero.src}

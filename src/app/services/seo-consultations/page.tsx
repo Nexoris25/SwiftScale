@@ -1,4 +1,5 @@
 "use server";
+import JsonLd from "@/components/SEO/JsonLd";
 import FAQSection from "@/components/FAQSection/FAQSection";
 import ScaleConsultSection from "@/components/ScaleConsultSection/ScaleConsultSection";
 import { SEOConsulting } from "@/components/SEOConsulting/SEOConsulting";
@@ -25,6 +26,18 @@ export default async function Page() {
     return (
         <div className="bg-white text-black dark:bg-custom-black dark:text-white flex flex-col items-center justify-center w-screen py-2">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
+                <JsonLd
+                    id="ld-breadcrumbs-seo"
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        itemListElement: [
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://example.com/services" },
+                            { "@type": "ListItem", position: 3, name: "SEO Consultations", item: "https://example.com/services/seo-consultations" }
+                        ]
+                    }}
+                />
                 <SEOConsulting />
                 <SEOGrowthServices />
                 {/* Scale & Consult Section */}
