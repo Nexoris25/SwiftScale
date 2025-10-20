@@ -43,11 +43,11 @@ export default function CoreServicesSection() {
   const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
 
   return (
-    <section className="w-full py-16 flex flex-col items-center">
-      <h2 className="text-black dark:text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
+    <section className="w-full py-16 flex flex-col items-center" role="region" aria-labelledby="core-services-heading">
+      <h2 id="core-services-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
         5 Core Services
       </h2>
-      <div className="flex flex-row flex-nowrap justify-center max-lg:flex-col max-lg:justify-start max-lg:items-start items-center gap-10 w-full">
+      <div className="flex flex-row flex-nowrap justify-center max-lg:flex-col max-lg:justify-start max-lg:items-start items-center gap-10 w-full" role="list" aria-label="Core services expandable cards">
         {services.map((service, idx) => {
           const expanded = expandedIdx === idx;
           return (
@@ -57,6 +57,9 @@ export default function CoreServicesSection() {
                 expanded ? "w-[25%] max-lg:w-full h-[520px] z-10" : "w-[15.5%] max-lg:w-full h-[520px]"
               }`}
               onClick={() => setExpandedIdx(expanded ? null : idx)}
+              role="listitem"
+              aria-expanded={expanded}
+              aria-label={`${service.title} card`}
             >
               <img
                 src={typeof service.image === "string" ? service.image : service.image.src}

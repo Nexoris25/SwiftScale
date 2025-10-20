@@ -45,11 +45,11 @@ export default function PortfolioSection() {
     const imgs: any = images[activeTab];
 
     return (
-        <section className="w-full py-20 px-2 bg-custom-white dark:bg-custom-black  flex flex-col items-center">
-            <h2 className="text-black dark:text-white font-monument-ultrabold text-4xl mb-8 text-center tracking-wide">
+        <section className="w-full py-20 px-2 bg-custom-white dark:bg-custom-black  flex flex-col items-center" role="region" aria-labelledby="portfolio-heading">
+            <h2 id="portfolio-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl mb-8 text-center tracking-wide">
                 Our Portfolio
             </h2>
-            <div className="flex flex-row flex-wrap justify-center gap-4 mb-10">
+            <div className="flex flex-row flex-wrap justify-center gap-4 mb-10" role="tablist" aria-label="Portfolio categories">
                 {tabs.map((tab) => (
                     <button
                         key={tab}
@@ -58,28 +58,31 @@ export default function PortfolioSection() {
                                 ? "bg-[#6A01E1] text-white"
                                 : "bg-transparent text-black dark:text-white"
                             }`}
+                        role="tab"
+                        aria-selected={activeTab === tab}
+                        aria-controls={`panel-${tab}`}
                     >
                         {tab}
                     </button>
                 ))}
             </div>
-            <div className="grid grid-cols-2 gap-6 w-full">
+            <div id={`panel-${activeTab}`} role="tabpanel" aria-labelledby={activeTab} className="grid grid-cols-2 gap-6 w-full">
                 <div className="flex flex-col gap-6">
                     <img
                         src={imgs[0] === "string" ? Image1.src : imgs[0].src}
-                        alt=""
+                        alt={`${activeTab} portfolio image 1`}
                         className="rounded-2xl object-cover w-full h-64"
                     />
                     <img
                         src={imgs[2] === "string" ? Image2.src : imgs[2].src}
-                        alt=""
+                        alt={`${activeTab} portfolio image 2`}
                         className="rounded-2xl object-cover w-full h-64"
                     />
                 </div>
                 <div className="flex flex-col gap-6 h-full">
                     <img
                         src={imgs[1] === "string" ? Image1.src : imgs[1].src}
-                        alt=""
+                        alt={`${activeTab} portfolio image 3`}
                         className="rounded-2xl object-cover w-full h-full"
                     />
                 </div>

@@ -27,14 +27,14 @@ const features = [
 
 export default function ScaleConsultSection() {
   return (
-    <section className="w-full py-20 px-2 flex flex-col items-center">
-      <h2 className="font-monument-ultrabold text-4xl max-w-4xl mx-auto mb-16 text-center tracking-wide text-black dark:text-white">
+    <section className="w-full py-20 px-2 flex flex-col items-center" role="region" aria-labelledby="scale-consult-heading">
+      <h2 id="scale-consult-heading" className="font-monument-ultrabold text-4xl max-w-4xl mx-auto mb-16 text-center tracking-wide text-black dark:text-white">
         How can SwiftScale Consult scale and help your business
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mx-auto" role="list" aria-label="Ways SwiftScale can help">
         {features.map((feature, idx) => (
-          <div key={idx} className="flex flex-col items-start text-start justify-start gap-4">
-            <div className="flex items-start justify-start max-lg:items-center max-lg:justify-center max-lg:w-full rounded-xl mb-4">
+          <div key={idx} className="flex flex-col items-start text-start justify-start gap-4" role="listitem">
+            <div className="flex items-start justify-start max-lg:items-center max-lg:justify-center max-lg:w-full rounded-xl mb-4" aria-hidden="true">
               <feature.icon className="w-16 h-16" />
             </div>
             <h3 className="font-monument-ultrabold text-2xl mb-4 text-black dark:text-white">{feature.title}</h3>

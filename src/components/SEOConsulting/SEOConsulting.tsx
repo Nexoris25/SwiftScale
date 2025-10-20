@@ -10,16 +10,17 @@ import X from '@/asset/svg/x.svg';
 
 export const SEOConsulting: React.FC = () => {
     return (
-        <section className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16">
+        <section className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16" role="region" aria-labelledby="seo-consulting-heading">
             {/* Decorative Blob */}
             <img
                 src={typeof HrBg === 'string' ? HrBg : HrBg.src}
                 alt=""
+                aria-hidden="true"
                 className="absolute w-[80%] -bottom-48 max-lg:hidden aspect-square z-0 pointer-events-none"
             />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">
-                <h1 className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
+                <h1 id="seo-consulting-heading" className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
                     Seo Consulting
                 </h1>
                 <p className="text-black dark:text-white/80 text-center mb-8">
@@ -27,12 +28,12 @@ export const SEOConsulting: React.FC = () => {
                     <br />
                     presence and drive sales to your Business.
                 </p>
-                <div className=" bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center">Get in Touch</div>
-                <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center py-5'>
-                    <Instagram className="w-12 lg:w-16 h-12 lg:h-16" />
-                    <Facebook className="w-12 lg:w-16 h-12 lg:h-16" />
-                    <Linkedin className="w-12 lg:w-16 h-12 lg:h-16" />
-                    <X className="w-12 lg:w-16 h-12 lg:h-16" />
+                <button type="button" className=" bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center" aria-label="Get in touch about SEO consulting">Get in Touch</button>
+                <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center py-5' role='group' aria-label='Social media icons'>
+                    <Instagram className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                    <Facebook className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                    <Linkedin className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                    <X className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
                 </div>
                 {/* Images */}
                 <div className="w-full flex flex-row mt-2 p-10 max-lg:px-4 justify-center items-center">

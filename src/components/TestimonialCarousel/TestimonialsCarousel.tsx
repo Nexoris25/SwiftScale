@@ -35,7 +35,7 @@ export default function TestimonialsCarousel() {
     const [active, setActive] = useState(1);
 
     return (
-        <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2">
+        <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2" role="region" aria-roledescription="carousel" aria-label="Testimonials carousel">
             <h2 className="text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
                 What They Say About Us
             </h2>
@@ -125,13 +125,15 @@ export default function TestimonialsCarousel() {
                 </button>
             </div>
             {/* Dots */}
-            <div className="flex gap-3 mt-8">
+            <div className="flex gap-3 mt-8" role="tablist" aria-label="Testimonials pagination">
                 {testimonials.map((_, idx) => (
-                    <span
+                    <button
                         key={idx}
-                        className={`w-3 h-3 rounded-full ${idx === active ? "bg-white" : "bg-white/40"
-                            } cursor-pointer`}
+                        className={`w-3 h-3 rounded-full ${idx === active ? "bg-white" : "bg-white/40"}`}
                         onClick={() => setActive(idx)}
+                        aria-label={`Go to testimonial ${idx + 1}`}
+                        role="tab"
+                        aria-selected={active === idx}
                     />
                 ))}
             </div>

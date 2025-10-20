@@ -23,7 +23,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
           <div onClick={() => navigate.push('/')} className='flex cursor-pointer items-center justify-center flex-row gap-2 text-xs'>
-            <Logo className='h-10 w-10 lg:h-14 lg:w-14' />
+            <Logo className='h-10 w-10 lg:h-14 lg:w-14' aria-hidden="true" />
             <div className='flex flex-col justify-start items-start'>
               <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>SwiftScale</div>
               <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>Consult</div>
@@ -32,17 +32,17 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         </div>
 
         {/* Desktop Navigation - Hidden on mobile */}
-        <div className='hidden lg:flex items-center justify-end flex-row flex-grow gap-10'>
+        <nav className='hidden lg:flex items-center justify-end flex-row flex-grow gap-10' aria-label='Primary'>
           <div className='font-poppins cursor-pointer my-auto'>
             <Link className='no-underline text-inherit' href="/about">About Us</Link>
           </div>
-          <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative'>
+          <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative' aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu'>
             <div className='my-auto'>Services</div>
             <div className='p-1 rounded-full'>
-              {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' /> : <CaretDownWhite className='h-6 w-6 my-auto' />}
+              {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
             </div>
             {(isDropdownOpen && !isMobileMenuOpen) && (
-              <div onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
+              <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/hr-consultation">HR Consultation</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/software-development">Software Development</Link></li>
@@ -57,9 +57,9 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             Get in Touch
           </div>
           <div onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className='cursor-pointer px-4'>
-            {theme === 'light' ? <DarkMode /> : <LightMode />}
+            {theme === 'light' ? <DarkMode aria-hidden="true" /> : <LightMode aria-hidden="true" />}
           </div>
-        </div>
+        </nav>
 
         {/* Mobile Menu Button - Visible only on mobile */}
         <div className='lg:hidden'>
@@ -67,23 +67,25 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className='p-2'
             aria-label='Toggle mobile menu'
+            aria-expanded={isMobileMenuOpen}
+            aria-controls='mobile-menu'
           >
-            {theme === 'light' ? <MenuDark className='h-8 w-8' /> : <MenuLight className='h-8 w-8' />}
+            {theme === 'light' ? <MenuDark className='h-8 w-8' aria-hidden="true" /> : <MenuLight className='h-8 w-8' aria-hidden="true" />}
           </div>
         </div>
 
         {/* Mobile Menu - Shows when menu button is clicked */}
         {isMobileMenuOpen && (
-          <div className='lg:hidden fixed top-[60px] left-0 right-0 bg-custom-white dark:bg-custom-black p-4 shadow-lg'>
+          <nav id='mobile-menu' className='lg:hidden fixed top:[60px] left-0 right-0 bg-custom-white dark:bg-custom-black p-4 shadow-lg' aria-label='Mobile Primary'>
             <div className='flex flex-col gap-6'>
               <div className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
               <div className='font-poppins cursor-pointer' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                 <div className='flex items-center gap-2'>
                   Services
-                  {theme === 'light' ? <CaretDownBlack className='h-6 w-6' /> : <CaretDownWhite className='h-6 w-6' />}
+                  {theme === 'light' ? <CaretDownBlack className='h-6 w-6' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6' aria-hidden="true" />}
                 </div>
                 {isDropdownOpen && (
-                  <ul className='mt-2 ml-4 list-none flex flex-col gap-4'>
+                  <ul className='mt-2 ml-4 list-none flex flex-col gap-4' role='menu'>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/hr-consultation">HR Consultation</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/software-development">Software Development</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/design">Design</Link></li>
@@ -100,11 +102,11 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                   onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
                   className='cursor-pointer'
                 >
-                  {theme === 'light' ? <DarkMode /> : <LightMode />}
+                  {theme === 'light' ? <DarkMode aria-hidden="true" /> : <LightMode aria-hidden="true" />}
                 </div>
               </div>
             </div>
-          </div>
+          </nav>
         )}
       </div>
     </div>

@@ -3,11 +3,11 @@ import AboutImage from '@/asset/image/about-image-1.png';
 
 export default function AboutIntroSection() {
   return (
-    <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-16 gap-10">
+    <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-16 gap-10" role="region" aria-labelledby="about-intro-heading">
       {/* Left Content */}
       <div className="flex-1 flex flex-col items-start justify-center">
         <h4 className="font-poppins text-lg text-black dark:text-white mb-2">About Swiftscale Consult</h4>
-        <h1 className="font-monument-ultrabold text-3xl md:text-5xl text-black dark:text-white mb-6 leading-tight">
+        <h1 id="about-intro-heading" className="font-monument-ultrabold text-3xl md:text-5xl text-black dark:text-white mb-6 leading-tight">
           Propelling Small-scale Businesses to New Heights
         </h1>
         <p className="font-poppins text-xl text-black dark:text-white mb-8 max-w-xl">
@@ -19,7 +19,7 @@ export default function AboutIntroSection() {
       <div className="flex-1 flex flex-row items-center justify-end">
         <img
           src={typeof AboutImage === "string" ? AboutImage : AboutImage.src}
-          alt=""
+          alt="Team collaborating in office"
           className="w-full max-w-lg aspect-video rounded-md object-cover"
         />
       </div>

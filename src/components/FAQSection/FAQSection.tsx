@@ -29,11 +29,11 @@ export default function FAQSection() {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
 
     return (
-        <section className="w-full py-20 px-2 flex flex-col items-center">
+        <section className="w-full py-20 px-2 flex flex-col items-center" role="region" aria-labelledby="faq-heading">
             <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left Side */}
                 <div>
-                    <h2 className="font-monument-ultrabold text-4xl mb-8 leading-tight text-black dark:text-white">
+                    <h2 id="faq-heading" className="font-monument-ultrabold text-4xl mb-8 leading-tight text-black dark:text-white">
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
                     <p className="font-poppins text-xl mb-8 text-black dark:text-white">
@@ -44,12 +44,14 @@ export default function FAQSection() {
                     </button>
                 </div>
                 {/* Right Side */}
-                <div className="flex flex-col gap-6 justify-center">
+                <div className="flex flex-col gap-6 justify-center" role="list" aria-label="Frequently asked questions">
                     {faqs.map((faq, idx) => (
-                        <div key={idx} className="pb-4 border-b border-solid border-t-0 border-l-0 border-r-0 border-black dark:border-white">
+                        <div key={idx} className="pb-4 border-b border-solid border-t-0 border-l-0 border-r-0 border-black dark:border-white" role="listitem">
                             <button
                                 className="w-full flex bg-transparent cursor-pointer border-none items-center justify-between text-left"
                                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                                aria-expanded={openIdx === idx}
+                                aria-controls={`faq-panel-${idx}`}
                             >
                                 <span className="font-monument-regular text-lg text-black dark:text-white">{faq.question}</span>
                                 <span className="text-2xl font-bold text-black dark:text-white">
@@ -57,7 +59,7 @@ export default function FAQSection() {
                                 </span>
                             </button>
                             {openIdx === idx && (
-                                <div className="mt-4 font-poppins text-base bg-black/5 dark:bg-black/30 p-10 text-black dark:text-white">
+                                <div id={`faq-panel-${idx}`} role="region" aria-label={`Answer to: ${faq.question}`} className="mt-4 font-poppins text-base bg-black/5 dark:bg-black/30 p-10 text-black dark:text-white">
                                     {faq.answer}
                                 </div>
                             )}
