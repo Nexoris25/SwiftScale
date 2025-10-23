@@ -20,7 +20,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
 
   return (
     <div id="header-top" className={`w-full fixed z-20 top-0 right-0 bg-custom-white dark:bg-custom-black text-black dark:text-white flex flex-row items-center justify-center ${className}`} style={style}>
-      <div className={`container mx-auto flex flex-grow flex-row items-center justify-between py-4 px-4`}>
+      <div className={`relative container mx-auto flex flex-grow flex-row items-center justify-between py-4 px-4`}>
         <JsonLd
           id="ld-org-website"
           data={[
