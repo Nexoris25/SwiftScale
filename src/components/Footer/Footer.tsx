@@ -75,7 +75,7 @@ export function Footer(props: IFooterProps) {
             </div>
 
             {/* Copyright Section */}
-            <div className='w-full flex text-black flex-row h-14 justify-center items-center px-4 lg:px-0'>
+            <div className='w-full flex dark:text-black text-white dark:bg-custom-white bg-custom-black flex-row h-14 justify-center items-center px-4 lg:px-0'>
                 <div className='font-poppins font-normal max-lg:mx-auto text-sm lg:text-xl text-center'>
                     © {year} SwiftScale. All Rights Reserved.
                 </div>
