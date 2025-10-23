@@ -11,10 +11,10 @@ export const ImpactServices: React.FC = () => (
         "@type": "ItemList",
         name: "Design Service Categories",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "UI/UX Design", url: "https://swiftscale.com.ng/services/design#uiux" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Graphics Design", url: "https://swiftscale.com.ng/services/design#graphics" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "3D Design", url: "https://swiftscale.com.ng/services/design#3d" } },
-          { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Branding", url: "https://swiftscale.com.ng/services/design#branding" } }
+          { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "UI/UX Design", url: "https://swiftscale.com.ng/design#uiux" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Graphics Design", url: "https://swiftscale.com.ng/design#graphics" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "3D Design", url: "https://swiftscale.com.ng/design#3d" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Branding", url: "https://swiftscale.com.ng/design#branding" } }
         ]
       }}
     />

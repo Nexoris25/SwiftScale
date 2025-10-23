@@ -15,12 +15,12 @@ export const SEOGrowthServices: React.FC = () => (
         "@type": "ItemList",
         name: "Growth and Content Services",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "Content Writing", url: "https://swiftscale.com.ng/services/seo-consultations#content-writing" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "SEO Writing", url: "https://swiftscale.com.ng/services/seo-consultations#seo-writing" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "Article Writing", url: "https://swiftscale.com.ng/services/seo-consultations#article-writing" } },
-          { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Ghostwriting", url: "https://swiftscale.com.ng/services/seo-consultations#ghostwriting" } },
-          { "@type": "ListItem", position: 5, item: { "@type": "Service", name: "Writer Outsourcing", url: "https://swiftscale.com.ng/services/seo-consultations#writer-outsourcing" } },
-          { "@type": "ListItem", position: 6, item: { "@type": "Service", name: "Content Team Management", url: "https://swiftscale.com.ng/services/seo-consultations#content-team-management" } }
+          { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "Content Writing", url: "https://swiftscale.com.ng/seo-consultations#content-writing" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "SEO Writing", url: "https://swiftscale.com.ng/seo-consultations#seo-writing" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "Article Writing", url: "https://swiftscale.com.ng/seo-consultations#article-writing" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Ghostwriting", url: "https://swiftscale.com.ng/seo-consultations#ghostwriting" } },
+          { "@type": "ListItem", position: 5, item: { "@type": "Service", name: "Writer Outsourcing", url: "https://swiftscale.com.ng/seo-consultations#writer-outsourcing" } },
+          { "@type": "ListItem", position: 6, item: { "@type": "Service", name: "Content Team Management", url: "https://swiftscale.com.ng/seo-consultations#content-team-management" } }
         ]
       }}
     />

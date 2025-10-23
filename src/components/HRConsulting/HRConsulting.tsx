@@ -25,7 +25,7 @@ export const HRConsulting: React.FC = () => {
                 name: "HR Consulting",
                 serviceType: "HR Consulting",
                 description: "Strategic HR advisory including talent acquisition, performance management, and compliance.",
-                url: "https://swiftscale.com.ng/services/hr-consultation",
+                url: "https://swiftscale.com.ng/hr-consultation",
                 provider: { "@id": "https://swiftscale.com.ng/#organization" },
                 areaServed: [
                   { "@type": "Country", name: "United States" },

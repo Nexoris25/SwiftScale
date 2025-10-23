@@ -23,7 +23,7 @@ export const SEOConsulting: React.FC = () => {
                         name: "SEO Consulting",
                         serviceType: "SEO Consulting",
                         description: "Consulting to improve search visibility, traffic, and conversions through SEO strategy and content.",
-                        url: "https://swiftscale.com.ng/services/seo-consultations",
+                        url: "https://swiftscale.com.ng/seo-consultations",
                         provider: { "@id": "https://swiftscale.com.ng/#organization" },
                         areaServed: "Worldwide",
                         serviceAudience: { "@type": "Audience", audienceType: "Businesses and startups" }
@@ -40,7 +40,7 @@ export const SEOConsulting: React.FC = () => {
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">
                 <h1 id="seo-consulting-heading" className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
-                    Seo Consulting
+                    SEO Consulting
                 </h1>
                 <p className="text-black dark:text-white/80 text-center mb-8">
                     Have a consultation with us, Let us know how we can help you boost your online

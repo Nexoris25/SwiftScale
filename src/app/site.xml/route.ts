@@ -7,12 +7,12 @@ export async function GET() {
     '/',
     '/about',
     '/contact',
-    '/services',
-    '/services/software-development',
-    '/services/design',
-    '/services/legal-services',
-    '/services/hr-consultation',
-    '/services/seo-consultations',
+    '',
+    '/software-development',
+    '/design',
+    '/legal-services',
+    '/hr-consultation',
+    '/seo-consultations',
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>

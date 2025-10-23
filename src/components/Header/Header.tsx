@@ -45,8 +45,8 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
           <Link href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
             <Logo className='h-10 w-10 lg:h-14 lg:w-14' aria-hidden="true" />
             <div className='flex flex-col justify-start items-start'>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>SwiftScale</div>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>Consult</div>
+              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.2] tracking-wide w-full'>SwiftScale</div>
+              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.1] tracking-wide w-full'>Consult</div>
             </div>
           </Link>
         </div>
@@ -64,11 +64,11 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/hr-consultation">HR Consultation</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/software-development">Software Development</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/design">Design</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/legal-services">Legal Services</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/seo-consultations">SEO Consultations</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultation</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/seo-consultations">SEO Consultations</Link></li>
                 </ul>
               </div>
             )}
@@ -106,11 +106,11 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                 </div>
                 {isDropdownOpen && (
                   <ul className='mt-2 ml-4 list-none flex flex-col gap-4' role='menu'>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/hr-consultation">HR Consultation</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/software-development">Software Development</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/design">Design</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/legal-services">Legal Services</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/services/seo-consultations">SEO Consultations</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultation</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
+                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/seo-consultations">SEO Consultations</Link></li>
                   </ul>
                 )}
               </div>

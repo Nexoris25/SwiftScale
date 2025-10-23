@@ -1,27 +1,26 @@
 "use server";
 import JsonLd from "@/components/SEO/JsonLd";
-import { DesignServices } from "@/components/DesignServices/DesignServices";
 import FAQSection from "@/components/FAQSection/FAQSection";
-import { ImpactServices } from "@/components/ImpactServices/ImpactServices";
+import { LegalServices } from "@/components/LegalServices/LegalServices";
 import ScaleConsultSection from "@/components/ScaleConsultSection/ScaleConsultSection";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Design Services | SwiftScale",
-        description: "Brand identity, UI/UX, and graphic design services that drive recognition and conversions.",
-        alternates: { canonical: "https://swiftscale.com.ng/services/design" },
+        title: "Legal Services | SwiftScale",
+        description: "Business formation, contracts, compliance, and corporate legal support.",
+        alternates: { canonical: "https://swiftscale.com.ng/legal-services" },
         openGraph: {
             type: "article",
-            url: "https://swiftscale.com.ng/services/design",
+            url: "https://swiftscale.com.ng/legal-services",
             siteName: "SwiftScale Consult",
-            title: "Design Services | SwiftScale",
-            description: "Brand identity, UI/UX, and graphics for standout products.",
+            title: "Legal Services | SwiftScale",
+            description: "Contracts, compliance, and ongoing legal support.",
         },
         twitter: {
-            card: "summary_large_image",
-            title: "Design Services | SwiftScale",
-            description: "Memorable, conversion-focused design services.",
+            card: "summary",
+            title: "Legal Services | SwiftScale",
+            description: "Simple, reliable legal support for your business.",
         },
     }
 };
@@ -32,21 +31,21 @@ export default async function Page() {
         <div className="bg-white text-black dark:bg-custom-black dark:text-white flex flex-col items-center justify-center w-screen py-2">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
                 <JsonLd
-                    id="ld-breadcrumbs-design"
+                    id="ld-breadcrumbs-legal"
                     data={{
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
                             { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
-                            { "@type": "ListItem", position: 3, name: "Design", item: "https://swiftscale.com.ng/services/design" }
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng" },
+                            { "@type": "ListItem", position: 3, name: "Legal Services", item: "https://swiftscale.com.ng/legal-services" }
                         ]
                     }}
                 />
-                <DesignServices />
-                <ImpactServices />
+                <LegalServices />
                 {/* Scale & Consult Section */}
                 <ScaleConsultSection />
+
                 {/* FAQ Section */}
                 <FAQSection />
             </div>

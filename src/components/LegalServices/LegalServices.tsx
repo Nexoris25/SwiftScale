@@ -51,7 +51,7 @@ export const LegalServices: React.FC = () => {
           name: "Legal Services",
           serviceType: "Business and Corporate Legal Services",
           description: "Business formation, contracts, compliance, and ongoing corporate legal support.",
-          url: "https://swiftscale.com.ng/services/legal-services",
+          url: "https://swiftscale.com.ng/legal-services",
           provider: { "@id": "https://swiftscale.com.ng/#organization" },
           areaServed: [
             { "@type": "Country", name: "United States" },

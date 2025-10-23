@@ -41,6 +41,7 @@ export default function RootLayout({ children, ...props }: PropsWithChildren) {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
+            <meta charSet="UTF-8" />
             <head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -90,10 +91,10 @@ export default function RootLayout({ children, ...props }: PropsWithChildren) {
                             ]}
                         />
                         <Header />
-                        <div id="main-content" tabIndex={-1} className="outline-none w-screen h-screen overflow-y-auto  pt-14">
+                        <main id="main-content" tabIndex={-1} className="outline-none w-screen h-screen overflow-y-auto  pt-14">
                             <div className="w-screen overflow-x-hidden h-auto block py-10">{children}</div>
                             <Footer />
-                        </div>
+                        </main>
                     </div>
                 </ThemeProvider>
             </body>

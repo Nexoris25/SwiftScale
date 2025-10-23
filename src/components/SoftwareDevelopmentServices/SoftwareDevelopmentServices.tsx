@@ -36,7 +36,7 @@ export const SoftwareDevelopmentServices: React.FC = () => {
                         name: "Software Development",
                         serviceType: "Custom software, web and mobile app development",
                         description: "End-to-end product development for web and mobile: discovery, design, development, QA, and launch.",
-                        url: "https://swiftscale.com.ng/services/software-development",
+                        url: "https://swiftscale.com.ng/software-development",
                         provider: { "@id": "https://swiftscale.com.ng/#organization" },
                         areaServed: [
                             { "@type": "Country", name: "United States" },

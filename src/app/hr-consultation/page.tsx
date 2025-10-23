@@ -1,26 +1,26 @@
 "use server";
 import JsonLd from "@/components/SEO/JsonLd";
 import FAQSection from "@/components/FAQSection/FAQSection";
-import { LegalServices } from "@/components/LegalServices/LegalServices";
+import { HRConsulting } from "@/components/HRConsulting/HRConsulting";
 import ScaleConsultSection from "@/components/ScaleConsultSection/ScaleConsultSection";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Legal Services | SwiftScale",
-        description: "Business formation, contracts, compliance, and corporate legal support.",
-        alternates: { canonical: "https://swiftscale.com.ng/services/legal-services" },
+        title: "HR Consultation Services | SwiftScale",
+        description: "Strategic HR advisory: talent acquisition, performance management, and compliance.",
+        alternates: { canonical: "https://swiftscale.com.ng/hr-consultation" },
         openGraph: {
             type: "article",
-            url: "https://swiftscale.com.ng/services/legal-services",
+            url: "https://swiftscale.com.ng/hr-consultation",
             siteName: "SwiftScale Consult",
-            title: "Legal Services | SwiftScale",
-            description: "Contracts, compliance, and ongoing legal support.",
+            title: "HR Consultation Services | SwiftScale",
+            description: "Tailored HR strategies for teams and organizations.",
         },
         twitter: {
             card: "summary",
-            title: "Legal Services | SwiftScale",
-            description: "Simple, reliable legal support for your business.",
+            title: "HR Consultation Services | SwiftScale",
+            description: "HR support that aligns people, culture, and business goals.",
         },
     }
 };
@@ -31,21 +31,20 @@ export default async function Page() {
         <div className="bg-white text-black dark:bg-custom-black dark:text-white flex flex-col items-center justify-center w-screen py-2">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
                 <JsonLd
-                    id="ld-breadcrumbs-legal"
+                    id="ld-breadcrumbs-hr"
                     data={{
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
                             { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
-                            { "@type": "ListItem", position: 3, name: "Legal Services", item: "https://swiftscale.com.ng/services/legal-services" }
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng" },
+                            { "@type": "ListItem", position: 3, name: "HR Consultation", item: "https://swiftscale.com.ng/hr-consultation" }
                         ]
                     }}
                 />
-                <LegalServices />
+                <HRConsulting />
                 {/* Scale & Consult Section */}
                 <ScaleConsultSection />
-
                 {/* FAQ Section */}
                 <FAQSection />
             </div>

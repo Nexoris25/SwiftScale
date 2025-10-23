@@ -1,26 +1,27 @@
 "use server";
 import JsonLd from "@/components/SEO/JsonLd";
+import { DesignServices } from "@/components/DesignServices/DesignServices";
 import FAQSection from "@/components/FAQSection/FAQSection";
-import { HRConsulting } from "@/components/HRConsulting/HRConsulting";
+import { ImpactServices } from "@/components/ImpactServices/ImpactServices";
 import ScaleConsultSection from "@/components/ScaleConsultSection/ScaleConsultSection";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "HR Consultation Services | SwiftScale",
-        description: "Strategic HR advisory: talent acquisition, performance management, and compliance.",
-        alternates: { canonical: "https://swiftscale.com.ng/services/hr-consultation" },
+        title: "Design Services | SwiftScale",
+        description: "Brand identity, UI/UX, and graphic design services that drive recognition and conversions.",
+        alternates: { canonical: "https://swiftscale.com.ng/design" },
         openGraph: {
             type: "article",
-            url: "https://swiftscale.com.ng/services/hr-consultation",
+            url: "https://swiftscale.com.ng/design",
             siteName: "SwiftScale Consult",
-            title: "HR Consultation Services | SwiftScale",
-            description: "Tailored HR strategies for teams and organizations.",
+            title: "Design Services | SwiftScale",
+            description: "Brand identity, UI/UX, and graphics for standout products.",
         },
         twitter: {
-            card: "summary",
-            title: "HR Consultation Services | SwiftScale",
-            description: "HR support that aligns people, culture, and business goals.",
+            card: "summary_large_image",
+            title: "Design Services | SwiftScale",
+            description: "Memorable, conversion-focused design services.",
         },
     }
 };
@@ -31,18 +32,19 @@ export default async function Page() {
         <div className="bg-white text-black dark:bg-custom-black dark:text-white flex flex-col items-center justify-center w-screen py-2">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
                 <JsonLd
-                    id="ld-breadcrumbs-hr"
+                    id="ld-breadcrumbs-design"
                     data={{
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
                             { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
-                            { "@type": "ListItem", position: 3, name: "HR Consultation", item: "https://swiftscale.com.ng/services/hr-consultation" }
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng" },
+                            { "@type": "ListItem", position: 3, name: "Design", item: "https://swiftscale.com.ng/design" }
                         ]
                     }}
                 />
-                <HRConsulting />
+                <DesignServices />
+                <ImpactServices />
                 {/* Scale & Consult Section */}
                 <ScaleConsultSection />
                 {/* FAQ Section */}

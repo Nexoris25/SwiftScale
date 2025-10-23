@@ -27,7 +27,7 @@ export const DesignServices: React.FC = () => {
                     name: "Design Services",
                     serviceType: "Branding, UI/UX, and Graphic Design",
                     description: "Brand identity, UI/UX, and graphic design services for memorable, conversion‑focused products.",
-                    url: "https://swiftscale.com.ng/services/design",
+                    url: "https://swiftscale.com.ng/design",
                     provider: { "@id": "https://swiftscale.com.ng/#organization" },
                     areaServed: [
                         { "@type": "Country", name: "United States" },
