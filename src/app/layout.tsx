@@ -1,4 +1,4 @@
-"use client";
+"use server";
 import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
@@ -32,7 +32,7 @@ const monumentExtended = localFont({
     display: 'swap',
 });
 
-export default function RootLayout({ children, ...props }: PropsWithChildren) {
+export default async function RootLayout({ children, ...props }: PropsWithChildren) {
     const origin = 'https://swiftscale.com.ng';
 
     return (

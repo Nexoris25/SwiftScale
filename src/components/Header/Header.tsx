@@ -45,8 +45,8 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
           <Link href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
             <Logo className='h-10 w-10 lg:h-14 lg:w-14' aria-hidden="true" />
             <div className='flex flex-col justify-start items-start'>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.2] tracking-wide w-full'>SwiftScale</div>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.1] tracking-wide w-full'>Consult</div>
+              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[0.9] tracking-wide w-full'>SwiftScale</div>
+              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.0] tracking-wide w-full'>Consult</div>
             </div>
           </Link>
         </div>
