@@ -96,8 +96,8 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
 
         {/* Mobile Menu - Shows when menu button is clicked */}
         {isMobileMenuOpen && (
-          <nav id='mobile-menu' className='lg:hidden fixed top:[60px] left-0 right-0 bg-custom-white dark:bg-custom-black p-4 shadow-lg' aria-label='Mobile Primary'>
-            <div className='flex flex-col gap-6'>
+          <nav id='mobile-menu' className='lg:hidden fixed top-[60px] left-0 right-0 bg-custom-white dark:bg-custom-black p-4 shadow-lg' aria-label='Mobile Primary'>
+            <div className='flex flex-col gap-6 h-auto py-5'>
               <div className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
               <div className='font-poppins cursor-pointer' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                 <div className='flex items-center gap-2'>
