@@ -9,10 +9,10 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "Legal Services | SwiftScale",
         description: "Business formation, contracts, compliance, and corporate legal support.",
-        alternates: { canonical: "https://example.com/services/legal-services" },
+        alternates: { canonical: "https://swiftscale.com.ng/services/legal-services" },
         openGraph: {
             type: "article",
-            url: "https://example.com/services/legal-services",
+            url: "https://swiftscale.com.ng/services/legal-services",
             siteName: "SwiftScale Consult",
             title: "Legal Services | SwiftScale",
             description: "Contracts, compliance, and ongoing legal support.",
@@ -36,9 +36,9 @@ export default async function Page() {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
-                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://example.com/services" },
-                            { "@type": "ListItem", position: 3, name: "Legal Services", item: "https://example.com/services/legal-services" }
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
+                            { "@type": "ListItem", position: 3, name: "Legal Services", item: "https://swiftscale.com.ng/services/legal-services" }
                         ]
                     }}
                 />

@@ -10,10 +10,10 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "SEO Consultations | SwiftScale",
         description: "Consulting to improve search visibility, traffic, and conversions through SEO strategy and content.",
-        alternates: { canonical: "https://example.com/services/seo-consultations" },
+        alternates: { canonical: "https://swiftscale.com.ng/services/seo-consultations" },
         openGraph: {
             type: "article",
-            url: "https://example.com/services/seo-consultations",
+            url: "https://swiftscale.com.ng/services/seo-consultations",
             siteName: "SwiftScale Consult",
             title: "SEO Consultations | SwiftScale",
             description: "SEO strategy, content, and growth services.",
@@ -37,9 +37,9 @@ export default async function Page() {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
-                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://example.com/services" },
-                            { "@type": "ListItem", position: 3, name: "SEO Consultations", item: "https://example.com/services/seo-consultations" }
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
+                            { "@type": "ListItem", position: 3, name: "SEO Consultations", item: "https://swiftscale.com.ng/services/seo-consultations" }
                         ]
                     }}
                 />

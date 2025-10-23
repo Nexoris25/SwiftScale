@@ -9,10 +9,10 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "HR Consultation Services | SwiftScale",
         description: "Strategic HR advisory: talent acquisition, performance management, and compliance.",
-        alternates: { canonical: "https://example.com/services/hr-consultation" },
+        alternates: { canonical: "https://swiftscale.com.ng/services/hr-consultation" },
         openGraph: {
             type: "article",
-            url: "https://example.com/services/hr-consultation",
+            url: "https://swiftscale.com.ng/services/hr-consultation",
             siteName: "SwiftScale Consult",
             title: "HR Consultation Services | SwiftScale",
             description: "Tailored HR strategies for teams and organizations.",
@@ -36,9 +36,9 @@ export default async function Page() {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
-                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://example.com/services" },
-                            { "@type": "ListItem", position: 3, name: "HR Consultation", item: "https://example.com/services/hr-consultation" }
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
+                            { "@type": "ListItem", position: 3, name: "HR Consultation", item: "https://swiftscale.com.ng/services/hr-consultation" }
                         ]
                     }}
                 />

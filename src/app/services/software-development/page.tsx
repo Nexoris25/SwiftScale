@@ -11,10 +11,10 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "Software Development Services | SwiftScale",
         description: "Custom software, web and mobile app development: discovery, design, engineering, QA, and launch.",
-        alternates: { canonical: "https://example.com/services/software-development" },
+        alternates: { canonical: "https://swiftscale.com.ng/services/software-development" },
         openGraph: {
             type: "article",
-            url: "https://example.com/services/software-development",
+            url: "https://swiftscale.com.ng/services/software-development",
             siteName: "SwiftScale Consult",
             title: "Software Development Services | SwiftScale",
             description: "End-to-end product development for web and mobile.",
@@ -38,9 +38,9 @@ export default async function Page() {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
-                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
-                            { "@type": "ListItem", position: 2, name: "Services", item: "https://example.com/services" },
-                            { "@type": "ListItem", position: 3, name: "Software Development", item: "https://example.com/services/software-development" }
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
+                            { "@type": "ListItem", position: 2, name: "Services", item: "https://swiftscale.com.ng/services" },
+                            { "@type": "ListItem", position: 3, name: "Software Development", item: "https://swiftscale.com.ng/services/software-development" }
                         ]
                     }}
                 />

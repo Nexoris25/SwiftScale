@@ -10,9 +10,11 @@ import Cac from '@/asset/svg/cac.svg';
 import Son from '@/asset/svg/son.svg';
 import Nda from '@/asset/svg/nda.svg';
 import JsonLd from "@/components/SEO/JsonLd";
+import { useRouter } from "next/navigation";
 
 
 export const LegalServices: React.FC = () => {
+  const navigate = useRouter();
   const services = [
     {
       icon: <Cac />,
@@ -49,8 +51,8 @@ export const LegalServices: React.FC = () => {
           name: "Legal Services",
           serviceType: "Business and Corporate Legal Services",
           description: "Business formation, contracts, compliance, and ongoing corporate legal support.",
-          url: "https://example.com/services/legal-services",
-          provider: { "@id": "https://example.com/#organization" },
+          url: "https://swiftscale.com.ng/services/legal-services",
+          provider: { "@id": "https://swiftscale.com.ng/#organization" },
           areaServed: [
             { "@type": "Country", name: "United States" },
             { "@type": "Country", name: "United Kingdom" },
@@ -78,16 +80,17 @@ export const LegalServices: React.FC = () => {
         </p>
         <button
           type="button"
+          onClick={()=> navigate.push('/contact')}
           className=" bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center"
           aria-label="Get in touch with SwiftScale legal services team"
         >
           Get in Touch
         </button>
         <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center py-5' role='group' aria-label='Follow us on social media'>
-          <Instagram className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-          <Facebook className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-          <Linkedin className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-          <X className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <Instagram onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <Facebook onClick={() => navigate.push('https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <Linkedin onClick={() => navigate.push('https://www.linkedin.com/company/swiftscale-consult')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <X onClick={() => navigate.push('https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
         </div>
         {/* Images */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-2 p-10 max-lg:px-4" role="list" aria-label="List of legal services">

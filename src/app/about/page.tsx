@@ -14,10 +14,10 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "About SwiftScale Consult",
         description: "Learn about SwiftScale—our mission, values, and the team helping organizations scale with people, technology, and identity.",
-        alternates: { canonical: "https://example.com/about" },
+        alternates: { canonical: "https://swiftscale.com.ng/about" },
         openGraph: {
             type: "article",
-            url: "https://example.com/about",
+            url: "https://swiftscale.com.ng/about",
             siteName: "SwiftScale Consult",
             title: "About SwiftScale Consult",
             description: "Learn about SwiftScale—our mission, values, and the team helping organizations scale.",
@@ -41,8 +41,8 @@ export default async function Page() {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         itemListElement: [
-                            { "@type": "ListItem", position: 1, name: "Home", item: "https://example.com/" },
-                            { "@type": "ListItem", position: 2, name: "About", item: "https://example.com/about" }
+                            { "@type": "ListItem", position: 1, name: "Home", item: "https://swiftscale.com.ng/" },
+                            { "@type": "ListItem", position: 2, name: "About", item: "https://swiftscale.com.ng/about" }
                         ]
                     }}
                 />

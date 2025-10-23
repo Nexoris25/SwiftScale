@@ -30,10 +30,10 @@ export function Footer(props: IFooterProps) {
                                 </div>
                             </div>
                             <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center' role='group' aria-label='Follow us on social media'>
-                                <Instagram className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                                <Facebook className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                                <Linkedin className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                                <X className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <Instagram onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <Facebook onClick={() => navigate.push('https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <Linkedin onClick={() => navigate.push('https://www.linkedin.com/company/swiftscale-consult')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <X onClick={() => navigate.push('https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
                             </div>
                         </div>
                     </div>

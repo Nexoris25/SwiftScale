@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import JsonLd from "@/components/SEO/JsonLd";
+import { useRouter } from "next/navigation";
 
 export default function ContactFormSection() {
+  const navigate = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,11 +17,65 @@ export default function ContactFormSection() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+
+  const formEndpoint = "https://formsubmit.co/ajax/info@swiftscale.com.ng";
+
+  const [status, setStatus] = React.useState({ loading: false, error: false, success: false });
+
+  const contactInfo = {
+    email: "info@swiftscale.com.ng",
+    phone: "+2347037428518",
+    brandName: "SwiftScale"
   };
+
+  const autoResponseMessage = `
+  <div style="font-family: Arial, sans-serif; color: #333;">
+    <h2 style="color: #7c3c8e;">Thank you for your message!</h2>
+    <p>
+      Thank you for reaching out to <strong>${contactInfo.brandName}</strong>!
+      We will get back to you within the next <strong>48 hours</strong> from email:
+      <a href="mailto:${contactInfo.email}" style="color: #7c3c8e;">${contactInfo.email}</a>.
+    </p>
+    <p>
+      If no response is received, please send another message or call/text this number:
+      <a href="tel:${contactInfo.phone}" style="color: #7c3c8e;">${contactInfo.phone}</a>.
+    </p>
+    <p style="margin-top: 20px;">Thank you again!</p>
+  </div>
+  `;
+
+  const handleSubmit = React.useCallback(async (e: any) => {
+    e.preventDefault();
+
+    setStatus({ loading: true, error: false, success: false });
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          _captcha: false,
+          _autoresponse: autoResponseMessage
+        }),
+      });
+
+      if (response.ok) {
+        setStatus({ loading: false, error: false, success: true });
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus({ loading: false, error: true, success: false });
+      }
+    } catch (error) {
+      console.log(error)
+      setStatus({ loading: false, error: true, success: false });
+    }
+  }, [autoResponseMessage, formData]);
 
   return (
     <section className="w-full bg-custom-white dark:bg-custom-black py-20 px-4 flex flex-col items-center" role="region" aria-labelledby="contact-form-heading">
@@ -126,10 +182,12 @@ export default function ContactFormSection() {
             </p>
             <button
               type="submit"
+              onClick={() => handleSubmit}
+              disabled={status.loading}
               className="bg-[#6A01E1] text-white font-poppins px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300"
               aria-label="Submit contact form"
             >
-              Get in Touch
+              {status.loading ? "Sending..." : "Get in Touch"}
             </button>
           </form>
         </div>

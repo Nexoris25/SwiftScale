@@ -33,7 +33,7 @@ const monumentExtended = localFont({
 });
 
 export default function RootLayout({ children, ...props }: PropsWithChildren) {
-    const origin = 'https://example.com';
+    const origin = 'https://swiftscale.com.ng';
 
     return (
         <html lang="en">

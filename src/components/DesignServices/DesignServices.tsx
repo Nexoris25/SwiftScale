@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { use } from "react";
 import DImage2 from '@/asset/image/design-service-2.jpg';
 import DImage3 from '@/asset/image/design-service-3.jpg';
 import Instagram from '@/asset/svg/instagram.svg';
@@ -8,9 +8,11 @@ import Linkedin from '@/asset/svg/linkedin.svg';
 import HrBg from '@/asset/image/hr-consulting-bg-purple.png';
 import X from '@/asset/svg/x.svg';
 import JsonLd from "@/components/SEO/JsonLd";
+import { useRouter } from "next/navigation";
 
 
 export const DesignServices: React.FC = () => {
+    const navigate = useRouter();
     return (
         <section
             className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16"
@@ -25,8 +27,8 @@ export const DesignServices: React.FC = () => {
                     name: "Design Services",
                     serviceType: "Branding, UI/UX, and Graphic Design",
                     description: "Brand identity, UI/UX, and graphic design services for memorable, conversion‑focused products.",
-                    url: "https://example.com/services/design",
-                    provider: { "@id": "https://example.com/#organization" },
+                    url: "https://swiftscale.com.ng/services/design",
+                    provider: { "@id": "https://swiftscale.com.ng/#organization" },
                     areaServed: [
                         { "@type": "Country", name: "United States" },
                         { "@type": "Country", name: "United Kingdom" },
@@ -60,10 +62,10 @@ export const DesignServices: React.FC = () => {
                     Get in Touch
                 </button>
                 <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center py-5'>
-                    <Instagram aria-hidden="true" className="w-12 lg:w-16 h-12 lg:h-16" />
-                    <Facebook aria-hidden="true" className="w-12 lg:w-16 h-12 lg:h-16" />
-                    <Linkedin aria-hidden="true" className="w-12 lg:w-16 h-12 lg:h-16" />
-                    <X aria-hidden="true" className="w-12 lg:w-16 h-12 lg:h-16" />
+                      <Instagram onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <Facebook onClick={() => navigate.push('https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <Linkedin onClick={() => navigate.push('https://www.linkedin.com/company/swiftscale-consult')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+          <X onClick={() => navigate.push('https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
                 </div>
                 {/* Images */}
                 <div className="flex lg:grid max-lg:hidden lg:grid-cols-4 gap-10 mt-2 p-10">

@@ -27,15 +27,15 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             {
               "@context": "https://schema.org",
               "@type": "Organization",
-              "@id": "https://example.com/#organization",
+              "@id": "https://swiftscale.com.ng/#organization",
               name: "SwiftScale",
-              url: "https://example.com/"
+              url: "https://swiftscale.com.ng/"
             },
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "@id": "https://example.com/#website",
-              url: "https://example.com/",
+              "@id": "https://swiftscale.com.ng/#website",
+              url: "https://swiftscale.com.ng/",
               name: "SwiftScale"
             }
           ]}

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 // Simple sitemap-like XML. For production, consider adding <lastmod> and dynamic URL discovery.
 export async function GET() {
-  const baseUrl = 'https://example.com';
+  const baseUrl = 'https://swiftscale.com.ng';
   const urls = [
     '/',
     '/about',
