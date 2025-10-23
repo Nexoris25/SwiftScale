@@ -16,8 +16,8 @@ export function Footer(props: IFooterProps) {
     const year = new Date().getFullYear()
     const navigate = useRouter();
     return (
-        <footer className='w-full bg-custom-white flex flex-col items-start justify-center' role="contentinfo" aria-label="Footer">
-            <div className='w-full flex bg-[#6A01E1] text-white py-8 lg:py-14 px-4 lg:px-0'>
+        <footer className='w-screen bg-custom-white flex flex-col items-start justify-center' role="contentinfo" aria-label="Footer">
+            <div className='w-screen flex bg-[#6A01E1] text-white py-8 lg:py-14 px-4 lg:px-0'>
                 <div className='container mx-auto flex flex-col lg:flex-row flex-grow gap-8 lg:gap-0 px-4 py-4'>
                     {/* Logo and Social Media Section */}
                     <div className='flex flex-col items-start justify-start w-full lg:w-5/12'>

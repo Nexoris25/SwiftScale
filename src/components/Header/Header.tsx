@@ -105,7 +105,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                   {theme === 'light' ? <CaretDownBlack className='h-6 w-6' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6' aria-hidden="true" />}
                 </div>
                 {isDropdownOpen && (
-                  <ul className='mt-2 ml-4 list-none flex flex-col gap-4' role='menu'>
+                  <ul className='mt-2 ml-4 list-none flex flex-col gap-5 py-5' role='menu'>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultation</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>

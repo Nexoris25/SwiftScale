@@ -43,7 +43,7 @@ function LandingHero(props: ILandingHeroProps) {
                 </div>
             </div>
             <div className="w-full flex justify-center items-center py-5">
-                <HeroLanding className="w-full h-auto" />
+                <HeroLanding className="w-full h-auto aspect-video" />
             </div>
             <div className="w-full flex max-lg:flex-wrap max-lg:grid max-lg:grid-cols-3 justify-between items-center py-5">
                 <div className="mx-auto"><Herbary className="max-lg:w-20" /></div>
