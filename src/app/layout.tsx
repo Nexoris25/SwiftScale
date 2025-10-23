@@ -52,7 +52,7 @@ export default async function RootLayout({ children, ...props }: PropsWithChildr
                 <meta name="theme-color" content="#222529" media="(prefers-color-scheme: dark)" />
             </head>
             <body
-                className={`${inter.className} ${monumentExtended.variable} h-screen w-screen overflow-scroll bg-white text-black dark:bg-custom-black dark:text-white`}
+                className={`${inter.className} ${monumentExtended.variable} h-screen w-screen overflow-scroll bg-white text-black dark:bg-custom-black dark:text-white fixed top-0 left-0`}
             >
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                     <div
