@@ -15,12 +15,14 @@ const config: Config = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         serif: ['Merriweather', 'serif'],
-        monument: ['Monument Extended', 'sans-serif'],
+        // Alias previous "monument" family to Manrope so existing utilities keep working
+        monument: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontWeight: {
         'monument-regular': '400',
         'monument-bold': '700',
-        'monument-ultrabold': '900',
+        // Manrope maxes at 800; map ultrabold to 800 for best match
+        'monument-ultrabold': '800',
       }
     },
   },

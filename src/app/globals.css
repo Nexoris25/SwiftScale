@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Manrope font (via @fontsource) */
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/manrope/800.css";
+
 @font-face {
   font-family: 'Monument Extended';
   src: url('/fonts/MonumentExtended-Regular.otf') format('opentype');
@@ -34,6 +39,11 @@
   font-weight: 500;
   line-height: normal;
   box-sizing: border-box;
+}
+
+/* Use Manrope for headings to replace previous Monument Extended usage */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* Customize the width of the scrollbar */
