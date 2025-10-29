@@ -13,6 +13,12 @@ import Firebase from '@/asset/svg/firebase.svg';
 import Html5 from '@/asset/svg/html5.svg';
 import Tailwind from '@/asset/svg/tailwind.svg';
 import JsonLd from "@/components/SEO/JsonLd";
+import FacebookLight from '@/asset/svg/facebook-lightmode.svg';
+import InstagramLight from '@/asset/svg/instagram-lightmode.svg';
+import LinkedinLight from '@/asset/svg/linkedin-lightmode.svg';
+import XLight from '@/asset/svg/x-lightmode.svg';
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
 
 const techIcons = [
@@ -25,6 +31,8 @@ const techIcons = [
 ];
 
 export const SoftwareDevelopmentServices: React.FC = () => {
+    const theme = useTheme().theme;
+    const navigate = useRouter();
     return (
         <>
             <section className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16" role="region" aria-labelledby="sd-heading">
@@ -65,10 +73,20 @@ export const SoftwareDevelopmentServices: React.FC = () => {
                     </p>
                     <button type="button" className=" bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center" aria-label="Get in touch about software development">Get in Touch</button>
                     <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center py-5' role='group' aria-label='Social media icons'>
-                        <Instagram className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                        <Facebook className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                        <Linkedin className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                        <X className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                        {theme === "dark" ? (
+                            <>
+                                <Instagram onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <Facebook onClick={() => navigate.push('https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <Linkedin onClick={() => navigate.push('https://www.linkedin.com/company/swiftscale-consult')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                <X onClick={() => navigate.push('https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                            </>)
+                            : (
+                                <>
+                                    <InstagramLight onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                    <FacebookLight onClick={() => navigate.push('https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                    <LinkedinLight onClick={() => navigate.push('https://www.linkedin.com/company/swiftscale-consult')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                    <XLight onClick={() => navigate.push('https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+                                </>)}
                     </div>
                     {/* Images */}
                     <div className="w-full flex justify-center items-center p-10">

@@ -33,7 +33,7 @@ export const SEOGrowthServices: React.FC = () => (
         Beyond SEO: Unlock the Next<br className="hidden lg:block" /> Level of Growth
       </h2>
     </div>
-    <div className="flex flex-col lg:flex-row w-full mx-auto gap-0">
+    <div className="flex flex-col lg:flex-row w-full mx-auto py-10 gap-6">
       {/* Left: SEO image */}
       <div className="lg:w-1/3 w-full flex items-center justify-center mb-8 lg:mb-0">
         <img
@@ -43,9 +43,9 @@ export const SEOGrowthServices: React.FC = () => (
         />
       </div>
       {/* Right: Service grid */}
-      <div className="lg:w-2/3 w-full grid grid-cols-2 gap-y-10 gap-x-8" role="list" aria-label="SEO and content services list">
+      <div className="lg:w-2/3 w-full grid grid-cols-2 gap-y-10  gap-x-8" role="list" aria-label="SEO and content services list">
         {/* Content Writing */}
-        <div id="content-writing" className="flex items-start gap-4" role="listitem">
+        <div id="content-writing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FF7F2E] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Content Writing</h3>
@@ -55,7 +55,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* SEO Writing */}
-        <div id="seo-writing" className="flex items-start gap-4" role="listitem">
+        <div id="seo-writing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-10 h-6 rounded-full bg-[#00C97B] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">SEO Writing</h3>
@@ -65,7 +65,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Article Writing */}
-        <div id="article-writing" className="flex items-start gap-4" role="listitem">
+        <div id="article-writing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FFE600] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Article Writing</h3>
@@ -75,7 +75,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Ghostwriting */}
-        <div id="ghostwriting" className="flex items-start gap-4" role="listitem">
+        <div id="ghostwriting" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-5 h-5 rounded-md bg-[#7B2FF2] inline-block mt-2" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Ghostwriting</h3>
@@ -85,7 +85,7 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Writer Outsourcing */}
-        <div id="writer-outsourcing" className="flex items-start gap-4" role="listitem">
+        <div id="writer-outsourcing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-md bg-[#8ED6DF] inline-block mt-1" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg  mb-1">Writer Outsourcing</h3>
@@ -95,8 +95,8 @@ export const SEOGrowthServices: React.FC = () => (
           </div>
         </div>
         {/* Content Team Management */}
-        <div id="content-team-management" className="flex items-start gap-4" role="listitem">
-          <span className="w-5 h-5 rounded-md bg-[#7B2FF2] inline-block mt-2" aria-hidden="true" />
+        <div id="content-team-management" className="flex flex-col items-start gap-4" role="listitem">
+          <span className="w-5 h-5 rounded-t-full rounded-b-full bg-[#C7B7FF] inline-block mt-2" aria-hidden="true" />
           <div>
             <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Content Team Management</h3>
             <p className="text-black dark:text-white/80 text-sm leading-relaxed">
