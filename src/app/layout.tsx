@@ -7,7 +7,6 @@ import { ThemeProvider } from 'next-themes';
 import Header from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
-import HeroLandingImg from '@/asset/image/hero-landing.jpg';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,11 +47,6 @@ export default async function RootLayout({ children, ...props }: PropsWithChildr
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
-                <link
-                    rel="preload"
-                    as="image"
-                    href={HeroLandingImg.src}
-                />
                 <meta name="description" content="SwiftScale - Your Partner in Growth" />
                 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
                 <meta name="theme-color" content="#222529" media="(prefers-color-scheme: dark)" />
