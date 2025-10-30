@@ -4,7 +4,8 @@ import JsonLd from "@/components/SEO/JsonLd";
 import { useTheme } from 'next-themes';
 import LightMode from '@/asset/svg/light-mode.svg';
 import DarkMode from '@/asset/svg/dark-mode.svg';
-import Logo from '@/asset/svg/logo.svg';
+import LogoDark from '@/asset/svg/logo-full-dark.svg';
+import LogoWhite from '@/asset/svg/logo-full-white.svg';
 import CaretDownWhite from '@/asset/svg/caret-down-white.svg';
 import CaretDownBlack from '@/asset/svg/caret-down-black.svg';
 import MenuLight from '@/asset/svg/menu.svg';
@@ -43,11 +44,11 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
           <Link href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
-            <Logo className='h-10 w-10 lg:h-14 lg:w-14' aria-hidden="true" />
-            <div className='flex flex-col justify-start items-start'>
+            {theme === "dark" ? <LogoDark className='h-10 w-auto lg:h-14 lg:w-auto' aria-hidden="true" /> : <LogoWhite className='h-10 w-auto lg:h-14 lg:w-auto' aria-hidden="true" />}
+            {/* <div className='flex flex-col justify-start items-start'>
               <div className='flex font-poppins font-normal text-base lg:text-lg leading-[0.9] tracking-wide w-full'>SwiftScale</div>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.0] tracking-wide w-full'>Consult</div>
-            </div>
+              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[0.9] tracking-wide w-full'>Consult</div>
+            </div> */}
           </Link>
         </div>
 
