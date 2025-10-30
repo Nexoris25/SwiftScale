@@ -64,6 +64,8 @@ function LandingHero(props: ILandingHeroProps) {
                 <img
                     src={HeroLandingImg.src}
                     alt="Hero Landing"
+                    fetchPriority="high"
+                    loading="eager"
                     className="rounded-2xl object-cover w-full max-h-[400px] aspect-video max-lg:min-h-[300px]"
                 />
             </div>
