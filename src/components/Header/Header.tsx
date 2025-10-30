@@ -56,21 +56,12 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
           <div className='font-poppins cursor-pointer my-auto'>
             <Link className='no-underline text-inherit' href="/about">About Us</Link>
           </div>
-          <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative' aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu'>
-            <div className='my-auto'>Services</div>
-            <div className='p-1 rounded-full'>
-              {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
-            </div>
-            <button
-              type="button"
-              className="font-poppins cursor-pointer flex items-center gap-1 flex-row relative"
-              aria-haspopup="menu"
-              aria-expanded={isDropdownOpen}
-              aria-controls="services-menu"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            >
-              Services
-              <CaretDownBlack className="h-4 w-4" aria-hidden="true" />
+          <div className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative'>
+            <button aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu' onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='flex items-center border-0 bg-inherit gap-1'>
+              <div className='my-auto'>Services</div>
+              <div className='p-1 rounded-full'>
+                {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
+              </div>
             </button>
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
@@ -97,7 +88,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className='p-2'
+              className='p-2 border-0'
               aria-label='Toggle mobile menu'
               aria-controls='mobile-menu'
               aria-expanded={isMobileMenuOpen}
