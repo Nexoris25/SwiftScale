@@ -1,6 +1,6 @@
 import React from "react";
 import JsonLd from "@/components/SEO/JsonLd";
-import AboutHero from '@/asset/image/about-hero.png';
+import AboutHero from '@/asset/image/about-hero.jpg';
 
 export default function ContactHero() {
     return (

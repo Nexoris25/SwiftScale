@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import AboutHero from '@/asset/image/about-hero.png';
+import AboutHero from '@/asset/image/about-hero.jpg';
 import { useRouter } from "next/navigation";
 import JsonLd from "@/components/SEO/JsonLd";
 

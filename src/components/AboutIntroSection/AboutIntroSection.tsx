@@ -1,6 +1,6 @@
 import React from "react";
 import JsonLd from "@/components/SEO/JsonLd";
-import AboutImage from '@/asset/image/about-image-1.png';
+import AboutImage from '@/asset/image/about-image-1.jpg';
 
 export default function AboutIntroSection() {
   return (
