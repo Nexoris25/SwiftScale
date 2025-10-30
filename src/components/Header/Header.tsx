@@ -61,6 +61,17 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             <div className='p-1 rounded-full'>
               {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
             </div>
+            <button
+              type="button"
+              className="font-poppins cursor-pointer flex items-center gap-1 flex-row relative"
+              aria-haspopup="menu"
+              aria-expanded={isDropdownOpen}
+              aria-controls="services-menu"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            >
+              Services
+              <CaretDownBlack className="h-4 w-4" aria-hidden="true" />
+            </button>
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
@@ -83,15 +94,16 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
 
         {/* Mobile Menu Button - Visible only on mobile */}
         <div className='lg:hidden'>
-          <div
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className='p-2'
-            aria-label='Toggle mobile menu'
-            aria-expanded={isMobileMenuOpen}
-            aria-controls='mobile-menu'
-          >
-            {theme === 'light' ? <MenuDark className='h-8 w-8' aria-hidden="true" /> : <MenuLight className='h-8 w-8' aria-hidden="true" />}
-          </div>
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className='p-2'
+              aria-label='Toggle mobile menu'
+              aria-controls='mobile-menu'
+              aria-expanded={isMobileMenuOpen}
+            >
+              {theme === 'light' ? <MenuDark className='h-8 w-8' aria-hidden="true" /> : <MenuLight className='h-8 w-8' aria-hidden="true" />}
+            </button>
         </div>
 
         {/* Mobile Menu - Shows when menu button is clicked */}
