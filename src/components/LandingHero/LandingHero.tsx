@@ -60,11 +60,11 @@ function LandingHero(props: ILandingHeroProps) {
                             </>)}
                 </div>
             </div>
-            <div className="w-full flex flex-row justify-center px-4 items-center">
+            <div className="w-full flex flex-row justify-center px-4 items-center max-lg:px-0 max-lg:py-5">
                 <img
                     src={HeroLandingImg.src}
                     alt="Hero Landing"
-                    // fetchPriority="high"
+                    fetchPriority="high"
                     className="rounded-2xl object-cover w-full max-h-[400px] aspect-video max-lg:min-h-[300px]"
                 />
             </div>
