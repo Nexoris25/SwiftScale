@@ -17,7 +17,7 @@ const WebDashboard: React.FC = () => {
             {/* Content */}
             <div className="p-10 flex flex-col h-full items-start justify-start gap-4 w-full">
                 <h1 className="text-black dark:text-white w-full flex text-4xl md:text-5xl mb-4 text-start font-monument-ultrabold">
-                    Software Development Services
+                    Web Development
                 </h1>
                 <p className="text-black flex dark:text-white/80 text-start mb-8">
                     Building mobile apps, web apps, and websites that are functional, beautiful,

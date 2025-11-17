@@ -10,7 +10,7 @@ const tabs = [
     "Software Development",
     "Design",
     "Legal Services",
-    "Seo Consulting",
+    "SEO Consulting",
 ];
 
 const images: any = {

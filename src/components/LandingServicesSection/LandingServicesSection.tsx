@@ -6,7 +6,7 @@ export interface ILandingServiceSectionProps {
 
 export default function LandingServiceSection(props: ILandingServiceSectionProps) {
     const services = [
-        { name: 'HR Consultation', content: "Offering tailored solutions, from recruitment and staffing to specialized legal and administrative services." },
+        { name: 'HR Consulting', content: "Offering tailored solutions, from recruitment and staffing to specialized legal and administrative services." },
         { name: 'Software Development', content: "Building mobile apps, web apps, and websites that are functional, beautiful, and user-friendly." },
         { name: 'Design', content: "Creating brand identities that stand out, with services ranging from logo design and social media templates to full corporate and personal branding packages." },
         { name: 'Legal Services', content: "Company incorporation and filings, contract drafting and review, regulatory compliance, and ongoing corporate legal advisory." },

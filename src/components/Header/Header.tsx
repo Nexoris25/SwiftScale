@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 function Header({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  const { theme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const navigate = useRouter();
@@ -44,11 +44,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
           <Link href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
-            {theme === "dark" ? <LogoDark className='h-10 w-auto lg:h-14 lg:w-auto' aria-hidden="true" /> : <LogoWhite className='h-10 w-auto lg:h-14 lg:w-auto' aria-hidden="true" />}
-            {/* <div className='flex flex-col justify-start items-start'>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[0.9] tracking-wide w-full'>SwiftScale</div>
-              <div className='flex font-poppins font-normal text-base lg:text-lg leading-[0.9] tracking-wide w-full'>Consult</div>
-            </div> */}
+            <LogoDark className={`h-10 w-auto lg:h-14 lg:w-auto dark:block hidden`} aria-hidden="true" /><LogoWhite id="logo-white" className={`h-10 w-auto lg:h-14 lg:w-auto dark:hidden block`} aria-hidden="true" />
           </Link>
         </div>
 
@@ -58,10 +54,10 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             <Link className='no-underline text-inherit' href="/about">About Us</Link>
           </div>
           <div className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative'>
-            <button aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu' onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='flex items-center border-0 bg-inherit gap-1'>
-              <div className='my-auto'>Services</div>
-              <div className='p-1 rounded-full'>
-                {theme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
+            <button aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu' onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='flex justify-center border-0 bg-inherit gap-1'>
+              <div className='my-auto flex'>Services</div>
+              <div className='p-1 flex rounded-full'>
+                {resolvedTheme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
               </div>
             </button>
             {(isDropdownOpen && !isMobileMenuOpen) && (
@@ -79,38 +75,39 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
           <div onClick={() => navigate.push("/contact")} className='font-poppins cursor-pointer my-auto bg-primary text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300'>
             Get in Touch
           </div>
-          <div onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className='cursor-pointer px-4'>
-            {theme === 'light' ? <DarkMode aria-hidden="true" /> : <LightMode aria-hidden="true" />}
+          <div onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')} className='cursor-pointer px-4'>
+            {resolvedTheme === 'light' ? <DarkMode className="outline-none rounded-full" aria-hidden="true" /> : <LightMode className="outline-none rounded-full" aria-hidden="true" />}
           </div>
         </nav>
 
         {/* Mobile Menu Button - Visible only on mobile */}
         <div className='lg:hidden'>
-            <button
-              type="button"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className='p-2 border-0'
-              aria-label='Toggle mobile menu'
-              aria-controls='mobile-menu'
-              aria-expanded={isMobileMenuOpen}
-            >
-              {theme === 'light' ? <MenuDark className='h-8 w-8' aria-hidden="true" /> : <MenuLight className='h-8 w-8' aria-hidden="true" />}
-            </button>
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className='p-2 border-0'
+            aria-label='Toggle mobile menu'
+            aria-controls='mobile-menu'
+            aria-expanded={isMobileMenuOpen}
+          >
+            {resolvedTheme === 'light' ? <MenuDark className='h-8 w-8' aria-hidden="true" /> : <MenuLight className='h-8 w-8' aria-hidden="true" />}
+          </button>
         </div>
 
         {/* Mobile Menu - Shows when menu button is clicked */}
         {isMobileMenuOpen && (
-          <nav id='mobile-menu' className='lg:hidden fixed top-[60px] left-0 right-0 bg-custom-white dark:bg-custom-black p-4 shadow-lg' aria-label='Mobile Primary'>
+          <nav id='mobile-menu' className='lg:hidden fixed top-[60px] h-full items-stretch justify-start flex flex-col left-0 right-0 bg-custom-white dark:bg-custom-black p-4 shadow-lg' aria-label='Mobile Primary'>
             <div className='flex flex-col gap-6 h-auto py-5'>
-              <div className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
               <div className='font-poppins cursor-pointer' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                <div className='flex items-center gap-2'>
-                  Services
-                  {theme === 'light' ? <CaretDownBlack className='h-6 w-6' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6' aria-hidden="true" />}
+                <div className='flex flex-row items-center justify-between gap-2'>
+                  <div className='my-auto flex'>Services</div>
+                  <div className='p-1 flex rounded-full'>
+                    {resolvedTheme === 'light' ? <CaretDownBlack className='h-6 w-6' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
+                  </div>
                 </div>
                 {isDropdownOpen && (
-                  <ul className='mt-2 ml-4 list-none flex flex-col gap-5 py-5' role='menu'>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultation</Link></li>
+                  <ul className='mt-2 list-none flex flex-col gap-5 py-5' role='menu'>
+                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consulting</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
                     <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
@@ -118,16 +115,18 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                   </ul>
                 )}
               </div>
+              <div className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
               <div className='font-poppins cursor-pointer bg-primary text-white px-4 py-2 rounded-full text-center'>
                 <Link className='no-underline text-inherit' href="/contact">Get in Touch</Link>
               </div>
-              <div className='flex justify-center'>
-                <div
-                  onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                  className='cursor-pointer'
-                >
-                  {theme === 'light' ? <DarkMode aria-hidden="true" /> : <LightMode aria-hidden="true" />}
-                </div>
+            </div>
+            <div className='flex justify-start bottom-0 mt-20 items-center flex-row'>
+              <div
+                onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
+                className='cursor-pointer flex flex-row p-auto'
+              >
+                {resolvedTheme === 'light' ? <DarkMode className="outline-none rounded-full" aria-hidden="true" /> : <LightMode className="outline-none rounded-full" aria-hidden="true" />}
+                {resolvedTheme === 'light' ? <div className='py-auto ml-4 my-auto font-medium text-center'>Light mode</div> : <div className='py-auto ml-4 my-auto font-medium text-center'>Dark mode</div>}
               </div>
             </div>
           </nav>

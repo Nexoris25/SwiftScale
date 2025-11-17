@@ -19,7 +19,7 @@ import { useTheme } from "next-themes";
 
 
 export const LegalServices: React.FC = () => {
-  const theme = useTheme().theme;
+  const theme = useTheme().resolvedTheme;
   const navigate = useRouter();
   const services = [
     {

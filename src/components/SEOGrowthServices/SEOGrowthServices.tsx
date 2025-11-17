@@ -26,7 +26,7 @@ export const SEOGrowthServices: React.FC = () => (
     />
     {/* Small heading */}
     <div className="w-full">
-      <span className="block text-black dark:text-white text-sm font-semibold mb-2">
+      <span className="block text-black dark:text-white text-base font-semibold mb-2">
         See What Makes SwiftScale Unique
       </span>
       <h2 id="seo-growth-heading" className="text-black dark:text-white text-3xl lg:text-5xl font-monument-ultrabold mb-8 leading-tight">
@@ -48,8 +48,8 @@ export const SEOGrowthServices: React.FC = () => (
         <div id="content-writing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FF7F2E] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Content Writing</h3>
-            <p className="text-black dark:text-white/80 text-sm leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Content Writing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed">
               Blog posts, Website Content, Newsletters,<br />Press Releases.
             </p>
           </div>
@@ -58,8 +58,8 @@ export const SEOGrowthServices: React.FC = () => (
         <div id="seo-writing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-10 h-6 rounded-full bg-[#00C97B] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">SEO Writing</h3>
-            <p className="text-black dark:text-white/80 text-sm leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">SEO Writing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed">
               Keyword-optimized content to improve<br />search rankings.
             </p>
           </div>
@@ -68,8 +68,8 @@ export const SEOGrowthServices: React.FC = () => (
         <div id="article-writing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FFE600] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Article Writing</h3>
-            <p className="text-black dark:text-white/80 text-sm leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Article Writing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed">
               Research-based and opinion articles for<br />various niches.
             </p>
           </div>
@@ -78,8 +78,8 @@ export const SEOGrowthServices: React.FC = () => (
         <div id="ghostwriting" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-5 h-5 rounded-md bg-[#7B2FF2] inline-block mt-2" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Ghostwriting</h3>
-            <p className="text-black dark:text-white/80 text-sm leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Ghostwriting</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed">
               Writing books, Articles, or reports for clients<br />under their name.
             </p>
           </div>
@@ -88,8 +88,8 @@ export const SEOGrowthServices: React.FC = () => (
         <div id="writer-outsourcing" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-6 h-6 rounded-md bg-[#8ED6DF] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-lg  mb-1">Writer Outsourcing</h3>
-            <p className="text-black dark:text-white/80 text-sm leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl  mb-1">Writer Outsourcing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed">
               Providing experienced writers for<br />businesses.
             </p>
           </div>
@@ -98,8 +98,8 @@ export const SEOGrowthServices: React.FC = () => (
         <div id="content-team-management" className="flex flex-col items-start gap-4" role="listitem">
           <span className="w-5 h-5 rounded-t-full rounded-b-full bg-[#C7B7FF] inline-block mt-2" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-lg mb-1">Content Team Management</h3>
-            <p className="text-black dark:text-white/80 text-sm leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Content Team Management</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed">
               Assembling and managing a team of<br />writers for clients.
             </p>
           </div>

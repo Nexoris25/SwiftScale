@@ -17,7 +17,7 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 
 export const HRConsulting: React.FC = () => {
-  const theme = useTheme().theme;
+  const theme = useTheme().resolvedTheme;
   const navigate = useRouter();
 
   return (

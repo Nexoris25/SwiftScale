@@ -31,7 +31,7 @@ const techIcons = [
 ];
 
 export const SoftwareDevelopmentServices: React.FC = () => {
-    const theme = useTheme().theme;
+    const theme = useTheme().resolvedTheme;
     const navigate = useRouter();
     return (
         <>

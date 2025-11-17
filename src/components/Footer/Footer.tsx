@@ -9,14 +9,11 @@ import LocationFooter from '@/asset/svg/location-footer-white.svg';
 import X from '@/asset/svg/x.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useTheme } from 'next-themes';
-import LogoDark from '@/asset/svg/logo-full-dark.svg';
-import LogoWhite from '@/asset/svg/logo-full-white.svg';
+// import LogoDark from '@/asset/svg/logo-full-dark.svg';
 
 export interface IFooterProps { }
 
 export function Footer(props: IFooterProps) {
-    const { theme } = useTheme();
     const year = new Date().getFullYear()
     const navigate = useRouter();
     return (
@@ -26,13 +23,13 @@ export function Footer(props: IFooterProps) {
                     {/* Logo and Social Media Section */}
                     <div className='flex flex-col items-start justify-start w-full lg:w-5/12'>
                         <div className='flex items-start max-lg:mx-auto justify-start flex-col gap-6 lg:gap-4'>
-                            <div onClick={() => navigate.push('/')} className='flex cursor-pointer max-lg:mx-auto items-center justify-center flex-row gap-2' aria-label='Go to homepage'>
-                                {/* <Logo className='h-14 w-14' aria-hidden="true" />
-                                <div className='flex flex-col justify-start items-start'>
-                                    <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>SwiftScale</div>
-                                    <div className='flex font-poppins font-normal text-base lg:text-lg leading-[1.3] tracking-wide w-full'>Consult</div>
-                                </div> */}
-                                 {theme === "dark" ? <LogoDark className='h-10 w-auto lg:h-14 lg:w-auto' aria-hidden="true" /> : <LogoWhite className='h-10 w-auto lg:h-14 lg:w-auto' aria-hidden="true" />}
+                            <div onClick={() => navigate.push('/')} className='flex cursor-pointer max-lg:mx-auto items-center justify-center flex-row gap-3' aria-label='Go to homepage'>
+                                <Logo className='h-16 w-16' aria-hidden="true" />
+                                <div className='flex flex-col h-14 justify-start items-start'>
+                                    <div className='flex font-poppins font-medium text-xl lg:text-2xl leading-[1] tracking-wide w-full'>SwiftScale</div>
+                                    <div className='flex font-poppins font-medium text-xl lg:text-2xl leading-[1] tracking-wide w-full'>Consult</div>
+                                </div>
+                                  {/* <LogoDark className='h-10 w-auto lg:h-14 lg:w-auto block dark:block' aria-hidden="true" /> */}
                             </div>
                             <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center' role='group' aria-label='Follow us on social media'>
                                 <Instagram onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />

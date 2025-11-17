@@ -85,7 +85,7 @@ export default function TestimonialsCarousel() {
                                             }`}
                                     >
                                         <div className="flex flex-col justify-center items-center"><Quote className="my-auto" /></div>
-                                        <p className="text-sm text-start p-5">{t.quote}</p>
+                                        <div className="text-sm text-start p-5 h-full"><div className=" py-auto my-auto">{t.quote}</div></div>
                                     </div>
                                     <div className="flex flex-col items-center mt-6">
                                         <span className="w-1 h-1 rounded-full bg-white/60 mb-2"></span>
@@ -111,7 +111,7 @@ export default function TestimonialsCarousel() {
                                     >
                                         <div className="rounded-2xl aspect-video flex flex-row px-8 max-md:px-4 max-md:py-2 py-4 shadow-lg max-md:max-w-[300px] bg-white text-black">
                                             <div className="flex flex-col justify-center items-center"><Quote className="my-auto max-md:max-w-[25px]" /></div>
-                                            <p className="text-sm text-start p-5">{t.quote}</p>
+                                            <div className="text-sm text-start p-5 h-full"><div className="py-auto my-auto">{t.quote}</div></div>
                                         </div>
                                         <div className="flex flex-col items-center mt-6">
                                             <span className="w-1 h-1 rounded-full bg-white/60 mb-2"></span>
