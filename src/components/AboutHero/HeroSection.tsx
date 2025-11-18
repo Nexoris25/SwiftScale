@@ -22,14 +22,14 @@ export default function HeroSection() {
       {/* Gradient bottom fade */}
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white/70 to-transparent pointer-events-none" />
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full px-8 max-w-2xl">
-        <h1 id="about-hero-heading" className="text-white font-monument-ultrabold text-4xl md:text-6xl mb-6 leading-tight">
+      <div className="relative z-10 flex flex-col items-start justify-center h-full px-8 max-lg:px-4 max-w-2xl">
+        <h1 id="about-hero-heading" className="text-white max-lg:text-center font-monument-ultrabold text-4xl md:text-6xl mb-6 leading-tight">
           Your Talent Partners In Every Step
         </h1>
-        <p className="text-white font-poppins text-lg md:text-xl mb-8 max-w-lg">
+        <p className="text-white font-poppins max-lg:w-full max-lg:text-center text-lg md:text-xl mb-8 max-w-lg">
           We understand the people behind the roles. Our mission? To connect you with professionals who will push your business forward.
         </p>
-        <button onClick={() => navigate.push("/contact")} className="bg-[#6A01E1] text-white border font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300" aria-label="Get in touch with SwiftScale">
+        <button onClick={() => navigate.push("/contact")} className="bg-[#6A01E1] text-white border max-lg:w-full max-lg:mx-auto max-lg:max-w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300" aria-label="Get in touch with SwiftScale">
           Get in Touch
         </button>
       </div>

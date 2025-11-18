@@ -98,7 +98,7 @@ export const SoftwareDevelopmentServices: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full h-auto">
+            <section className="w-full h-auto max-lg:hidden">
                 <TechStackIcons />
             </section>
         </>
@@ -106,7 +106,7 @@ export const SoftwareDevelopmentServices: React.FC = () => {
 };
 
 export const TechStackIcons: React.FC = () => (
-    <div className="flex flex-row w-full items-center justify-center gap-12 py-8 bg-transparent">
+    <div className="flex flex-row w-full items-center justify-center gap-12 py-8 bg-transparent max-lg:overflow-auto">
         {techIcons.map((icon) => (
             <div key={icon.alt} className="flex flex-col items-center mx-auto">{icon.src}</div>
         ))}

@@ -44,10 +44,10 @@ export default function FAQSection() {
             <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left Side */}
                 <div>
-                    <h2 id="faq-heading" className="font-monument-ultrabold text-4xl mb-8 leading-tight text-black dark:text-white">
+                    <h2 id="faq-heading" className="font-monument-ultrabold text-4xl mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white">
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
-                    <p className="font-poppins text-xl mb-8 text-black dark:text-white">
+                    <p className="font-poppins text-xl mb-8 max-lg:w-full max-lg:text-center text-black dark:text-white">
                         Got a burning question? You're not alone. Dive into our FAQ where we've gathered answers to the most common (and not-so-common) questions to help guide you every step of the way.
                     </p>
                     <button className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700">

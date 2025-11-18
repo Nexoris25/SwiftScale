@@ -4,7 +4,7 @@ import WebDashboardImage from '@/asset/image/web-dev-dashboard.png';
 
 const WebDashboard: React.FC = () => {
     return (
-        <section className="relative w-full min-h-[600px] flex gap-10 flex-col lg:flex-row items-center rounded-lg justify-center px-4 py-16">
+        <section className="relative w-full min-h-[600px] flex gap-10 flex-col lg:flex-row max-lg:flex-col-reverse items-center rounded-lg justify-center px-4 py-16">
             <JsonLd id="ld-web-dashboard" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Web Dashboard Showcase" }} />
             {/* Images */}
             <div className="w-full flex justify-center h-full items-center py-10">
@@ -15,16 +15,16 @@ const WebDashboard: React.FC = () => {
                 />
             </div>
             {/* Content */}
-            <div className="p-10 flex flex-col h-full items-start justify-start gap-4 w-full">
-                <h1 className="text-black dark:text-white w-full flex text-4xl md:text-5xl mb-4 text-start font-monument-ultrabold">
+            <div className="p-10 max-lg:px-2 flex flex-col h-full items-start justify-start gap-4 w-full">
+                <h1 className="text-black dark:text-white w-full flex text-4xl md:text-5xl mb-4 text-start max-lg:text-center font-monument-ultrabold">
                     Web Development
                 </h1>
-                <p className="text-black flex dark:text-white/80 text-start mb-8">
+                <p className="text-black flex dark:text-white/80 text-start mb-8 max-lg:text-center">
                     Building mobile apps, web apps, and websites that are functional, beautiful,
                     <br />
                     and user-friendly.
                 </p>
-                <div className=" bg-primary flex-shrink max-w-[300px] text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center">Get in Touch</div>
+                <div className=" bg-primary flex-shrink max-w-[300px] text-white max-lg:w-full max-lg:mx-auto max-lg:max-w-full px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center">Get in Touch</div>
             </div>
         </section>
     );

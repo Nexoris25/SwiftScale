@@ -43,8 +43,8 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         />
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
-          <Link href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
-            <LogoDark className={`h-10 w-auto lg:h-14 lg:w-auto dark:block hidden`} aria-hidden="true" /><LogoWhite id="logo-white" className={`h-10 w-auto lg:h-14 lg:w-auto dark:hidden block`} aria-hidden="true" />
+          <Link onClick={() => setIsMobileMenuOpen(false)} href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
+            <LogoDark className={`h-10 w-auto lg:h-14 cursor-pointer lg:w-auto dark:block hidden`} aria-hidden="true" /><LogoWhite id="logo-white" className={`h-10 w-auto lg:h-14 lg:w-auto dark:hidden block`} aria-hidden="true" />
           </Link>
         </div>
 
@@ -107,20 +107,20 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                 </div>
                 {isDropdownOpen && (
                   <ul className='mt-2 list-none flex flex-col gap-5 py-5' role='menu'>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consulting</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
-                    <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/seo-consultations">SEO Consultations</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consulting</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/seo-consultations">SEO Consultations</Link></li>
                   </ul>
                 )}
               </div>
-              <div className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
+              <div onClick={() => setIsMobileMenuOpen(false)} className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
               <div className='font-poppins cursor-pointer bg-primary text-white px-4 py-2 rounded-full text-center'>
-                <Link className='no-underline text-inherit' href="/contact">Get in Touch</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className='no-underline text-inherit' href="/contact">Get in Touch</Link>
               </div>
             </div>
-            <div className='flex justify-start bottom-0 mt-20 items-center flex-row'>
+            <div onClick={() => setIsMobileMenuOpen(false)}  className='flex justify-start bottom-0 mt-20 items-center flex-row'>
               <div
                 onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
                 className='cursor-pointer flex flex-row p-auto'

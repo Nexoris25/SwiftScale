@@ -95,19 +95,19 @@ export default function ContactFormSection() {
       <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Left Side */}
         <div>
-          <h4 className="font-poppins text-lg text-black dark:text-white mb-2">Swiftscale Consult</h4>
-          <h2 id="contact-form-heading" className="font-monument-ultrabold text-4xl md:text-5xl text-black dark:text-white mb-6 leading-tight">
+          <h4 className="font-poppins text-lg text-black max-lg:text-center max-lg:w-full dark:text-white mb-2">Swiftscale Consult</h4>
+          <h2 id="contact-form-heading" className="font-monument-ultrabold max-lg:text-center max-lg:w-full text-4xl md:text-5xl text-black dark:text-white mb-6 leading-tight">
             Keep In Touch
           </h2>
-          <p className="font-poppins text-lg text-black dark:text-white mb-8">
+          <p className="font-poppins text-lg text-black max-lg:text-center max-lg:w-full dark:text-white mb-8">
             Have questions, ideas, or a challenge we can solve? Let’s talk. Our team is ready to respond quickly and get you the answers you need — so you can move forward without delay.
           </p>
         </div>
         {/* Right Side */}
-        <div>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-transparent border border-white rounded-lg" aria-describedby="contact-form-help">
+        <div className="max-lg:w-full">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 max-lg:px-2 bg-transparent border border-white max-md:w-full rounded-lg" aria-describedby="contact-form-help">
             <p id="contact-form-help" className="sr-only">All fields except message are required.</p>
-            <div className="relative border-b border-white">
+            <div className="relative border-b border-white w-full">
               <label htmlFor="name" className="sr-only">Your name</label>
               <input
                 type="text"
@@ -125,7 +125,7 @@ export default function ContactFormSection() {
               <span id="name-help" className="sr-only">Enter your full name.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">👤</span>
             </div>
-            <div className="relative border-b border-white">
+            <div className="relative border-b border-white w-full">
               <label htmlFor="email" className="sr-only">Your Email</label>
               <input
                 type="email"
@@ -143,7 +143,7 @@ export default function ContactFormSection() {
               <span id="email-help" className="sr-only">Use a valid email address so we can reply.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📧</span>
             </div>
-            <div className="relative border-b border-white">
+            <div className="relative border-b border-white w-full">
               <label htmlFor="subject" className="sr-only">Subject</label>
               <input
                 type="text"
@@ -161,7 +161,7 @@ export default function ContactFormSection() {
               <span id="subject-help" className="sr-only">Briefly describe your request or topic.</span>
               <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📄</span>
             </div>
-            <div className="relative border-b border-white">
+            <div className="relative border-b border-white w-full">
               <label htmlFor="message" className="sr-only">Your Message</label>
               <textarea
                 name="message"

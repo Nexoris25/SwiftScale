@@ -39,8 +39,8 @@ export default function ScaleConsultSection() {
             <div className="flex items-start justify-start max-lg:items-center max-lg:justify-center max-lg:w-full rounded-xl mb-4" aria-hidden="true">
               <feature.icon className="w-16 h-16" />
             </div>
-            <h3 className="font-monument-ultrabold text-2xl mb-4 text-black dark:text-white">{feature.title}</h3>
-            <p className="font-poppins text-base leading-relaxed text-black dark:text-white">{feature.description}</p>
+            <h3 className="font-monument-ultrabold text-2xl mb-4 max-lg:text-center max-lg:w-full text-black dark:text-white">{feature.title}</h3>
+            <p className="font-poppins text-base leading-relaxed max-lg:text-center max-lg:w-full text-black dark:text-white">{feature.description}</p>
           </div>
         ))}
       </div>

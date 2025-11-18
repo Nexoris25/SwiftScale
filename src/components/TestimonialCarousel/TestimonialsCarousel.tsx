@@ -59,7 +59,7 @@ export default function TestimonialsCarousel() {
             <div className="flex items-center justify-center gap-10 w-full mx-auto p-4">
                 {/* Left Arrow */}
                 <button
-                    className="bg-transparent border-none mr-2 max-sm:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
+                    className="bg-transparent border-none mr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                     onClick={() => setActive((prev) => (prev > 0 ? prev - 1 : prev))}
                     aria-label="Previous testimonial"
                 >
@@ -109,7 +109,7 @@ export default function TestimonialsCarousel() {
                                         key={idx}
                                         className="flex flex-col items-center w-full max-w-[320px] transition-all duration-300 scale-105 z-10 mx-auto"
                                     >
-                                        <div className="rounded-2xl aspect-video flex flex-row px-8 max-md:px-4 max-md:py-2 py-4 shadow-lg max-md:max-w-[300px] bg-white text-black">
+                                        <div className="rounded-2xl aspect-video max-md:aspect-auto flex flex-row px-8 max-md:px-4 max-md:py-2 py-4 shadow-lg max-md:max-w-[300px] bg-white text-black">
                                             <div className="flex flex-col justify-center items-center"><Quote className="my-auto max-md:max-w-[25px]" /></div>
                                             <div className="text-sm text-start p-5 h-full"><div className="py-auto my-auto">{t.quote}</div></div>
                                         </div>
@@ -132,7 +132,7 @@ export default function TestimonialsCarousel() {
                 </div>
                 {/* Right Arrow */}
                 <button
-                    className="bg-transparent border-none ml-2 max-sm:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
+                    className="bg-transparent border-none ml-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                     onClick={() =>
                         setActive((prev) => (prev < testimonials.length - 1 ? prev + 1 : prev))
                     }

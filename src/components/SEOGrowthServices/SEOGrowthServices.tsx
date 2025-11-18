@@ -26,10 +26,10 @@ export const SEOGrowthServices: React.FC = () => (
     />
     {/* Small heading */}
     <div className="w-full">
-      <span className="block text-black dark:text-white text-base font-semibold mb-2">
+      <span className="block text-black dark:text-white max-lg:text-center max-lg:w-full text-base font-semibold mb-2">
         See What Makes SwiftScale Unique
       </span>
-      <h2 id="seo-growth-heading" className="text-black dark:text-white text-3xl lg:text-5xl font-monument-ultrabold mb-8 leading-tight">
+      <h2 id="seo-growth-heading" className="text-black dark:text-white text-3xl max-lg:text-center max-lg:w-full lg:text-5xl font-monument-ultrabold mb-8 leading-tight">
         Beyond SEO: Unlock the Next<br className="hidden lg:block" /> Level of Growth
       </h2>
     </div>
@@ -43,63 +43,63 @@ export const SEOGrowthServices: React.FC = () => (
         />
       </div>
       {/* Right: Service grid */}
-      <div className="lg:w-2/3 w-full grid grid-cols-2 gap-y-10  gap-x-8" role="list" aria-label="SEO and content services list">
+      <div className="lg:w-2/3 w-full grid grid-cols-2 max-md:grid-cols-1 gap-y-10  gap-x-8" role="list" aria-label="SEO and content services list">
         {/* Content Writing */}
-        <div id="content-writing" className="flex flex-col items-start gap-4" role="listitem">
+        <div id="content-writing" className="flex flex-col items-start gap-4 max-md:items-center max-md:justify-center" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FF7F2E] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Content Writing</h3>
-            <p className="text-black dark:text-white/80 text-base leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1 max-md:text-center">Content Writing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed max-md:text-center">
               Blog posts, Website Content, Newsletters,<br />Press Releases.
             </p>
           </div>
         </div>
         {/* SEO Writing */}
-        <div id="seo-writing" className="flex flex-col items-start gap-4" role="listitem">
+        <div id="seo-writing" className="flex flex-col items-start gap-4 max-md:items-center max-md:justify-center" role="listitem">
           <span className="w-10 h-6 rounded-full bg-[#00C97B] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">SEO Writing</h3>
-            <p className="text-black dark:text-white/80 text-base leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1 max-md:text-center">SEO Writing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed max-md:text-center">
               Keyword-optimized content to improve<br />search rankings.
             </p>
           </div>
         </div>
         {/* Article Writing */}
-        <div id="article-writing" className="flex flex-col items-start gap-4" role="listitem">
+        <div id="article-writing" className="flex flex-col items-start gap-4 max-md:items-center max-md:justify-center" role="listitem">
           <span className="w-6 h-6 rounded-full bg-[#FFE600] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Article Writing</h3>
-            <p className="text-black dark:text-white/80 text-base leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1 max-md:text-center">Article Writing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed max-md:text-center">
               Research-based and opinion articles for<br />various niches.
             </p>
           </div>
         </div>
         {/* Ghostwriting */}
-        <div id="ghostwriting" className="flex flex-col items-start gap-4" role="listitem">
+        <div id="ghostwriting" className="flex flex-col items-start gap-4 max-md:items-center max-md:justify-center" role="listitem">
           <span className="w-5 h-5 rounded-md bg-[#7B2FF2] inline-block mt-2" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Ghostwriting</h3>
-            <p className="text-black dark:text-white/80 text-base leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1 max-md:text-center">Ghostwriting</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed max-md:text-center">
               Writing books, Articles, or reports for clients<br />under their name.
             </p>
           </div>
         </div>
         {/* Writer Outsourcing */}
-        <div id="writer-outsourcing" className="flex flex-col items-start gap-4" role="listitem">
+        <div id="writer-outsourcing" className="flex flex-col items-start gap-4 max-md:items-center max-md:justify-center" role="listitem">
           <span className="w-6 h-6 rounded-md bg-[#8ED6DF] inline-block mt-1" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl  mb-1">Writer Outsourcing</h3>
-            <p className="text-black dark:text-white/80 text-base leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1 max-md:text-center">Writer Outsourcing</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed max-md:text-center">
               Providing experienced writers for<br />businesses.
             </p>
           </div>
         </div>
         {/* Content Team Management */}
-        <div id="content-team-management" className="flex flex-col items-start gap-4" role="listitem">
+        <div id="content-team-management" className="flex flex-col items-start gap-4 max-md:items-center max-md:justify-center" role="listitem">
           <span className="w-5 h-5 rounded-t-full rounded-b-full bg-[#C7B7FF] inline-block mt-2" aria-hidden="true" />
           <div>
-            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1">Content Team Management</h3>
-            <p className="text-black dark:text-white/80 text-base leading-relaxed">
+            <h3 className="text-black dark:text-white font-monument-ultrabold text-xl mb-1 max-md:text-center">Content Team Management</h3>
+            <p className="text-black dark:text-white/80 text-base leading-relaxed max-md:text-center">
               Assembling and managing a team of<br />writers for clients.
             </p>
           </div>

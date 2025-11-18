@@ -64,12 +64,12 @@ export default function PortfolioSection() {
             <h2 id="portfolio-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl mb-8 text-center tracking-wide">
                 Our Portfolio
             </h2>
-            <div className="flex flex-row flex-wrap justify-center gap-4 mb-10" role="tablist" aria-label="Portfolio categories">
+            <div className="flex flex-row flex-wrap max-sm:overflow-auto justify-center gap-4 mb-10" role="tablist" aria-label="Portfolio categories">
                 {tabs.map((tab) => (
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`font-poppins text-lg max-lg:text-sm px-8 max-lg:px-2 cursor-pointer py-2 max-lg:py-1 text-nowrap rounded-full border-[1px] dark:border-white border-black  transition-all duration-200 ${activeTab === tab
+                        className={`font-poppins text-lg max-lg:text-sm max-sm:rounded-full max-sm:truncate max-sm:min-w-[70px] max-sm:text-xs px-8 max-lg:px-2 cursor-pointer py-2 max-lg:py-1 text-nowrap rounded-full border-[1px] dark:border-white border-black  transition-all duration-200 ${activeTab === tab
                             ? "bg-[#6A01E1] text-white"
                             : "bg-transparent text-black dark:text-white"
                             }`}
