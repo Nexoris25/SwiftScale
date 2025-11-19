@@ -10,7 +10,7 @@ const MobileAppShowcase: React.FC = () => {
             <JsonLd id="ld-mobile-app-showcase" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Mobile App Showcase" }} />
             {/* Content */}
             <div className="py-10 flex flex-grow flex-col h-full items-start justify-start gap-4 w-full">
-                <h1 id="mobile-dev-heading" className="text-black dark:text-white w-full flex max-lg:text-center text-4xl md:text-5xl max-lg:text-2xl mb-4 text-start font-monument-ultrabold">
+                <h1 id="mobile-dev-heading" className="text-black dark:text-white w-full flex max-lg:text-center text-4xl md:text-5xl max-lg:text-2xl max-lg:mx-auto max-lg:w-auto mb-4 text-start font-monument-ultrabold">
                     Mobile Development
                 </h1>
                 <p className="text-black flex max-lg:text-center dark:text-white/80 text-start mb-8">
@@ -24,7 +24,7 @@ const MobileAppShowcase: React.FC = () => {
                 <img
                     src={typeof MobileAppShowcaseImage === 'string' ? MobileAppShowcaseImage : MobileAppShowcaseImage.src}
                     alt="Phone mockups for mobile development"
-                    className="rounded-lg mx-auto h-full max-h-[600px]"
+                    className="rounded-lg mx-auto h-full max-h-[600px] max-lg:max-h-[400px]"
                 />
             </div>
 

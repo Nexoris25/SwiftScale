@@ -16,7 +16,7 @@ const WebDashboard: React.FC = () => {
             </div>
             {/* Content */}
             <div className="p-10 max-lg:px-2 flex flex-col h-full items-start justify-start gap-4 w-full">
-                <h1 className="text-black dark:text-white w-full flex text-4xl md:text-5xl max-lg:text-2xl mb-4 text-start max-lg:text-center font-monument-ultrabold">
+                <h1 className="text-black dark:text-white w-full flex text-4xl md:text-5xl max-lg:mx-auto max-lg:w-auto max-lg:text-2xl mb-4 text-start max-lg:text-center font-monument-ultrabold">
                     Web Development
                 </h1>
                 <p className="text-black flex dark:text-white/80 text-start mb-8 max-lg:text-center">
