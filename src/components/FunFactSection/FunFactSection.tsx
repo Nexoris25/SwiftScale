@@ -16,7 +16,7 @@ export default function FunFactSection() {
             <div className="flex-1 grid grid-cols-2 gap-x-12 gap-y-8 max-lg:grid-cols-1 max-lg:gap-y-12" role="list" aria-label="Company statistics">
                 <div className="flex flex-row max-lg:flex-wrap max-lg:justify-center max-lg:align-middle justify-start items-center max-lg:mx-auto gap-4">
                     <div className="flex items-center">
-                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-2xl md:text-6xl">10</span>
+                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-4xl md:text-6xl">10</span>
                     </div>
                     <div className="flex flex-col justify-end items-start" role="listitem">
                         <span className="text-primary dark:text-white font-monument-ultrabold text-2xl">+</span>
@@ -26,7 +26,7 @@ export default function FunFactSection() {
                 </div>
                 <div className="flex flex-row max-lg:flex-wrap max-lg:justify-center max-lg:align-middle justify-start items-center max-lg:mx-auto gap-4">
                     <div className="flex items-center">
-                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-2xl md:text-6xl">50</span>
+                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-4xl md:text-6xl">50</span>
                     </div>
                     <div className="flex flex-col justify-end items-start" role="listitem">
                         <span className="text-primary dark:text-white font-monument-ultrabold text-2xl">+</span>
@@ -36,7 +36,7 @@ export default function FunFactSection() {
                 </div>
                 <div className="flex flex-row max-lg:flex-wrap max-lg:justify-center max-lg:align-middle justify-start items-center max-lg:mx-auto gap-4">
                     <div className="flex items-center">
-                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-2xl md:text-6xl">15</span>
+                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-4xl md:text-6xl">15</span>
                     </div>
                     <div className="flex flex-col justify-end items-start" role="listitem">
                         <span className="text-primary dark:text-white font-monument-ultrabold text-2xl">+</span>
@@ -46,7 +46,7 @@ export default function FunFactSection() {
                 </div>
                 <div className="flex flex-row max-lg:flex-wrap max-lg:justify-center max-lg:align-middle justify-start items-center max-lg:mx-auto gap-4">
                     <div className="flex items-center">
-                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-2xl md:text-6xl">100</span>
+                        <span className="text-primary dark:text-white font-monument-ultrabold text-5xl max-lg:text-4xl md:text-6xl">100</span>
                     </div>
                     <div className="flex flex-col justify-end items-start" role="listitem">
                         <span className="text-primary dark:text-white font-monument-ultrabold text-2xl">+</span>
