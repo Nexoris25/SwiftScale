@@ -41,7 +41,7 @@ export const SEOConsulting: React.FC = () => {
                 src={typeof HrBg === 'string' ? HrBg : HrBg.src}
                 alt=""
                 aria-hidden="true"
-                className="absolute w-[80%] -bottom-48 max-lg:hidden rotate-[20deg] aspect-square z-0 pointer-events-none"
+                className="absolute w-full max-w-[1000px] h-auto -bottom-0 rotate-[20deg] max-lg:hidden z-0 pointer-events-none"
             />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">

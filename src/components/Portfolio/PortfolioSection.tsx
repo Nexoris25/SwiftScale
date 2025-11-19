@@ -81,27 +81,38 @@ export default function PortfolioSection() {
                     </button>
                 ))}
             </div>
-            <div id={`panel-${activeTab}`} role="tabpanel" aria-labelledby={activeTab} className="grid grid-cols-2 gap-6 w-full">
+            <div
+                id={`panel-${activeTab}`}
+                role="tabpanel"
+                aria-labelledby={activeTab}
+                className="grid grid-cols-2 gap-6 w-full"
+            >
                 <div className="flex flex-col gap-6">
                     <img
                         src={imgs[0] === "string" ? Image1.src : imgs[0].src}
                         alt={`${activeTab} portfolio image 1`}
-                        className="rounded-2xl object-cover w-full h-64"
+                        className="rounded-2xl object-cover w-full 
+                 h-40 sm:h-48 md:h-56 lg:h-72"
                     />
+
                     <img
                         src={imgs[2] === "string" ? Image2.src : imgs[2].src}
                         alt={`${activeTab} portfolio image 2`}
-                        className="rounded-2xl object-cover w-full h-64"
+                        className="rounded-2xl object-cover w-full 
+                 h-40 sm:h-48 md:h-56 lg:h-72"
                     />
                 </div>
+
                 <div className="flex flex-col gap-6 h-full">
                     <img
                         src={imgs[1] === "string" ? Image1.src : imgs[1].src}
                         alt={`${activeTab} portfolio image 3`}
-                        className="rounded-2xl object-cover w-full h-full"
+                        className="rounded-2xl object-cover w-full 
+                     h-full"
                     />
                 </div>
             </div>
+
         </section>
     );
 }
