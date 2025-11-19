@@ -9,7 +9,7 @@ export default function AboutIntroSection() {
       {/* Left Content */}
       <div className="flex-1 flex flex-col items-start justify-center max-lg:items-center max-lg:text-center">
         <h4 className="font-poppins text-lg text-black dark:text-white max-lg:text-center max-lg:w-full mb-2">About Swiftscale Consult</h4>
-        <h1 id="about-intro-heading" className="font-monument-ultrabold text-3xl md:text-5xl text-black max-lg:text-center max-lg:w-full dark:text-white mb-6 leading-tight">
+        <h1 id="about-intro-heading" className="font-monument-ultrabold text-3xl md:text-5xl max-lg:text-2xl text-black max-lg:text-center max-lg:w-full dark:text-white mb-6 leading-tight">
           Propelling Small-scale Businesses to New Heights
         </h1>
         <p className="font-poppins text-xl text-black dark:text-white mb-8 max-w-xl max-lg:w-full max-lg:text-center">

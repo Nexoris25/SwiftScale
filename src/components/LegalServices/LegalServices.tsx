@@ -72,11 +72,11 @@ export const LegalServices: React.FC = () => {
         src={typeof HrBg === 'string' ? HrBg : HrBg.src}
         alt=""
         aria-hidden="true"
-        className="absolute w-[80%] -bottom-48 rotate-[20deg] max-lg:hidden aspect-square z-0 pointer-events-none"
+        className="absolute w-full max-w-[400px] h-auto max-h-[50px] -bottom-48 rotate-[20deg] max-lg:hidden z-0 pointer-events-none"
       />
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-4 w-full">
-        <h1 id="legal-services-heading" className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
+        <h1 id="legal-services-heading" className="text-black dark:text-white text-4xl md:text-5xl max-lg:text-2xl mb-4 text-center font-monument-ultrabold">
           Legal Services
         </h1>
         <p className="text-black dark:text-white/80 text-center mb-8">

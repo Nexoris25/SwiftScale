@@ -63,7 +63,7 @@ export const SoftwareDevelopmentServices: React.FC = () => {
                 />
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center gap-4 w-full">
-                    <h1 id="sd-heading" className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
+                    <h1 id="sd-heading" className="text-black dark:text-white text-4xl md:text-5xl max-lg:text-2xl mb-4 text-center font-monument-ultrabold">
                         Software Development Services
                     </h1>
                     <p className="text-black dark:text-white/80 text-center mb-8">

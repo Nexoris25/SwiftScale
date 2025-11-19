@@ -96,7 +96,7 @@ export default function ContactFormSection() {
         {/* Left Side */}
         <div>
           <h4 className="font-poppins text-lg text-black max-lg:text-center max-lg:w-full dark:text-white mb-2">Swiftscale Consult</h4>
-          <h2 id="contact-form-heading" className="font-monument-ultrabold max-lg:text-center max-lg:w-full text-4xl md:text-5xl text-black dark:text-white mb-6 leading-tight">
+          <h2 id="contact-form-heading" className="font-monument-ultrabold max-lg:text-center max-lg:w-full text-4xl md:text-5xl max-lg:text-2xl text-black dark:text-white mb-6 leading-tight">
             Keep In Touch
           </h2>
           <p className="font-poppins text-lg text-black max-lg:text-center max-lg:w-full dark:text-white mb-8">

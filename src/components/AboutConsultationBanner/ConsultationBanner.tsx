@@ -21,7 +21,7 @@ export default function ConsultationBanner() {
                     Let's discuss making<br />something together
                 </h1>
                 <a
-                    href="#"
+                    href="/contact"
                     className="text-white font-poppins text-2xl flex no-underline items-center gap-2"
                     aria-label="Apply for consultation"
                 >

@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from "react";
 import CaretRightWhite from '@/asset/svg/caret-right-white.svg';
 import JsonLd from "@/components/SEO/JsonLd";
+import { useRouter } from "next/navigation";
 
 const faqs = [
     {
@@ -28,6 +29,7 @@ const faqs = [
 
 export default function FAQSection() {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
+    const navigate = useRouter();
     const faqJsonLd = useMemo(() => ({
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -50,7 +52,7 @@ export default function FAQSection() {
                     <p className="font-poppins text-xl mb-8 max-lg:w-full max-lg:text-center text-black dark:text-white">
                         Got a burning question? You're not alone. Dive into our FAQ where we've gathered answers to the most common (and not-so-common) questions to help guide you every step of the way.
                     </p>
-                    <button className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700">
+                    <button onClick={() => navigate.push("/contact")} className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700">
                         Get in Touch
                     </button>
                 </div>

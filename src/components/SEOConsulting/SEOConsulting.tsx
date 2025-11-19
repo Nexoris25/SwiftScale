@@ -45,7 +45,7 @@ export const SEOConsulting: React.FC = () => {
             />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">
-                <h1 id="seo-consulting-heading" className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
+                <h1 id="seo-consulting-heading" className="text-black dark:text-white text-4xl md:text-5xl max-lg:text-2xl mb-4 text-center font-monument-ultrabold">
                     SEO Consulting
                 </h1>
                 <p className="text-black dark:text-white/80 text-center mb-8">

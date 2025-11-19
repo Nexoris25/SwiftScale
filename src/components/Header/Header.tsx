@@ -63,7 +63,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultation</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultating</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
@@ -120,7 +120,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                 <Link onClick={() => setIsMobileMenuOpen(false)} className='no-underline text-inherit' href="/contact">Get in Touch</Link>
               </div>
             </div>
-            <div onClick={() => setIsMobileMenuOpen(false)}  className='flex justify-start bottom-0 mt-20 items-center flex-row'>
+            <div onClick={() => setIsMobileMenuOpen(false)}  className='flex justify-start mt-20 items-center flex-row absolute bottom-0 '>
               <div
                 onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
                 className='cursor-pointer flex flex-row p-auto'

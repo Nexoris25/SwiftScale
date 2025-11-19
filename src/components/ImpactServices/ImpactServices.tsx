@@ -18,7 +18,7 @@ export const ImpactServices: React.FC = () => (
         ]
       }}
     />
-    <h2 id="impact-services-heading" className="text-black dark:text-white text-3xl md:text-5xl text-center font-monument-ultrabold mb-2">
+    <h2 id="impact-services-heading" className="text-black dark:text-white text-3xl md:text-5xl max-lg:text-2xl text-center font-monument-ultrabold mb-2">
       Proven Result, Real Impact
     </h2>
     <p className="text-black dark:text-white/80 text-center max-w-2xl mb-10 leading-relaxed">

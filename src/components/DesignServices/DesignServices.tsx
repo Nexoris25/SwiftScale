@@ -52,7 +52,7 @@ export const DesignServices: React.FC = () => {
             />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-4 w-full">
-                <h1 id="design-services-heading" className="text-black dark:text-white text-4xl md:text-5xl mb-4 text-center font-monument-ultrabold">
+                <h1 id="design-services-heading" className="text-black dark:text-white text-4xl md:text-5xl max-lg:text-2xl mb-4 text-center font-monument-ultrabold">
                     Design Services
                 </h1>
                 <p className="text-black dark:text-white/80 text-center mb-8">
@@ -183,7 +183,7 @@ const DesignSlider: React.FC = () => {
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-transparent border-0 rounded-full p-2 text-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                 aria-label="Previous"
             >
-                <span className="text-white text-5xl max-md:text-3xl">&#60;</span>
+                <span className="text-white text-5xl max-lg:text-2xl max-md:text-3xl">&#60;</span>
             </button>
             {/* Right Arrow */}
             <button
@@ -191,7 +191,7 @@ const DesignSlider: React.FC = () => {
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-white  bg-transparent border-0 rounded-full p-2 text-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                 aria-label="Next"
             >
-                <span className="text-white text-5xl max-md:text-3xl">&#62;</span>
+                <span className="text-white text-5xl max-lg:text-2xl max-md:text-3xl">&#62;</span>
             </button>
 
             {/* Dots */}

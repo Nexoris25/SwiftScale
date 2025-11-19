@@ -29,7 +29,7 @@ export const SEOGrowthServices: React.FC = () => (
       <span className="block text-black dark:text-white max-lg:text-center max-lg:w-full text-base font-semibold mb-2">
         See What Makes SwiftScale Unique
       </span>
-      <h2 id="seo-growth-heading" className="text-black dark:text-white text-3xl max-lg:text-center max-lg:w-full lg:text-5xl font-monument-ultrabold mb-8 leading-tight">
+      <h2 id="seo-growth-heading" className="text-black dark:text-white text-3xl max-lg:text-center max-lg:w-full lg:text-5xl max-lg:text-2xl font-monument-ultrabold mb-8 leading-tight">
         Beyond SEO: Unlock the Next<br className="hidden lg:block" /> Level of Growth
       </h2>
     </div>

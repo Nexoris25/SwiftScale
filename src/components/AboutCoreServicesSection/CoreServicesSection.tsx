@@ -46,7 +46,7 @@ export default function CoreServicesSection() {
   return (
     <section className="w-full py-16 flex flex-col items-center" role="region" aria-labelledby="core-services-heading">
       <JsonLd id="ld-core-services" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Core Services" }} />
-      <h2 id="core-services-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
+      <h2 id="core-services-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl md:text-5xl max-lg:text-2xl mb-12 text-center tracking-wide">
         5 Core Services
       </h2>
       <div className="flex flex-row flex-nowrap justify-center max-lg:flex-col max-lg:justify-start max-lg:items-start items-center gap-10 w-full" role="list" aria-label="Core services expandable cards">

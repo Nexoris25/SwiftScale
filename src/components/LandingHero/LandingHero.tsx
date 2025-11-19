@@ -30,7 +30,7 @@ function LandingHero(props: ILandingHeroProps) {
     return (
         <div className="p-10 max-lg:p-4 dark:bg-[#363636] bg-[#F8F8F8] text-black dark:text-white rounded-lg flex flex-col items-start justify-start gap-1 w-full">
             <div className="flex flex-row max-lg:flex-col w-full justify-start items-center">
-                <div className="text-black dark:text-white font-monument-bold text-5xl max-lg:text-2xl w-7/12 p-12 pl-0 pr-22 max-lg:pr-0 max-lg:w-full max-lg:text-center">Powering Businesses with People, Technology & Identity</div>
+                <div className="text-black dark:text-white font-monument-bold text-5xl max-lg:text-2xl max-lg:text-2xl w-7/12 p-12 pl-0 pr-22 max-lg:pr-0 max-lg:w-full max-lg:text-center">Powering Businesses with People, Technology & Identity</div>
                 <div className="w-5/12 max-lg:w-full flex flex-col items-start justify-start">
                     <div className="font-poppins max-lg:text-center">Helping you find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.</div>
                     <Link

@@ -9,7 +9,7 @@ export default function OurMission() {
     return (
         <section className="w-full py-12  flex flex-col items-start justify-start gap-4 my-10" role="region" aria-labelledby="our-mission-heading">
             <JsonLd id="ld-our-mission" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Our Mission" }} />
-            <h2 id="our-mission-heading" className="font-monument-ultrabold max-lg:w-full max-lg:text-center  text-5xl max-lg:text-2xl text-black dark:text-white mb-6">
+            <h2 id="our-mission-heading" className="font-monument-ultrabold max-lg:w-full max-lg:text-center  text-5xl max-lg:text-2xl max-lg:text-2xl text-black dark:text-white mb-6">
                 Our Mission
             </h2>
             <div className="flex flex-col w-full lg:flex-row items-center justify-start gap-10">

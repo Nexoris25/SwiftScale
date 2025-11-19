@@ -53,7 +53,7 @@ export default function TestimonialsCarousel() {
         <div className="w-full min-h-[600px] bg-[#6A01E1] flex flex-col items-center justify-center py-20 px-2" role="region" aria-roledescription="carousel" aria-label="Testimonials carousel" aria-live="off">
             <JsonLd id="ld-reviews" data={reviewLd} />
             <p className="sr-only" aria-live="polite" aria-atomic="true">{`Showing testimonial ${active + 1} of ${testimonials.length}`}</p>
-            <h2 className="text-white font-monument-ultrabold text-4xl md:text-5xl mb-12 text-center tracking-wide">
+            <h2 className="text-white font-monument-ultrabold text-4xl md:text-5xl max-lg:text-2xl mb-12 text-center tracking-wide">
                 What They Say About Us
             </h2>
             <div className="flex items-center justify-center gap-10 w-full mx-auto p-4">
