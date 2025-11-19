@@ -28,7 +28,7 @@ const features = [
 
 export default function ScaleConsultSection() {
   return (
-    <section className="w-full py-20 px-2 flex flex-col items-center" role="region" aria-labelledby="scale-consult-heading">
+    <section className="w-full max-lg:py-10  py-20 px-2 flex flex-col items-center" role="region" aria-labelledby="scale-consult-heading">
       <JsonLd id="ld-scale-consult" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Scale Consult" }} />
       <h2 id="scale-consult-heading" className="font-monument-ultrabold text-4xl max-w-4xl mx-auto mb-16 text-center tracking-wide text-black dark:text-white">
         How can SwiftScale Consult scale and help your business

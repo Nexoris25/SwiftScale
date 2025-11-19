@@ -78,7 +78,7 @@ export default function ContactFormSection() {
   }, [autoResponseMessage, formData]);
 
   return (
-    <section className="w-full bg-custom-white dark:bg-custom-black py-20 px-4 flex flex-col items-center" role="region" aria-labelledby="contact-form-heading">
+    <section className="w-full bg-custom-white dark:bg-custom-black max-lg:py-10  py-20 px-4 flex flex-col items-center" role="region" aria-labelledby="contact-form-heading">
       <JsonLd
         id="ld-contact-point"
         data={{

@@ -59,7 +59,7 @@ export default function PortfolioSection() {
     }), [activeTab, imgs]);
 
     return (
-        <section className="w-full py-20 px-2 bg-custom-white dark:bg-custom-black  flex flex-col items-center" role="region" aria-labelledby="portfolio-heading">
+        <section className="w-full max-lg:py-10  py-20 px-2 bg-custom-white dark:bg-custom-black  flex flex-col items-center" role="region" aria-labelledby="portfolio-heading">
             <JsonLd id="ld-portfolio" data={itemListLd} />
             <h2 id="portfolio-heading" className="text-black dark:text-white font-monument-ultrabold text-4xl mb-8 text-center tracking-wide">
                 Our Portfolio

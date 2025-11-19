@@ -43,7 +43,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         />
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
-          <Link onClick={() => setIsMobileMenuOpen(false)} href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
+          <Link onClick={() => setIsMobileMenuOpen(false)} href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none cursor-pointer focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
             <LogoDark className={`h-10 w-auto lg:h-14 cursor-pointer lg:w-auto dark:block hidden`} aria-hidden="true" /><LogoWhite id="logo-white" className={`h-10 w-auto lg:h-14 lg:w-auto dark:hidden block`} aria-hidden="true" />
           </Link>
         </div>
@@ -51,10 +51,10 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         {/* Desktop Navigation - Hidden on mobile */}
         <nav className='hidden lg:flex items-center justify-end flex-row flex-grow gap-10' aria-label='Primary'>
           <div className='font-poppins cursor-pointer my-auto'>
-            <Link className='no-underline text-inherit' href="/about">About Us</Link>
+            <Link className='no-underline text-inherit cursor-pointer' href="/about">About Us</Link>
           </div>
           <div className='font-poppins cursor-pointer flex items-center gap-1 flex-row relative'>
-            <button aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu' onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='flex justify-center border-0 bg-inherit gap-1'>
+            <button aria-haspopup='menu' aria-expanded={isDropdownOpen} aria-controls='services-menu' onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='flex justify-center border-0 cursor-pointer bg-inherit gap-1'>
               <div className='my-auto flex'>Services</div>
               <div className='p-1 flex rounded-full'>
                 {resolvedTheme === 'light' ? <CaretDownBlack className='h-6 w-6 my-auto' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
@@ -63,11 +63,11 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consultating</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/seo-consultations">SEO Consultations</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/hr-consultation">HR Consultating</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/software-development">Software Development</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/design">Design</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/legal-services">Legal Services</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/seo-consultations">SEO Consultations</Link></li>
                 </ul>
               </div>
             )}
@@ -107,20 +107,20 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                 </div>
                 {isDropdownOpen && (
                   <ul className='mt-2 list-none flex flex-col gap-5 py-5' role='menu'>
-                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/hr-consultation">HR Consulting</Link></li>
-                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/software-development">Software Development</Link></li>
-                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/design">Design</Link></li>
-                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/legal-services">Legal Services</Link></li>
-                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit' href="/seo-consultations">SEO Consultations</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/hr-consultation">HR Consulting</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/software-development">Software Development</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/design">Design</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/legal-services">Legal Services</Link></li>
+                    <li onClick={() => setIsMobileMenuOpen(false)} className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/seo-consultations">SEO Consultations</Link></li>
                   </ul>
                 )}
               </div>
-              <div onClick={() => setIsMobileMenuOpen(false)} className='font-poppins cursor-pointer'><Link className='no-underline text-inherit' href="/about">About Us</Link></div>
+              <div onClick={() => setIsMobileMenuOpen(false)} className='font-poppins cursor-pointer'><Link className='no-underline text-inherit cursor-pointer' href="/about">About Us</Link></div>
               <div className='font-poppins cursor-pointer bg-primary text-white px-4 py-2 rounded-full text-center'>
-                <Link onClick={() => setIsMobileMenuOpen(false)} className='no-underline text-inherit' href="/contact">Get in Touch</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className='no-underline text-inherit cursor-pointer' href="/contact">Get in Touch</Link>
               </div>
             </div>
-            <div onClick={() => setIsMobileMenuOpen(false)}  className='flex justify-start mt-20 items-center flex-row absolute bottom-0 '>
+            <div onClick={() => setIsMobileMenuOpen(false)}  className='flex justify-start mt-20 items-center flex-row absolute bottom-24 left-4'>
               <div
                 onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
                 className='cursor-pointer flex flex-row p-auto'

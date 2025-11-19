@@ -6,7 +6,7 @@ export default function FunFactSection() {
         <section className="w-full bg-[#fafafa] dark:bg-[#363636] m-auto rounded-xl py-12 px-6 flex flex-col md:flex-row items-center justify-between gap-10 my-20" role="region" aria-labelledby="fun-fact-heading">
             <JsonLd id="ld-fun-fact" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Fun Fact" }} />
             {/* Left Side */}
-            <div className="lg:flex-1 flex max-lg:w-full max-lg:flex-col">
+            <div className="lg:flex-1 flex max-lg:w-full flex-col">
                 <h2 id="fun-fact-heading" className="font-monument-ultrabold text-3xl md:text-4xl text-black max-lg:text-center dark:text-white mb-6 px-10">Fun Fact</h2>
                 <p className="font-poppins text-lg px-10 max-lg:w-full max-lg:text-center text-black dark:text-white">
                     We blend strategy, design, and engineering to deliver outcomes—not just outputs. Here are a few numbers were proud of.

@@ -41,7 +41,7 @@ export default function FAQSection() {
     }), []);
 
     return (
-        <section className="w-full py-20 px-2 flex flex-col items-center" role="region" aria-labelledby="faq-heading">
+        <section className="w-full max-lg:py-10 py-20 px-2  flex flex-col items-center" role="region" aria-labelledby="faq-heading">
             <JsonLd id="ld-faq" data={faqJsonLd} />
             <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left Side */}
@@ -49,7 +49,7 @@ export default function FAQSection() {
                     <h2 id="faq-heading" className="font-monument-ultrabold text-4xl mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white">
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
-                    <p className="font-poppins text-xl mb-8 max-lg:w-full max-lg:text-center text-black dark:text-white">
+                    <p className="font-poppins mb-8 max-lg:w-full font-normal max-lg:text-center text-black dark:text-white">
                         Got a burning question? You're not alone. Dive into our FAQ where we've gathered answers to the most common (and not-so-common) questions to help guide you every step of the way.
                     </p>
                     <button onClick={() => navigate.push("/contact")} className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700">

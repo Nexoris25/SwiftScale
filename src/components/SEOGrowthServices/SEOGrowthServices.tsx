@@ -4,7 +4,7 @@ import Seo from '@/asset/image/seo.png';
 
 export const SEOGrowthServices: React.FC = () => (
   <section
-    className="w-full px-4 py-20 flex flex-col items-center"
+    className="w-full px-4 max-lg:py-10  py-20 flex flex-col items-center"
     role="region"
     aria-labelledby="seo-growth-heading"
   >
