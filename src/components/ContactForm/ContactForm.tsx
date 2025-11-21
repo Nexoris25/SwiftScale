@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import JsonLd from "@/components/SEO/JsonLd";
 import { useRouter } from "next/navigation";
 
+// Better Icons (Lucide)
+import { User2, Mail, FileText, MessageSquare } from "lucide-react";
+
 export default function ContactFormSection() {
   const navigate = useRouter();
   const [formData, setFormData] = useState({
@@ -12,20 +15,25 @@ export default function ContactFormSection() {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-
   const formEndpoint = "https://formsubmit.co/ajax/info@swiftscale.com.ng";
 
-  const [status, setStatus] = React.useState({ loading: false, error: false, success: false });
+  const [status, setStatus] = React.useState({
+    loading: false,
+    error: false,
+    success: false,
+  });
 
   const contactInfo = {
     email: "info@swiftscale.com.ng",
     phone: "+2347037428518",
-    brandName: "SwiftScale"
+    brandName: "SwiftScale",
   };
 
   const autoResponseMessage = `
@@ -37,48 +45,47 @@ export default function ContactFormSection() {
       <a href="mailto:${contactInfo.email}" style="color: #7c3c8e;">${contactInfo.email}</a>.
     </p>
     <p>
-      If no response is received, please send another message or call/text this number:
+      If no response is received, please send another message or call/text:
       <a href="tel:${contactInfo.phone}" style="color: #7c3c8e;">${contactInfo.phone}</a>.
     </p>
-    <p style="margin-top: 20px;">Thank you again!</p>
   </div>
   `;
 
-  const handleSubmit = React.useCallback(async (e: any) => {
-    e.preventDefault();
+  const handleSubmit = React.useCallback(
+    async (e: any) => {
+      e.preventDefault();
+      setStatus({ loading: true, error: false, success: false });
 
-    setStatus({ loading: true, error: false, success: false });
-
-    try {
-      const response = await fetch(formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          _captcha: false,
-          _autoresponse: autoResponseMessage
-        }),
-      });
-
-      if (response.ok) {
-        setStatus({ loading: false, error: false, success: true });
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
+      try {
+        const response = await fetch(formEndpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...formData,
+            _captcha: false,
+            _autoresponse: autoResponseMessage,
+          }),
         });
-      } else {
+
+        if (response.ok) {
+          setStatus({ loading: false, error: false, success: true });
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        } else {
+          setStatus({ loading: false, error: true, success: false });
+        }
+      } catch {
         setStatus({ loading: false, error: true, success: false });
       }
-    } catch (error) {
-      console.log(error)
-      setStatus({ loading: false, error: true, success: false });
-    }
-  }, [autoResponseMessage, formData]);
+    },
+    [autoResponseMessage, formData]
+  );
 
   return (
-    <section className="w-full bg-custom-white dark:bg-custom-black max-lg:py-10  py-20 px-4 flex flex-col items-center" role="region" aria-labelledby="contact-form-heading">
+    <section
+      className="w-full bg-custom-white dark:bg-custom-black max-lg:py-10 py-20 px-4 flex flex-col items-center"
+      role="region"
+      aria-labelledby="contact-form-heading"
+    >
       <JsonLd
         id="ld-contact-point"
         data={{
@@ -89,103 +96,101 @@ export default function ContactFormSection() {
             "@type": "ContactPoint",
             contactType: "customer support",
             availableLanguage: ["English"],
-          }
+          },
         }}
       />
+
       <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Left Side */}
+        {/* LEFT SIDE */}
         <div>
-          <h4 className="font-poppins text-lg text-black max-lg:text-center max-lg:w-full dark:text-white mb-2">Swiftscale Consult</h4>
-          <h2 id="contact-form-heading" className="font-monument-ultrabold max-lg:text-center max-lg:w-full text-4xl md:text-5xl max-lg:text-2xl text-black dark:text-white mb-6 leading-tight">
+          <h4 className="font-poppins text-base md:text-lg text-black max-lg:text-center dark:text-white mb-2">
+            Swiftscale Consult
+          </h4>
+
+          <h2
+            id="contact-form-heading"
+            className="font-monument-ultrabold max-lg:text-center text-3xl md:text-5xl text-black dark:text-white mb-6 leading-tight"
+          >
             Keep In Touch
           </h2>
-          <p className="font-poppins text-lg text-black max-lg:text-center max-lg:w-full dark:text-white mb-8">
-            Have questions, ideas, or a challenge we can solve? Let’s talk. Our team is ready to respond quickly and get you the answers you need — so you can move forward without delay.
+
+          <p className="font-poppins text-base md:text-lg text-black max-lg:text-center dark:text-white mb-8">
+            Have questions, ideas, or a challenge we can solve? Let’s talk. Our
+            team is ready to respond quickly and help you move forward.
           </p>
         </div>
-        {/* Right Side */}
+
+        {/* RIGHT SIDE FORM */}
         <div className="max-lg:w-full">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 max-lg:px-2 bg-transparent border border-white max-md:w-full rounded-lg" aria-describedby="contact-form-help">
-            <p id="contact-form-help" className="sr-only">All fields except message are required.</p>
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-6 p-10 max-lg:px-2 bg-transparent rounded-lg"
+            aria-describedby="contact-form-help"
+          >
+            <p id="contact-form-help" className="sr-only">
+              All fields except message are required.
+            </p>
+
+            {/* NAME */}
             <div className="relative border-b border-white w-full">
-              <label htmlFor="name" className="sr-only">Your name</label>
               <input
                 type="text"
                 name="name"
-                id="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0"
                 required
-                aria-required="true"
-                aria-invalid={formData.name.trim() === ''}
-                aria-describedby="name-help"
               />
-              <span id="name-help" className="sr-only">Enter your full name.</span>
-              <span className="absolute right-2 top-3 text-black dark:text-white text-lg">👤</span>
+              <User2 className="absolute right-2 top-3 h-5 w-5 text-black dark:text-white" />
             </div>
+
+            {/* EMAIL */}
             <div className="relative border-b border-white w-full">
-              <label htmlFor="email" className="sr-only">Your Email</label>
               <input
                 type="email"
                 name="email"
-                id="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0"
                 required
-                aria-required="true"
-                aria-invalid={formData.email.trim() === ''}
-                aria-describedby="email-help"
               />
-              <span id="email-help" className="sr-only">Use a valid email address so we can reply.</span>
-              <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📧</span>
+              <Mail className="absolute right-2 top-3 h-5 w-5 text-black dark:text-white" />
             </div>
+
+            {/* SUBJECT */}
             <div className="relative border-b border-white w-full">
-              <label htmlFor="subject" className="sr-only">Subject</label>
               <input
                 type="text"
                 name="subject"
-                id="subject"
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Subject"
                 className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0"
                 required
-                aria-required="true"
-                aria-invalid={formData.subject.trim() === ''}
-                aria-describedby="subject-help"
               />
-              <span id="subject-help" className="sr-only">Briefly describe your request or topic.</span>
-              <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📄</span>
+              <FileText className="absolute right-2 top-3 h-5 w-5 text-black dark:text-white" />
             </div>
+
+            {/* MESSAGE */}
             <div className="relative border-b border-white w-full">
-              <label htmlFor="message" className="sr-only">Your Message</label>
               <textarea
                 name="message"
-                id="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message (optional)"
-                className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0 resize-none"
                 rows={4}
-                aria-describedby="message-help"
+                className="w-full py-3 px-2 bg-transparent text-black dark:text-white outline-none placeholder-black dark:placeholder-white border-t-0 border-l-0 border-r-0 resize-none"
               />
-              <span id="message-help" className="sr-only">Provide any extra details that will help us assist you.</span>
-              <span className="absolute right-2 top-3 text-black dark:text-white text-lg">📝</span>
+              <MessageSquare className="absolute right-2 top-3 h-5 w-5 text-black dark:text-white" />
             </div>
-            {/* Simple error announcer example (extend with real validation if needed) */}
-            <p className="sr-only" role="status" aria-live="polite">
-              {formData.name.trim() === '' || formData.email.trim() === '' || formData.subject.trim() === '' ? 'Please complete required fields: name, email, and subject.' : ''}
-            </p>
+
+            {/* BUTTON */}
             <button
               type="submit"
-              onClick={() => handleSubmit}
               disabled={status.loading}
-              className="bg-[#6A01E1] text-white font-poppins px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300"
-              aria-label="Submit contact form"
+              className="bg-[#6A01E1] text-white font-poppins cursor-pointer px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300"
             >
               {status.loading ? "Sending..." : "Get in Touch"}
             </button>

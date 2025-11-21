@@ -30,6 +30,7 @@ const faqs = [
 export default function FAQSection() {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
     const navigate = useRouter();
+
     const faqJsonLd = useMemo(() => ({
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -41,44 +42,79 @@ export default function FAQSection() {
     }), []);
 
     return (
-        <section className="w-full max-lg:py-10 py-20 px-2  flex flex-col items-center" role="region" aria-labelledby="faq-heading">
+        <section
+            className="w-full max-lg:py-10 py-20 px-2 flex flex-col items-center"
+            role="region"
+            aria-labelledby="faq-heading"
+        >
             <JsonLd id="ld-faq" data={faqJsonLd} />
-            <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+
                 {/* Left Side */}
                 <div>
-                    <h2 id="faq-heading" className="font-monument-bold text-4xl mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white">
+                    <h2
+                        id="faq-heading"
+                        className="font-monument-bold text-3xl sm:text-4xl lg:text-4xl mb-6 sm:mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white"
+                    >
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
-                    <p className="font-poppins mb-8 max-lg:w-full font-normal max-lg:text-center text-black dark:text-white">
+
+                    <p className="font-poppins text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-lg:w-full max-lg:text-center text-black dark:text-white">
                         Got a burning question? You're not alone. Dive into our FAQ where we've gathered answers to the most common (and not-so-common) questions to help guide you every step of the way.
                     </p>
-                    <button onClick={() => navigate.push("/contact")} className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700">
+
+                    <button
+                        onClick={() => navigate.push("/contact")}
+                        className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-6 sm:px-8 py-2.5 rounded-full text-base sm:text-lg hover:bg-purple-700 cursor-pointer"
+                    >
                         Get in Touch
                     </button>
                 </div>
+
                 {/* Right Side */}
-                <div className="flex flex-col gap-6 justify-center" role="list" aria-label="Frequently asked questions">
+                <div
+                    className="flex flex-col gap-5 sm:gap-6 justify-center"
+                    role="list"
+                    aria-label="Frequently asked questions"
+                >
                     {faqs.map((faq, idx) => (
-                        <div key={idx} className="pb-4 border-b border-solid border-t-0 border-l-0 border-r-0 border-black dark:border-white" role="listitem">
+                        <div
+                            key={idx}
+                            className="pb-3 sm:pb-4 border-b border-solid border-t-0 border-l-0 border-r-0 border-black dark:border-white"
+                            role="listitem"
+                        >
                             <button
-                                className="w-full flex bg-transparent cursor-pointer border-none items-center justify-between text-left"
+                                className="w-full flex bg-transparent cursor-pointer border-none items-center justify-between text-left py-2"
                                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                                 aria-expanded={openIdx === idx}
                                 aria-controls={`faq-panel-${idx}`}
                             >
-                                <span className="font-monument-regular text-lg text-black dark:text-white">{faq.question}</span>
-                                <span className="text-2xl font-bold text-black dark:text-white">
-                                    {openIdx === idx ? <CaretRightWhite className="transform rotate-90 w-4 h-4" /> : <CaretRightWhite className="w-4 h-4" />}
+                                <span className="font-monument-regular text-base sm:text-lg text-black dark:text-white">
+                                    {faq.question}
+                                </span>
+
+                                <span className="text-xl sm:text-2xl font-bold text-black dark:text-white">
+                                    {openIdx === idx
+                                        ? <CaretRightWhite className="transform rotate-90 w-4 h-4" />
+                                        : <CaretRightWhite className="w-4 h-4" />}
                                 </span>
                             </button>
+
                             {openIdx === idx && (
-                                <div id={`faq-panel-${idx}`} role="region" aria-label={`Answer to: ${faq.question}`} className="mt-4 font-poppins text-base bg-black/5 dark:bg-black/30 p-10 text-black dark:text-white">
+                                <div
+                                    id={`faq-panel-${idx}`}
+                                    role="region"
+                                    aria-label={`Answer to: ${faq.question}`}
+                                    className="mt-3 sm:mt-4 font-poppins text-sm sm:text-base bg-black/5 dark:bg-black/30 p-4 sm:p-6 lg:p-10 text-black dark:text-white"
+                                >
                                     {faq.answer}
                                 </div>
                             )}
                         </div>
                     ))}
                 </div>
+
             </div>
         </section>
     );

@@ -1,33 +1,77 @@
-import React from 'react';
+"use client";
+
+import React from "react";
 import JsonLd from "@/components/SEO/JsonLd";
-import MobileAppShowcaseImage from '@/asset/image/dev-service-phones.png';
+import Image from "next/image";
+import MobileAppShowcaseImage from "@/asset/image/dev-service-phones.png";
 
 const MobileAppShowcase: React.FC = () => {
-
-
     return (
-        <section className="relative w-full min-h-[600px] flex gap-10 flex-col lg:flex-row items-center rounded-lg justify-center px-4 py-16" role="region" aria-labelledby="mobile-dev-heading">
-            <JsonLd id="ld-mobile-app-showcase" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "Mobile App Showcase" }} />
-            {/* Content */}
-            <div className="py-10 flex flex-grow flex-col h-full items-start justify-start gap-4 w-full">
-                <h1 id="mobile-dev-heading" className="text-black dark:text-white w-full flex max-lg:text-center text-4xl md:text-5xl max-lg:text-2xl max-lg:mx-auto max-lg:w-auto mb-4 text-start font-monument-ultrabold">
+        <section
+            className="relative w-full flex flex-col lg:flex-row items-center justify-between gap-12 px-6 py-12 rounded-lg"
+            role="region"
+            aria-labelledby="mobile-dev-heading"
+        >
+            <JsonLd
+                id="ld-mobile-app-showcase"
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "WebPageElement",
+                    name: "Mobile App Showcase",
+                }}
+            />
+
+            {/* Text Content */}
+            <div className="flex flex-col w-full lg:w-1/2 gap-6 text-start max-lg:text-center">
+                <h2
+                    id="mobile-dev-heading"
+                    className="
+                        text-black dark:text-white font-monument-ultrabold
+                        text-3xl md:text-4xl lg:text-5xl
+                    "
+                >
                     Mobile Development
-                </h1>
-                <p className="text-black flex max-lg:text-center dark:text-white/80 text-start mb-8">
-                    From MVPs to enterprise apps, we build fast, reliable mobile experiences with clean architectures,
-                    <br /> modern tooling, and a focus on performance, accessibility, and maintainability.
+                </h2>
+
+                <p className="text-black dark:text-white/80 text-base md:text-lg leading-relaxed max-w-xl max-lg:mx-auto">
+                    From MVPs to enterprise products, we create fast, reliable mobile experiences with clean
+                    architectures, modern tooling, and an emphasis on performance, accessibility, and long term maintainability.
                 </p>
-                <button type="button" className=" bg-primary flex-shrink max-w-[300px] max-lg:w-full max-lg:mx-auto max-lg:max-w-full text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 cursor-pointer text-center" aria-label="Get in touch about mobile development">Get in Touch</button>
+
+                {/* Button with corrected width */}
+                <button
+                    type="button"
+                    aria-label="Get in touch about mobile development"
+                    className="
+                        flex justify-center items-center gap-1 border-0 cursor-pointer
+                        bg-primary text-white rounded-full
+                        px-6 py-3 transition-colors duration-300
+                        max-sm:w-full max-sm:py-2 max-sm:mx-auto
+                        max-w-44
+                    "
+                >
+                    <div className="my-auto flex">Get in Touch</div>
+                </button>
             </div>
-            {/* Images */}
-            <div className="w-full flex flex-row justify-center h-full items-center py-10">
-                <img
-                    src={typeof MobileAppShowcaseImage === 'string' ? MobileAppShowcaseImage : MobileAppShowcaseImage.src}
+
+            {/* Responsive Image */}
+            <div className="flex justify-center items-center w-full lg:w-1/2">
+                <Image
+                    src={MobileAppShowcaseImage}
                     alt="Phone mockups for mobile development"
-                    className="rounded-lg mx-auto h-full max-h-[600px] max-lg:max-h-[400px]"
+                    className="
+                        h-auto w-auto object-contain rounded-lg
+                        max-h-[420px] max-w-[55%]
+                        md:max-h-[360px] max-lg:max-w-[65%]
+                        max-sm:max-h-[260px] max-sm:max-w-[75%]
+                    "
+                    sizes="
+                        (max-width: 640px) 75vw,
+                        (max-width: 1024px) 60vw,
+                        35vw
+                    "
                 />
             </div>
-
         </section>
     );
 };

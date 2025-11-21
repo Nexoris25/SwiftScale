@@ -1,35 +1,69 @@
 "use client";
 import React from "react";
-import AboutHero from '@/asset/image/about-hero.jpg';
+import Image from "next/image";
+import AboutHero from "@/asset/image/about-hero.jpg";
 import { useRouter } from "next/navigation";
 import JsonLd from "@/components/SEO/JsonLd";
 
-
 export default function HeroSection() {
-  const navigate = useRouter();
+  const router = useRouter();
+
   return (
-    <section className="relative w-full h-[600px] flex items-center justify-start overflow-hidden" role="region" aria-labelledby="about-hero-heading">
-      <JsonLd id="ld-about-hero" data={{ "@context": "https://schema.org", "@type": "WebPageElement", name: "About Hero" }} />
+    <section
+      className="relative flex w-full items-center justify-start overflow-hidden h-[500px] max-sm:h-[440px] max-[350px]:h-[400px] max-[300px]:h-[360px]"
+      role="region"
+      aria-labelledby="about-hero-heading"
+    >
+      {/* SEO JSON-LD */}
+      <JsonLd
+        id="ld-about-hero"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPageElement",
+          name: "About Hero",
+        }}
+      />
+
       {/* Background Image */}
-      <img
-        src={typeof AboutHero === "string" ? AboutHero : AboutHero.src}
+      <Image
+        src={AboutHero}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover"
+        priority
+        fill
+        quality={90}
+        className="object-cover"
+        sizes="100vw"
       />
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
-      {/* Gradient bottom fade */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white/70 to-transparent pointer-events-none" />
+
+      {/* Bottom Gradient */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white/70 to-transparent dark:from-black/60" />
+
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full px-8 max-lg:px-4 max-w-2xl">
-        <h1 id="about-hero-heading" className="text-white max-lg:text-center font-monument-ultrabold text-4xl md:text-6xl mb-6 leading-tight">
-          Your Talent Partners In Every Step
+      <div className="relative z-10 flex h-full max-w-2xl flex-col items-start justify-center px-6 max-lg:px-4">
+
+        {/* Heading */}
+        <h1
+          id="about-hero-heading"
+          className="font-monument-ultrabold text-3xl text-white leading-snug max-[350px]:text-2xl sm:text-4xl md:text-5xl lg:text-6xl max-lg:text-center"
+        >
+          Your Talent Partners in Every Step
         </h1>
-        <p className="text-white font-poppins max-lg:w-full max-lg:text-center text-lg md:text-xl mb-8 max-w-lg">
-          We understand the people behind the roles. Our mission? To connect you with professionals who will push your business forward.
+
+        {/* Subtext */}
+        <p className="mt-4 max-w-lg font-poppins text-base text-white leading-relaxed max-lg:text-center sm:text-lg md:text-xl">
+          We understand the people behind the roles. Our mission is to connect you with professionals who move your business forward.
         </p>
-        <button onClick={() => navigate.push("/contact")} className="bg-[#6A01E1] text-white border max-lg:w-full max-lg:mx-auto max-lg:max-w-full font-poppins px-8 py-2 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300" aria-label="Get in touch with SwiftScale">
+
+        {/* Button */}
+        <button
+          onClick={() => router.push("/contact")}
+          aria-label="Get in touch with SwiftScale"
+          className="mt-8 w-fit rounded-full border bg-[#6A01E1] px-8 py-2 font-poppins text-base text-white cursor-pointer transition-colors duration-300 hover:bg-purple-700 max-lg:mx-auto max-lg:w-full sm:text-lg"
+        >
           Get in Touch
         </button>
       </div>

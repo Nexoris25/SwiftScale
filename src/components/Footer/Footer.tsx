@@ -1,84 +1,151 @@
 "use client";
-import * as React from 'react';
-import Logo from '@/asset/svg/logo.svg';
-import Instagram from '@/asset/svg/instagram.svg';
-import Facebook from '@/asset/svg/facebook.svg';
-import Linkedin from '@/asset/svg/linkedin.svg';
-import EmailFooter from '@/asset/svg/email-footer-white.svg';
-import LocationFooter from '@/asset/svg/location-footer-white.svg';
-import X from '@/asset/svg/x.svg';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-// import LogoDark from '@/asset/svg/logo-full-dark.svg';
+import * as React from "react";
+import Logo from "@/asset/svg/logo.svg";
+import Instagram from "@/asset/svg/instagram.svg";
+import Facebook from "@/asset/svg/facebook.svg";
+import Linkedin from "@/asset/svg/linkedin.svg";
+import EmailFooter from "@/asset/svg/email-footer-white.svg";
+import LocationFooter from "@/asset/svg/location-footer-white.svg";
+import X from "@/asset/svg/x.svg";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export interface IFooterProps { }
+export interface IFooterProps {}
 
 export function Footer(props: IFooterProps) {
-    const year = new Date().getFullYear()
+    const year = new Date().getFullYear();
     const navigate = useRouter();
+
     return (
-        <footer className='w-screen bg-custom-white flex flex-col items-start justify-center' role="contentinfo" aria-label="Footer">
-            <div className='w-screen flex bg-[#6A01E1] text-white py-8 lg:py-14 px-4 lg:px-0'>
-                <div className='container mx-auto flex flex-col lg:flex-row flex-grow gap-8 lg:gap-0 px-4 py-4'>
-                    {/* Logo and Social Media Section */}
-                    <div className='flex flex-col items-start justify-start w-full lg:w-5/12'>
-                        <div className='flex items-start max-lg:mx-auto justify-start flex-col gap-6 lg:gap-4'>
-                            <div onClick={() => navigate.push('/')} className='flex cursor-pointer max-lg:mx-auto items-center justify-center flex-row gap-3' aria-label='Go to homepage'>
-                                <Logo className='h-16 w-16' aria-hidden="true" />
-                                <div className='flex flex-col h-14 justify-start items-start'>
-                                    <div className='flex font-poppins font-medium text-xl lg:text-2xl leading-[1] tracking-wide w-full'>SwiftScale</div>
-                                    <div className='flex font-poppins font-medium text-xl lg:text-2xl leading-[1] tracking-wide w-full'>Consult</div>
+        <footer
+            className="w-full max-w-full overflow-hidden bg-custom-white flex flex-col items-start justify-center"
+            role="contentinfo"
+            aria-label="Footer"
+        >
+            {/* Top Section */}
+            <div className="w-full bg-[#6A01E1] text-white py-10 lg:py-14 px-4">
+                <div className="container mx-auto max-w-[1400px] flex flex-col lg:flex-row gap-10 lg:gap-0 px-2">
+
+                    {/* Logo + Social */}
+                    <div className="flex flex-col w-full lg:w-5/12 gap-8">
+                        <div className="flex flex-col gap-6 items-center lg:items-start">
+
+                            {/* Logo */}
+                            <div
+                                onClick={() => navigate.push("/")}
+                                className="flex items-center cursor-pointer gap-3"
+                            >
+                                <Logo className="h-14 w-14 sm:h-16 sm:w-16" />
+                                <div className="flex flex-col leading-none">
+                                    <div className="font-poppins font-medium text-xl sm:text-2xl">
+                                        SwiftScale
+                                    </div>
+                                    <div className="font-poppins font-medium text-xl sm:text-2xl">
+                                        Consult
+                                    </div>
                                 </div>
-                                  {/* <LogoDark className='h-10 w-auto lg:h-14 lg:w-auto block dark:block' aria-hidden="true" /> */}
                             </div>
-                            <div className='gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center' role='group' aria-label='Follow us on social media'>
-                                <Instagram onClick={() => navigate.push('https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                                <Facebook onClick={() => navigate.push('https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                                <Linkedin onClick={() => navigate.push('https://www.linkedin.com/company/swiftscale-consult')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
-                                <X onClick={() => navigate.push('https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng')} className="w-12 lg:w-16 h-12 lg:h-16" aria-hidden="true" />
+
+                            {/* Social Icons */}
+                            <div
+                                className="flex flex-row gap-5 sm:gap-6 items-center"
+                                role="group"
+                                aria-label="Social media links"
+                            >
+                                {/* Standard icon size: 40px mobile, 48px desktop */}
+                                <Instagram
+                                    onClick={() =>
+                                        navigate.push(
+                                            "https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0"
+                                        )
+                                    }
+                                    className="w-10 h-10 sm:w-12 sm:h-12 cursor-pointer transition-transform duration-200 hover:scale-110"
+                                />
+                                <Facebook
+                                    onClick={() =>
+                                        navigate.push(
+                                            "https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr"
+                                        )
+                                    }
+                                    className="w-10 h-10 sm:w-12 sm:h-12 cursor-pointer transition-transform duration-200 hover:scale-110"
+                                />
+                                <Linkedin
+                                    onClick={() =>
+                                        navigate.push(
+                                            "https://www.linkedin.com/company/swiftscale-consult"
+                                        )
+                                    }
+                                    className="w-10 h-10 sm:w-12 sm:h-12 cursor-pointer transition-transform duration-200 hover:scale-110"
+                                />
+                                <X
+                                    onClick={() =>
+                                        navigate.push(
+                                            "https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng"
+                                        )
+                                    }
+                                    className="w-10 h-10 sm:w-12 sm:h-12 cursor-pointer transition-transform duration-200 hover:scale-110"
+                                />
                             </div>
                         </div>
                     </div>
 
-                    {/* Links and Contact Section */}
-                    <div className='lg:w-6/12 w-full flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-28'>
-                        {/* Company Links */}
-                        <div className='flex flex-col gap-4 max-lg:mx-auto w-auto'>
-                            <h2 className='text-base lg:text-lg max-lg:mx-auto font-monument-bold'>Company</h2>
-                            <Link className='text-white no-underline max-lg:mx-auto cursor-pointer font-thin hover:text-gray-200' href='/about'>About Us</Link>
-                            <Link className='text-white no-underline max-lg:mx-auto cursor-pointer font-thin hover:text-gray-200' href='/contact'>Contact Us</Link>
+                    {/* Links & Contact */}
+                    <div className="flex flex-col lg:flex-row w-full lg:w-6/12 gap-10 lg:gap-28">
+
+                        {/* Company */}
+                        <div className="flex flex-col gap-4 items-center lg:items-start">
+                            <h2 className="font-monument-bold text-base sm:text-lg">Company</h2>
+                            <Link
+                                className="text-white no-underline cursor-pointer font-light text-sm sm:text-base hover:text-gray-200"
+                                href="/about"
+                            >
+                                About Us
+                            </Link>
+                            <Link
+                                className="text-white no-underline cursor-pointer font-light text-sm sm:text-base hover:text-gray-200"
+                                href="/contact"
+                            >
+                                Contact Us
+                            </Link>
                         </div>
 
-                        {/* Contact Information */}
-                        <div className='flex flex-col gap-6 lg:gap-4 w-auto max-lg:mx-auto lg:w-auto'>
+                        {/* Contact Info */}
+                        <div className="flex flex-col gap-8 lg:gap-6 w-full">
+
                             {/* Location */}
-                            <div className='flex flex-col lg:flex-row items-start justify-start gap-4'>
-                                <div className='flex items-center max-lg:mx-auto' aria-hidden="true">
-                                    <LocationFooter className='h-6 lg:h-8 w-6 lg:w-8' />
-                                </div>
-                                <div className='flex flex-col gap-2 lg:gap-4 max-lg:mx-auto'>
-                                    <h2 className='text-base lg:text-lg font-monument-bold max-lg:mx-auto'>Location</h2>
-                                    <p className='text-white no-underline cursor-pointer font-thin'>Plot 952B Idejo Street, VI Lagos.</p>
+                            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
+                                <LocationFooter className="h-6 w-6 sm:h-8 sm:w-8" />
+                                <div className="flex flex-col gap-1 sm:gap-2 text-center lg:text-left">
+                                    <h2 className="font-monument-bold text-base sm:text-lg">
+                                        Location
+                                    </h2>
+                                    <p className="font-light text-sm sm:text-base">
+                                        Plot 952B Idejo Street, VI Lagos.
+                                    </p>
                                 </div>
                             </div>
+
                             {/* Email */}
-                            <div className='flex flex-col lg:flex-row items-start justify-start gap-4'>
-                                <div className='flex items-center max-lg:mx-auto' aria-hidden="true">
-                                    <EmailFooter className='h-6 lg:h-8 w-6 lg:w-8' />
-                                </div>
-                                <div className='flex flex-col gap-2 lg:gap-4 max-lg:mx-auto'>
-                                    <h2 className='text-base lg:text-lg font-monument-bold max-lg:mx-auto'>Email Address</h2>
-                                    <p className='text-white no-underline cursor-pointer font-thin break-words'>info@swiftscale.com.ng</p>
+                            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
+                                <EmailFooter className="h-6 w-6 sm:h-8 sm:w-8" />
+                                <div className="flex flex-col gap-1 sm:gap-2 text-center lg:text-left">
+                                    <h2 className="font-monument-bold text-base sm:text-lg">
+                                        Email Address
+                                    </h2>
+                                    <p className="font-light text-sm sm:text-base break-words">
+                                        info@swiftscale.com.ng
+                                    </p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Copyright Section */}
-            <div className='w-screen flex dark:text-black text-white dark:bg-custom-white bg-custom-black flex-row h-14 justify-center items-center px-4 lg:px-0'>
-                <div className='font-poppins font-normal max-lg:mx-auto text-sm lg:text-xl text-center'>
+            {/* Bottom Bar */}
+            <div className="w-full max-w-full flex text-white bg-custom-black dark:text-black dark:bg-custom-white h-14 justify-center items-center px-4">
+                <div className="font-poppins text-xs sm:text-sm md:text-base text-center">
                     © {year} SwiftScale. All Rights Reserved.
                 </div>
             </div>
