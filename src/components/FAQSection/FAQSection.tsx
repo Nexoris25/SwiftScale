@@ -55,7 +55,7 @@ export default function FAQSection() {
                 <div>
                     <h2
                         id="faq-heading"
-                        className="font-monument-bold text-3xl sm:text-4xl lg:text-4xl mb-6 sm:mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white"
+                        className="text-xl md:text-3xl lg:text-4xl mb-6 sm:mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white"
                     >
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
@@ -64,12 +64,21 @@ export default function FAQSection() {
                         Got a burning question? You're not alone. Dive into our FAQ where we've gathered answers to the most common (and not-so-common) questions to help guide you every step of the way.
                     </p>
 
-                    <button
-                        onClick={() => navigate.push("/contact")}
-                        className="bg-[#6A01E1] text-white max-lg:w-full font-poppins px-6 sm:px-8 py-2.5 rounded-full text-base sm:text-lg hover:bg-purple-700 cursor-pointer"
-                    >
-                        Get in Touch
-                    </button>
+                   <button
+  onClick={() => navigate.push("/contact")}
+  className="
+    bg-[#6A01E1] text-white max-lg:w-full font-poppins
+    px-6 sm:px-8 py-2.5 rounded-full text-base sm:text-lg
+    hover:bg-purple-700 cursor-pointer
+
+    border-none outline-none
+    focus:outline-none focus:ring-0 focus:border-0
+    active:outline-none active:ring-0 active:border-0
+  "
+>
+  Get in Touch
+</button>
+
                 </div>
 
                 {/* Right Side */}

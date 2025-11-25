@@ -43,7 +43,7 @@ export const ImpactServices: React.FC = () => (
 
     <h2
       id="impact-services-heading"
-      className="text-black dark:text-white text-3xl md:text-5xl max-lg:text-2xl text-center font-monument-ultrabold mb-2"
+      className="text-black dark:text-white text-xl md:text-3xl lg:text-4xl text-center mb-2"
     >
       Proven Result, Real Impact
     </h2>

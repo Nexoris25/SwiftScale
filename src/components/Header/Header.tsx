@@ -90,7 +90,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             aria-controls='mobile-menu'
             aria-expanded={isMobileMenuOpen}
           >
-            {resolvedTheme === 'light' ? <MenuDark className='h-8 w-8' aria-hidden="true" /> : <MenuLight className='h-8 w-8' aria-hidden="true" />}
+            {resolvedTheme === 'light' ? <MenuDark className='h-6 w-6' aria-hidden="true" /> : <MenuLight className='h-6 w-6' aria-hidden="true" />}
           </button>
         </div>
 
@@ -102,7 +102,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
                 <div className='flex flex-row items-center justify-between gap-2'>
                   <div className='my-auto flex'>Services</div>
                   <div className='p-1 flex rounded-full'>
-                    {resolvedTheme === 'light' ? <CaretDownBlack className='h-6 w-6' aria-hidden="true" /> : <CaretDownWhite className='h-6 w-6 my-auto' aria-hidden="true" />}
+                    {resolvedTheme === 'light' ? <CaretDownBlack className='h-4 w-4' aria-hidden="true" /> : <CaretDownWhite className='h-4 w-4 my-auto' aria-hidden="true" />}
                   </div>
                 </div>
                 {isDropdownOpen && (

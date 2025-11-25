@@ -13,15 +13,14 @@ const config: Config = {
         'primary': '#6A01E1',
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        serif: ['Merriweather', 'serif'],
-        monument: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-roboto)', 'sans-serif'], 
+        
+        manrope: ['var(--font-manrope)', 'sans-serif'],
+        
+        monument: ['var(--font-monument)', 'sans-serif'], 
+        
       },
-      fontWeight: {
-        'monument-regular': '400',
-        'monument-bold': '700',
-        'monument-ultrabold': '800',
-      }
+      
     },
   },
   corePlugins: {

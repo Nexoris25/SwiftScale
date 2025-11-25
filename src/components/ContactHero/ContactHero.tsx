@@ -3,7 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import JsonLd from "@/components/SEO/JsonLd";
-import AboutHero from "@/asset/image/about-hero.jpg";
+// migrated
+const AboutHero = "/asset/image/about-hero.webp";;
 
 export default function ContactHero() {
   return (

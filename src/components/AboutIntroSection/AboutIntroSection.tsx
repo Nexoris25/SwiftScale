@@ -2,12 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import JsonLd from "@/components/SEO/JsonLd";
-import AboutImage from "@/asset/image/about-image-1.jpg";
+
+const AboutImage = "/asset/image/about-image-1.webp";
 
 export default function AboutIntroSection() {
   return (
     <section
-      className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-16 gap-12 max-sm:gap-10 max-sm:py-12"
+      className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-16 gap-12 max-sm:gap-10 max-sm:py-12 max-w-7xl mx-auto"
       role="region"
       aria-labelledby="about-intro-heading"
     >
@@ -28,7 +29,7 @@ export default function AboutIntroSection() {
 
         <h1
           id="about-intro-heading"
-          className="font-monument-ultrabold text-3xl sm:text-4xl md:text-5xl max-[350px]:text-2xl text-black dark:text-white leading-tight mb-6 max-lg:text-center"
+          className="font-monument-ultrabold text-3xl sm:text-4xl md:text-4xl max-[350px]:text-2xl text-black dark:text-white leading-tight mb-6 max-lg:text-center"
         >
           Propelling Small-scale Businesses to New Heights
         </h1>
@@ -45,16 +46,12 @@ export default function AboutIntroSection() {
         <div className="w-full max-w-lg">
           <Image
             src={AboutImage}
-            alt="Team collaborating in office"
-            className="rounded-md object-cover"
+            width={1200}
+            height={800}
+            alt="SwiftScale team members collaborating enthusiastically on a project in a modern, brightly lit office."
+            className="rounded-md object-cover w-full h-auto max-h-[380px]"
             sizes="(max-width: 768px) 100vw, 50vw"
-            priority={false}
-            style={{
-              width: "100%",
-              height: "auto",
-              maxHeight: "380px",
-              objectFit: "cover",
-            }}
+            priority={false} 
           />
         </div>
       </div>

@@ -188,12 +188,14 @@ export default function ContactFormSection() {
 
             {/* BUTTON */}
             <button
-              type="submit"
-              disabled={status.loading}
-              className="bg-[#6A01E1] text-white font-poppins cursor-pointer px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300"
-            >
-              {status.loading ? "Sending..." : "Get in Touch"}
-            </button>
+                            type="submit"
+                            disabled={status.loading}
+                            // Ensured all border/outline/ring styles are removed
+                            className="bg-[#6A01E1] text-white font-poppins cursor-pointer px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300
+                                       border-none outline-none ring-0 focus:ring-0 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {status.loading ? "Sending..." : "Get in Touch"}
+                        </button>
           </form>
         </div>
       </div>

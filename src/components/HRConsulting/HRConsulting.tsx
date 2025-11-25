@@ -1,20 +1,25 @@
 "use client";
+
 import React from "react";
-import HrImage1 from "@/asset/image/hr-consulting-1.png";
-import HrImage2 from "@/asset/image/hr-consulting-2.png";
-import HrImage3 from "@/asset/image/hr-consulting-3.png";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import JsonLd from "@/components/SEO/JsonLd";
+
 import Instagram from "@/asset/svg/instagram.svg";
 import Facebook from "@/asset/svg/facebook.svg";
 import Linkedin from "@/asset/svg/linkedin.svg";
-import HrBg from "@/asset/image/hr-consulting-bg-purple.png";
 import X from "@/asset/svg/x.svg";
-import JsonLd from "@/components/SEO/JsonLd";
-import FacebookLight from "@/asset/svg/facebook-lightmode.svg";
+
 import InstagramLight from "@/asset/svg/instagram-lightmode.svg";
+import FacebookLight from "@/asset/svg/facebook-lightmode.svg";
 import LinkedinLight from "@/asset/svg/linkedin-lightmode.svg";
 import XLight from "@/asset/svg/x-lightmode.svg";
-import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
+
+const HrImage1 = "/asset/image/hr-consulting-1.webp";
+const HrImage2 = "/asset/image/hr-consulting-2.webp";
+const HrImage3 = "/asset/image/hr-consulting-3.webp";
+const HrBg = "/asset/image/hr-consulting-bg-purple.webp";
 
 export const HRConsulting: React.FC = () => {
   const theme = useTheme().resolvedTheme;
@@ -22,7 +27,11 @@ export const HRConsulting: React.FC = () => {
 
   return (
     <section
-      className="relative dark:bg-[#363636] bg-[#F8F8F8] w-full min-h-[600px] flex flex-col items-center rounded-lg justify-center px-4 py-16"
+      className="
+        relative dark:bg-[#363636] bg-[#F8F8F8]
+        w-full flex flex-col items-center
+        rounded-3xl px-4 py-10
+      "
       role="region"
       aria-labelledby="hr-consulting-heading"
     >
@@ -33,204 +42,91 @@ export const HRConsulting: React.FC = () => {
           "@type": "Service",
           name: "HR Consulting",
           serviceType: "HR Consulting",
-          description:
-            "Strategic HR advisory that covers talent acquisition, performance management, culture alignment, and compliance.",
-          url: "https://swiftscale.com.ng/hr-consultation",
-          provider: { "@id": "https://swiftscale.com.ng/#organization" },
-          areaServed: [
-            { "@type": "Country", name: "United States" },
-            { "@type": "Country", name: "United Kingdom" },
-            { "@type": "Country", name: "Nigeria" }
-          ],
-          serviceAudience: {
-            "@type": "Audience",
-            audienceType: "SMBs and enterprises"
-          }
         }}
       />
 
-      <img
-        src={typeof HrBg === "string" ? HrBg : HrBg.src}
-        alt=""
-        aria-hidden="true"
-        className="absolute w-full max-w-[800px] h-auto -bottom-32 rotate-[20deg] max-lg:hidden z-0 pointer-events-none"
-      />
+      {/* BLOB — EXACT POSITION, ROTATION, SCALE FROM SCREENSHOT */}
+      <div className="absolute inset-0 max-lg:hidden pointer-events-none z-0 flex justify-center items-end translate-y-20">
+        <div className="w-full max-w-[900px] h-[650px] relative">
+          <Image
+            src={HrBg}
+            alt="decorative image"
+            aria-hidden="true"
+            fill
+            sizes="900px"
+            className="object-contain rotate-[20deg]"
+            priority
+          />
+        </div>
+      </div>
 
-      <div className="relative z-10 flex flex-col items-center gap-4 w-full">
+      {/* Title + description */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
         <h1
           id="hr-consulting-heading"
-          className="text-black dark:text-white text-3xl md:text-5xl max-lg:text-2xl mb-4 text-center font-monument-ultrabold"
+          className="text-black dark:text-white text-2xl md:text-4xl lg:text-5xl"
         >
           HR Consulting
         </h1>
 
-        <p className="text-black w-full md:w-1/2 dark:text-white/80 text-center mb-8 text-base md:text-lg leading-relaxed">
-          We provide tailored HR strategies that align people, culture, and business goals.  
-          This helps your organization attract, retain, and grow top talent.
+        <p className="text-black dark:text-white/80 mt-6 text-base md:text-lg leading-relaxed max-w-2xl">
+          We provide tailored HR strategies that align people, culture, and business goals
+         - helping your organization attract, retain, and grow top talent.
         </p>
 
+        {/* Button — no outline, no border, correct styling */}
         <button
-          type="button"
-          className="bg-primary text-white px-6 py-3 max-lg:w-full rounded-full hover:bg-purple-700 transition-colors duration-300 text-base"
-          aria-label="Get in touch with SwiftScale HR consulting team"
+          className="
+            mt-8 px-8 py-3 cursor-pointer rounded-full
+            bg-primary text-white
+            hover:bg-purple-700 transition-colors duration-300
+            border-0 outline-none focus:outline-none focus:ring-0 active:outline-none
+          "
         >
           Get in Touch
         </button>
 
-        <div
-          className="gap-4 lg:gap-2 flex flex-row justify-start lg:justify-center items-center py-5"
-          aria-label="Social media icons"
-          role="group"
-        >
+        {/* Social icons — increased to match screenshot */}
+        <div className="flex gap-8 mt-10 z-10">
           {theme === "dark" ? (
             <>
-              <Instagram
-                onClick={() =>
-                  navigate.push(
-                    "https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
-              <Facebook
-                onClick={() =>
-                  navigate.push(
-                    "https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
-              <Linkedin
-                onClick={() =>
-                  navigate.push(
-                    "https://www.linkedin.com/company/swiftscale-consult"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
-              <X
-                onClick={() =>
-                  navigate.push(
-                    "https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
+              <Instagram className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
+              <Facebook className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
+              <Linkedin className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
+              <X className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
             </>
           ) : (
             <>
-              <InstagramLight
-                onClick={() =>
-                  navigate.push(
-                    "https://www.instagram.com/swiftscale_consult?igsh=OWtuaWx0ZnQ1aWw0"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
-              <FacebookLight
-                onClick={() =>
-                  navigate.push(
-                    "https://www.facebook.com/share/1BPjVCVArv/?mibextid=wwXIfr"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
-              <LinkedinLight
-                onClick={() =>
-                  navigate.push(
-                    "https://www.linkedin.com/company/swiftscale-consult"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
-              <XLight
-                onClick={() =>
-                  navigate.push(
-                    "https://x.com/swiftscale_con?s=11&t=4EAGtqs2PYQtDji4VQY7Ng"
-                  )
-                }
-                className="w-10 lg:w-14 h-10 lg:h-14 cursor-pointer"
-              />
+              <InstagramLight className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
+              <FacebookLight className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
+              <LinkedinLight className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
+              <XLight className="w-12 h-12 lg:w-16 lg:h-16 cursor-pointer" />
             </>
           )}
         </div>
-
-        <div className="flex lg:grid max-lg:hidden lg:grid-cols-3 gap-10 mt-2 p-10 overflow-x-hidden">
-          {[HrImage1, HrImage2, HrImage3].map((img, idx) => (
-            <img
-              key={idx}
-              src={typeof img === "string" ? img : img.src}
-              alt={`HR Consulting ${idx + 1}`}
-              className="rounded-xl w-full max-w-xs object-cover aspect-square"
-            />
-          ))}
-        </div>
-
-        <HRConsultingSlider />
       </div>
-    </section>
-  );
-};
 
-const HRConsultingSlider: React.FC = () => {
-  const images = [
-    typeof HrImage1 === "string" ? HrImage1 : HrImage1.src,
-    typeof HrImage2 === "string" ? HrImage2 : HrImage2.src,
-    typeof HrImage3 === "string" ? HrImage3 : HrImage3.src
-  ];
-
-  const [current, setCurrent] = React.useState(1);
-
-  const prevSlide = () =>
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const nextSlide = () =>
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-
-  return (
-    <div
-      className="relative w-full mx-auto hidden max-lg:block rounded-2xl overflow-hidden bg-black"
-      role="region"
-      aria-roledescription="carousel"
-      aria-label="HR Consulting photos carousel"
-    >
-      <p className="sr-only" aria-live="polite">
-        {`Showing slide ${current + 1} of ${images.length}`}
-      </p>
-
-      <img
-        src={images[current]}
-        alt={`HR Consulting ${current + 1}`}
-        className="w-full aspect-square object-cover"
-      />
-
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-transparent border-0 p-2 text-2xl focus:outline-none"
-        aria-label="Previous"
-      >
-        <span className="text-4xl">&lt;</span>
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-transparent border-0 p-2 text-2xl focus:outline-none"
-        aria-label="Next"
-      >
-        <span className="text-4xl">&gt;</span>
-      </button>
-
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3">
-        {images.map((_, idx) => (
-          <button
+      {/* Image Row — height reduced to match screenshot */}
+      <div className="
+        relative -z-10 mt-28
+        grid grid-cols-1 md:grid-cols-3 gap-8
+        w-full max-w-7xl px-4
+      ">
+        {[HrImage1, HrImage2, HrImage3].map((img, idx) => (
+          <Image
             key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`w-4 h-4 rounded-full ${
-              current === idx ? "bg-purple-600" : "bg-white"
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
+            src={img}
+            alt={`HR Consulting ${idx + 1}`}
+            width={450}
+            height={260}
+            className="
+              w-full
+              h-[240px] md:h-[260px]
+              rounded-2xl object-cover
+            "
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };

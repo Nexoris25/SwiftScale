@@ -1,130 +1,150 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react"; 
 import Image from "next/image";
+import Link from "next/link"; 
 import JsonLd from "@/components/SEO/JsonLd";
 
-import Core1 from "@/asset/image/core-1.png";
-import Core2 from "@/asset/image/core-2.jpg";
-import Core3 from "@/asset/image/core-3.jpg";
-import Core4 from "@/asset/image/core-4.jpg";
-import Core5 from "@/asset/image/core-5.jpg";
+const Core1 = "/asset/image/core-1.webp";
+const Core2 = "/asset/image/core-2.webp";
+const Core3 = "/asset/image/core-3.webp";
+const Core4 = "/asset/image/core-4.webp";
+const Core5 = "/asset/image/core-5.webp";
 
-const services = [
+interface ServiceItem {
+  title: string;
+  description: string;
+  image: string;
+  url: string; 
+}
+
+const services: ServiceItem[] = [
   {
     title: "HR Consulting",
     description:
       "Offering tailored solutions, from recruitment and staffing to specialised administrative services.",
     image: Core1,
+    url: "/hr-consulting",
   },
   {
     title: "Software Development",
     description:
-      "Building mobile apps, web apps, and websites that are functional and scalable.",
+    "Building mobile apps, web apps, and websites that are functional and scalable.",
     image: Core2,
+    url: "/software-development",
   },
   {
     title: "Design",
     description:
       "Creating brand identities that stand out, with services ranging from graphics to UI/UX.",
     image: Core3,
+    url: "/design",
   },
   {
     title: "Legal",
     description:
       "Creating brand identities that stand out, with services ranging from legal advisory to documentation.",
     image: Core4,
+    url: "/legal-services",
   },
   {
-    title: "Seo Consulting",
+    title: "SEO Consulting",
     description:
       "We offer Content & Writing Services. Producing SEO rich content for your business.",
     image: Core5,
+    url: "/seo-consultations", 
   },
 ];
 
 export default function CoreServicesSection() {
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
+  
+  // Generate JSON-LD schema for each service
+  const serviceSchema = services.map((service) => ({
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    serviceType: service.title,
+    url: service.url,
+  }));
 
   return (
     <section
-      className="w-full py-16 flex flex-col items-center px-6 max-sm:px-4"
+      className="w-full py-16 flex flex-col items-center px-6 max-sm:px-4 max-w-7xl mx-auto"
       role="region"
       aria-labelledby="core-services-heading"
     >
+      {/* Updated JSON-LD to include specific Service schema for better SEO context */}
       <JsonLd
-        id="ld-core-services"
+        id="ld-core-services-schema"
         data={{
           "@context": "https://schema.org",
-          "@type": "WebPageElement",
-          name: "Core Services",
+          "@graph": serviceSchema,
         }}
       />
 
       <h2
         id="core-services-heading"
-        className="text-black dark:text-white font-monument-ultrabold text-3xl sm:text-4xl md:text-5xl max-lg:text-2xl mb-12 text-center tracking-wide"
+        className="text-black dark:text-white font-monument-ultrabold text-3xl sm:text-4xl md:text-4xl max-lg:text-2xl mb-12 text-center tracking-wide"
       >
         5 Core Services
       </h2>
 
       <div
-        className="flex flex-row flex-nowrap justify-center gap-6 md:gap-8 w-full 
-                   max-lg:flex-col max-lg:items-stretch max-lg:gap-10"
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 w-full"
         role="list"
-        aria-label="Core services expandable cards"
+        aria-label="Core services links"
       >
         {services.map((service, idx) => {
-          const expanded = expandedIdx === idx;
-
+          
           return (
-            <div
+            <Link
               key={idx}
+              href={service.url}
               role="listitem"
-              aria-expanded={expanded}
-              aria-label={`${service.title} card`}
-              onClick={() => setExpandedIdx(expanded ? null : idx)}
+              aria-label={`View details for ${service.title}`}
               className={`
-                relative rounded-3xl overflow-hidden cursor-pointer shadow-lg
-                transition-all duration-500 flex flex-col justify-end
-
-                /* Updated heights */
-                h-[420px] sm:h-[440px] md:h-[460px] lg:h-[480px]
-                max-sm:h-[360px] max-[350px]:h-[330px]
-
-                ${expanded
-                  ? "w-[28%] max-lg:w-full lg:h-[500px]"
-                  : "w-[16%] max-lg:w-full"
-                }
+                relative rounded-3xl overflow-hidden shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[#6B18E7]/50
+                transition-all duration-300 flex flex-col justify-end cursor-pointer group hover:shadow-2xl hover:scale-[1.01]
+                
+                no-underline 
+                
+                /* Consistent Height for all cards */
+                h-[420px] sm:h-[400px] max-[350px]:h-[330px]
               `}
             >
               <Image
                 src={service.image}
-                alt={service.title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 20vw"
-                className="object-cover"
-                priority={idx === 0}
+                width={600}
+                height={800} 
+                alt={service.title + " service page thumbnail"} 
+                className="object-cover w-full h-full absolute inset-0 transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 1024px) 50vw, 20vw"
+                priority={idx === 0} 
               />
 
-              <div className="absolute inset-0 bg-black/40" />
+              {/* Dark Overlay*/}
+              <div className="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover:bg-black/70" aria-hidden="true" />
 
-              <div className="relative z-10 p-6 flex flex-col justify-end h-full">
-                <h3 className="font-monument-ultrabold text-white text-xl sm:text-2xl mb-2 truncate">
+              <div 
+                className="relative z-10 p-6 flex flex-col justify-end h-full"
+              >
+                {/* Heading */}
+                <h3 className="text-white text-xl md:text-2xl mb-2">
                   {service.title}
                 </h3>
 
                 <p
-                  className={`
-                    font-poppins text-white text-sm sm:text-base leading-relaxed
-                    transition-all duration-300
-                    ${expanded ? "line-clamp-none" : "line-clamp-3"}
-                  `}
+                  className="text-white text-base leading-relaxed line-clamp-3 opacity-90"
                 >
                   {service.description}
                 </p>
+                
+                {/* Visual cue that it is a link */}
+                <span className="font-poppins text-sm text-purple-300 mt-2 transition-colors duration-300 group-hover:text-white">
+                    View Details &rarr;
+                </span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

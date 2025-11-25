@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "convert-images": "node scripts/convert-images.js",
+    "migrate-images": "node scripts/migrate-images.js",
+    "fix-image-imports": "node scripts/fix-image-imports.js",
+    "dedupe:image": "node scripts/dedupe-image-imports.js"
+
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -23,7 +28,7 @@
     "npm": "^10.2.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "sharp": "^0.34.4",
+    "sharp": "^0.34.5",
     "tailwindcss-animated": "^1.0.1"
   },
   "devDependencies": {

@@ -52,7 +52,7 @@ export default function ScaleConsultSection() {
         id="scale-consult-heading"
         className="
           font-monument-ultrabold 
-          text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem]
+          text-xl md:text-3xl lg:text-4xl
           max-w-4xl mx-auto 
           mb-10 sm:mb-12 lg:mb-16 
           text-center tracking-wide 
@@ -105,8 +105,7 @@ export default function ScaleConsultSection() {
             {/* Title */}
             <h3
               className="
-                font-monument-ultrabold 
-                text-lg sm:text-xl md:text-2xl 
+                text-xl md:text-2xl 
                 text-black dark:text-white
               "
             >

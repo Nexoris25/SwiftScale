@@ -3,7 +3,8 @@
 import React from "react";
 import JsonLd from "@/components/SEO/JsonLd";
 import Image from "next/image";
-import MobileAppShowcaseImage from "@/asset/image/dev-service-phones.png";
+// migrated
+const MobileAppShowcaseImage = "/asset/image/dev-service-phones.webp";
 
 const MobileAppShowcase: React.FC = () => {
     return (
@@ -26,8 +27,8 @@ const MobileAppShowcase: React.FC = () => {
                 <h2
                     id="mobile-dev-heading"
                     className="
-                        text-black dark:text-white font-monument-ultrabold
-                        text-3xl md:text-4xl lg:text-5xl
+                        text-black dark:text-white
+                        text-xl md:text-3xl lg:text-4xl
                     "
                 >
                     Mobile Development
@@ -59,6 +60,8 @@ const MobileAppShowcase: React.FC = () => {
                 <Image
                     src={MobileAppShowcaseImage}
                     alt="Phone mockups for mobile development"
+                    width={1200}          // Standard intrinsic size
+                    height={1200}         // Standard intrinsic size
                     className="
                         h-auto w-auto object-contain rounded-lg
                         max-h-[420px] max-w-[55%]
