@@ -119,7 +119,7 @@ export const LegalServices: React.FC = () => {
           Get in Touch
         </button>
 
-        {/* ---------- Social Icons (clean + moved upward) ---------- */}
+        {/* ---------- Social Icons ---------- */}
         <div
           className="gap-4 lg:gap-2 flex flex-row justify-center items-center pt-2 pb-4"
           role="group"

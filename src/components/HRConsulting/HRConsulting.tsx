@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import JsonLd from "@/components/SEO/JsonLd";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Instagram from "@/asset/svg/instagram.svg";
 import Facebook from "@/asset/svg/facebook.svg";
@@ -24,6 +26,17 @@ const HrBg = "/asset/image/hr-consulting-bg-purple.webp";
 export const HRConsulting: React.FC = () => {
   const theme = useTheme().resolvedTheme;
   const navigate = useRouter();
+
+  const images = [HrImage1, HrImage2, HrImage3];
+  const [current, setCurrent] = useState(0);
+
+  // Corrected arrow logic
+  const nextSlide = () => {
+    if (current < images.length - 1) setCurrent(current + 1);
+  };
+  const prevSlide = () => {
+    if (current > 0) setCurrent(current - 1);
+  };
 
   return (
     <section
@@ -45,7 +58,7 @@ export const HRConsulting: React.FC = () => {
         }}
       />
 
-      {/* BLOB — EXACT POSITION, ROTATION, SCALE FROM SCREENSHOT */}
+      {/* BLOB BACKGROUND */}
       <div className="absolute inset-0 max-lg:hidden pointer-events-none z-0 flex justify-center items-end translate-y-20">
         <div className="w-full max-w-[900px] h-[650px] relative">
           <Image
@@ -60,7 +73,7 @@ export const HRConsulting: React.FC = () => {
         </div>
       </div>
 
-      {/* Title + description */}
+      {/* TEXT CONTENT */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
         <h1
           id="hr-consulting-heading"
@@ -71,22 +84,20 @@ export const HRConsulting: React.FC = () => {
 
         <p className="text-black dark:text-white/80 mt-6 text-base md:text-lg leading-relaxed max-w-2xl">
           We provide tailored HR strategies that align people, culture, and business goals
-         - helping your organization attract, retain, and grow top talent.
+          - helping your organization attract, retain, and grow top talent.
         </p>
 
-        {/* Button — no outline, no border, correct styling */}
         <button
           className="
             mt-8 px-8 py-3 cursor-pointer rounded-full
             bg-primary text-white
             hover:bg-purple-700 transition-colors duration-300
-            border-0 outline-none focus:outline-none focus:ring-0 active:outline-none
+            border-0 outline-none focus:outline-none focus:ring-0
           "
         >
           Get in Touch
         </button>
 
-        {/* Social icons — increased to match screenshot */}
         <div className="flex gap-8 mt-10 z-10">
           {theme === "dark" ? (
             <>
@@ -106,25 +117,85 @@ export const HRConsulting: React.FC = () => {
         </div>
       </div>
 
-      {/* Image Row — height reduced to match screenshot */}
-      <div className="
-        relative -z-10 mt-28
-        grid grid-cols-1 md:grid-cols-3 gap-8
-        w-full max-w-7xl px-4
-      ">
-        {[HrImage1, HrImage2, HrImage3].map((img, idx) => (
-          <Image
-            key={idx}
-            src={img}
-            alt={`HR Consulting ${idx + 1}`}
-            width={450}
-            height={260}
-            className="
-              w-full
-              h-[240px] md:h-[260px]
-              rounded-2xl object-cover
-            "
-          />
+      {/* ------------------------------- */}
+      {/* MOBILE CAROUSEL */}
+      <div className="relative w-full max-w-7xl px-2 mt-14 md:hidden">
+
+        {/* LEFT ARROW */}
+        <button
+          onClick={prevSlide}
+          disabled={current === 0}
+          className={`
+            absolute left-2 top-1/2 -translate-y-1/2 z-20
+            p-0 bg-transparent border-none outline-none
+            ${current === 0 ? "opacity-30 cursor-not-allowed" : "opacity-100"}
+          `}
+        >
+          <ChevronLeft size={32} className="text-white drop-shadow-lg" />
+        </button>
+
+        {/* RIGHT ARROW */}
+        <button
+          onClick={nextSlide}
+          disabled={current === images.length - 1}
+          className={`
+            absolute right-2 top-1/2 -translate-y-1/2 z-20
+            p-0 bg-transparent border-none outline-none
+            ${current === images.length - 1 ? "opacity-30 cursor-not-allowed" : "opacity-100"}
+          `}
+        >
+          <ChevronRight size={32} className="text-white drop-shadow-lg" />
+        </button>
+
+        {/* SLIDER */}
+        <div className="relative overflow-hidden rounded-2xl w-full h-[320px] z-10">
+          <div
+            className="flex transition-transform duration-500"
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
+            {images.map((img, idx) => (
+              <div key={idx} className="min-w-full h-[320px] relative">
+                <Image
+                  src={img}
+                  alt={`HR Slide ${idx + 1}`}
+                  fill
+                  className="object-cover rounded-2xl"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination */}
+          <div className="absolute bottom-3 w-full flex justify-center gap-2 z-20">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full ${
+                  i === current ? "bg-white" : "bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* DESKTOP GRID */}
+      <div
+        className="
+          hidden md:grid
+          grid-cols-3 gap-8
+          w-full max-w-7xl mt-28 px-4
+        "
+      >
+        {images.map((img, idx) => (
+          <div key={idx} className="w-full h-[260px] relative">
+            <Image
+              src={img}
+              alt={`HR Consulting ${idx + 1}`}
+              fill
+              className="object-cover rounded-2xl"
+            />
+          </div>
         ))}
       </div>
     </section>

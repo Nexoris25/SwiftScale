@@ -69,7 +69,7 @@ const DesignSlider: React.FC = () => {
             alt={slides[current].alt ?? ""}
             width={900}
             height={600}
-            className="w-full h-[420px] object-cover"
+            className="w-full h-[300px] object-cover"
             loading="lazy"
           />
         )}

@@ -113,7 +113,7 @@ export const SEOConsulting: React.FC = () => {
             Get in Touch
           </button>
 
-          {/* Social Icons - Restored Original Style (No Background Circles) */}
+          {/* Social Icons */}
           <div
             className="flex flex-row gap-4 lg:gap-6 mt-8 items-center"
             role="group"
@@ -142,19 +142,28 @@ export const SEOConsulting: React.FC = () => {
         </div>
 
         {/* --- BANNER IMAGE --- */}
-        <div className="w-full flex justify-center px-2 md:px-0 mt-4">
-          <div className="relative w-full aspect-[16/5.4] shadow-2xl rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-800">
-            {/* Added object-top to anchor image to the top and prevent cutting heads */}
-            <Image
-              src={Banner}
-              alt="SEO Consulting Dashboard Analysis"
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, (max-width: 1200px) 95vw, 1200px"
-            />
-          </div>
-        </div>
+        <div className="w-full flex justify-center px-2 md:px-0 mt-2">
+  <div
+    className="
+      relative w-full 
+      max-w-6xl        
+      aspect-[4/3]       
+      md:aspect-[16/5] 
+      shadow-2xl rounded-2xl overflow-hidden
+      bg-gray-200 dark:bg-gray-800
+    "
+  >
+    <Image
+      src={Banner}
+      alt="SEO Consulting Dashboard Analysis"
+      fill
+      priority
+      className="object-cover object-top"
+      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+    />
+  </div>
+</div>
+
 
       </div>
     </section>
