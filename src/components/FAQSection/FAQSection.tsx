@@ -55,12 +55,12 @@ export default function FAQSection() {
                 <div>
                     <h2
                         id="faq-heading"
-                        className="text-xl md:text-3xl lg:text-4xl mb-6 sm:mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white"
+                        className="text-xl md:text-3xl mb-6 sm:mb-8 max-lg:w-full max-lg:text-center leading-tight text-black dark:text-white"
                     >
                         HAVE ANY QUESTIONS?<br />FIND ANSWER HERE.
                     </h2>
 
-                    <p className="font-poppins text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-lg:w-full max-lg:text-center text-black dark:text-white">
+                    <p className="font-poppins text-sm md:text-base leading-relaxed mb-6 sm:mb-8 max-lg:w-full max-lg:text-center text-black dark:text-white">
                         Got a burning question? You're not alone. Dive into our FAQ where we've gathered answers to the most common (and not-so-common) questions to help guide you every step of the way.
                     </p>
 
@@ -99,7 +99,7 @@ export default function FAQSection() {
                                 aria-expanded={openIdx === idx}
                                 aria-controls={`faq-panel-${idx}`}
                             >
-                                <span className="font-monument-regular text-base sm:text-lg text-black dark:text-white">
+                                <span className="text-base text-black dark:text-white">
                                     {faq.question}
                                 </span>
 
@@ -115,7 +115,7 @@ export default function FAQSection() {
                                     id={`faq-panel-${idx}`}
                                     role="region"
                                     aria-label={`Answer to: ${faq.question}`}
-                                    className="mt-3 sm:mt-4 font-poppins text-sm sm:text-base bg-black/5 dark:bg-black/30 p-4 sm:p-6 lg:p-10 text-black dark:text-white"
+                                    className="mt-3 sm:mt-4 text-sm md:text-base bg-black/5 dark:bg-black/30 p-4 sm:p-6 lg:p-10 text-black dark:text-white"
                                 >
                                     {faq.answer}
                                 </div>

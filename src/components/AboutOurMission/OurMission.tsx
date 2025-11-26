@@ -17,7 +17,7 @@ export default function OurMission() {
 
             <h2
                 id="our-mission-heading"
-                className="font-monument-ultrabold max-lg:w-full max-lg:text-center text-5xl max-lg:text-2xl text-black dark:text-white mb-6"
+                className="font-monument-ultrabold max-lg:w-full max-lg:text-center text-3xl max-lg:text-2xl text-black dark:text-white mb-6"
             >
                 Our Mission
             </h2>
@@ -42,13 +42,13 @@ export default function OurMission() {
                 {/* Right Side (Content) */}
                 <div className="flex flex-col flex-grow gap-10 items-start justify-start max-lg:items-center max-lg:text-center lg:w-[60%]">
                     <div className="flex flex-col gap-4">
-                        <p className="font-poppins text-lg font-light text-black dark:text-white">
+                        <p className="text-base font-light text-black dark:text-white">
                             To deliver results with speed, precision, and creativity. We believe in combining strategy with execution to ensure that every project, no matter the size, meets the highest standard.
                         </p>
-                        <p className="font-poppins text-lg font-light text-black dark:text-white">
+                        <p className="text-base font-light text-black dark:text-white">
                             From startups to established organizations, Swiftscale is the trusted partner you need to move faster, go further, and achieve more.
                         </p>
-                        <p className="font-poppins text-lg font-light text-black dark:text-white">
+                        <p className="text-base font-light text-black dark:text-white">
                             Swiftscale is focused on powering businesses with people, technology, and identity.
                         </p>
                     </div>

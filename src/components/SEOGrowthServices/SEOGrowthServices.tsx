@@ -47,9 +47,10 @@ export const SEOGrowthServices: React.FC = () => (
                 id="seo-growth-heading"
                 className="
                     text-black dark:text-white 
-                    text-xl md:text-3xl lg:text-4xl
+                    text-lg md:text-3xl
                     leading-tight 
                     mb-10 
+                    mt-5
                     max-w-[680px] 
                     max-lg:max-w-full 
                     mx-auto lg:mx-0

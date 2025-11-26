@@ -2,17 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3, h4, h5, h6, a, button, 
-input[type="submit"], input[type="button"], input[type="reset"] {
-    font-family: var(--font-manrope), sans-serif;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 * {
-    
+    font-family: var(--font-manrope), sans-serif;
     font-size: 16px;
     line-height: normal;
 }
@@ -20,6 +15,10 @@ input[type="submit"], input[type="button"], input[type="reset"] {
 *, body {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
 }
 
 .body-scale {

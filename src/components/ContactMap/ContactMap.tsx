@@ -33,18 +33,17 @@ export default function ContactMap() {
             role="region" 
             aria-label="Geographic map visualization for company location"
         >
-            {/* SEO Structured Data: Embedded directly to avoid import error */}
+            {/* SEO Structured Data*/}
             <JsonLdScript data={structuredData} />
             
-            {/* Background Image: Using standard <img> tag to avoid 'next/image' error */}
+            {/* Background Image */}
             <img
                 src={ContactMapImage}
-                alt="" // Decorative/Background image
-                aria-hidden="true" // Hide from screen readers (Accessibility)
-                // Performance attributes added to standard img tag:
+                alt="SwiftScale Address" 
+                aria-hidden="true" 
                 loading="lazy" 
-                width={1200} // Approximate width for optimization hint
-                height={400} // Approximate height for optimization hint
+                width={1200} 
+                height={400} 
                 className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
             />
         </section>

@@ -38,7 +38,7 @@ export function Footer(props: IFooterProps) {
                             >
                                 <Logo className="h-14 w-14 sm:h-16 sm:w-16" />
                                 <div className="flex flex-col leading-none">
-                                    <div className="font-poppins font-medium text-xl sm:text-2xl">
+                                    <div className="text-lg sm:text-2xl">
                                         SwiftScale
                                     </div>
                                     <div className="font-poppins font-medium text-xl sm:text-2xl">
@@ -95,15 +95,15 @@ export function Footer(props: IFooterProps) {
 
                         {/* Company */}
                         <div className="flex flex-col gap-4 items-center lg:items-start">
-                            <h2 className="font-monument-bold text-base sm:text-lg">Company</h2>
+                            <h2 className="text-base sm:text-lg">Company</h2>
                             <Link
-                                className="text-white no-underline cursor-pointer font-light text-sm sm:text-base hover:text-gray-200"
+                                className="text-white no-underline cursor-pointer font-light text-sm hover:text-gray-200"
                                 href="/about"
                             >
                                 About Us
                             </Link>
                             <Link
-                                className="text-white no-underline cursor-pointer font-light text-sm sm:text-base hover:text-gray-200"
+                                className="text-white no-underline cursor-pointer font-light text-sm hover:text-gray-200"
                                 href="/contact"
                             >
                                 Contact Us
@@ -117,10 +117,10 @@ export function Footer(props: IFooterProps) {
                             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
                                 <LocationFooter className="h-6 w-6 sm:h-8 sm:w-8" />
                                 <div className="flex flex-col gap-1 sm:gap-2 text-center lg:text-left">
-                                    <h2 className="font-monument-bold text-base sm:text-lg">
+                                    <h2 className="text-sm">
                                         Location
                                     </h2>
-                                    <p className="font-light text-sm sm:text-base">
+                                    <p className="font-light text-sm">
                                         Plot 952B Idejo Street, VI Lagos.
                                     </p>
                                 </div>
@@ -130,12 +130,13 @@ export function Footer(props: IFooterProps) {
                             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
                                 <EmailFooter className="h-6 w-6 sm:h-8 sm:w-8" />
                                 <div className="flex flex-col gap-1 sm:gap-2 text-center lg:text-left">
-                                    <h2 className="font-monument-bold text-base sm:text-lg">
+                                    <h2 className="text-sm">
                                         Email Address
                                     </h2>
-                                    <p className="font-light text-sm sm:text-base break-words">
+                                    <p className="font-light text-sm break-words">
                                         info@swiftscale.com.ng
                                     </p>
+                                    <p className="font-light text-sm break-words">Tel: +234 (0) 7039755584</p>
                                 </div>
                             </div>
 
@@ -146,7 +147,7 @@ export function Footer(props: IFooterProps) {
 
             {/* Bottom Bar */}
             <div className="w-full max-w-full flex text-white bg-custom-black dark:text-black dark:bg-custom-white h-14 justify-center items-center px-4">
-                <div className="font-poppins text-xs sm:text-sm md:text-base text-center">
+                <div className="font-poppins text-sm text-center">
                     © {year} SwiftScale. All Rights Reserved.
                 </div>
             </div>

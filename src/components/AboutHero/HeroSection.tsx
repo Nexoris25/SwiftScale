@@ -48,14 +48,15 @@ export default function HeroSection() {
         {/* Heading */}
         <h1
           id="about-hero-heading"
-          className="font-monument-ultrabold text-3xl text-white leading-snug max-[350px]:text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-left max-lg:text-center"
+          className="font-monument-ultrabold text-3xl text-white leading-snug max-[350px]:text-2xl sm:text-4xl md:text-4xl text-left max-lg:text-center"
         >
-          Your Talent Partners in Every Step
+          Your Trusted Partner Every Step of the Way
         </h1>
 
         {/* Subtext */}
-        <p className="mt-4 max-w-lg font-poppins text-base text-white leading-relaxed text-left max-lg:text-center sm:text-lg md:text-xl">
-          We understand the people behind the roles. Our mission is to connect you with professionals who move your business forward.
+        <p className="mt-4 max-w-lg font-poppins text-base text-white leading-relaxed text-left max-lg:text-center">
+          We understand what your business needs - whether it’s the right people, the right technology, the right brand identity, or the right legal guidance. We’re here to support you at every stage as you scale and grow.
+Book a session with us today.
         </p>
 
         {/* Button: Removed redundant rounded-full at the end. */}

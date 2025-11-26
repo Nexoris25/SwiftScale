@@ -10,19 +10,19 @@ const features = [
     icon: Infinity,
     title: "Unlock the Power of Top Talent",
     description:
-      "We connect your business with highly skilled professionals who drive growth, innovation, and efficiency - helping you scale faster without compromise.",
+      "Access skilled professionals who elevate your output, strengthen your team, and drive consistent business results.",
   },
   {
     icon: Diamond,
-    title: "Tailored Solutions for Lasting Impact",
+    title: "Giving Your Brand the Identity or Visibility It Needs",
     description:
-      "Every business is unique. That's why we provide customized recruitment and consulting strategies designed to meet your goals, strengthen your team, and position you for long-term success.",
+      "Build a standout presence with strategic branding that attracts attention, builds trust, and positions you as a market leader.",
   },
   {
     icon: Flower,
-    title: "Scale with Confidence",
+    title: "Infusing Technology to Scale Your Business",
     description:
-      "From identifying the right talent to optimizing your workforce, SwiftScale Consult equips you with the people and strategies needed to stay ahead in today's competitive market.",
+      "Grow smarter with custom tech solutions built to improve efficiency, boost performance, and support long-term scaling.",
   },
 ];
 
@@ -51,9 +51,8 @@ export default function ScaleConsultSection() {
       <h2
         id="scale-consult-heading"
         className="
-          font-monument-ultrabold 
-          text-xl md:text-3xl lg:text-4xl
-          max-w-4xl mx-auto 
+          text-xl md:text-3xl
+          max-w-2xl mx-auto 
           mb-10 sm:mb-12 lg:mb-16 
           text-center tracking-wide 
           text-black dark:text-white
@@ -116,7 +115,7 @@ export default function ScaleConsultSection() {
             <p
               className="
                 font-poppins 
-                text-sm sm:text-base md:text-lg 
+                text-sm md:text-base 
                 leading-relaxed 
                 text-black/80 dark:text-white/80
                 max-w-[500px]

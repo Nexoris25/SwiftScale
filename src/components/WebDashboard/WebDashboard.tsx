@@ -65,7 +65,7 @@ const WebDashboard: React.FC = () => {
                     Web Development
                 </h2>
 
-                <p className="text-black dark:text-white/80 text-base md:text-lg leading-relaxed max-w-xl max-lg:mx-auto">
+                <p className="text-black dark:text-white/80 text-base leading-relaxed max-w-xl max-lg:mx-auto">
                     Building mobile apps, web apps, and websites that are
                     functional, beautiful, and user friendly.
                 </p>

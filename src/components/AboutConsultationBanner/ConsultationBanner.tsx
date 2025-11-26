@@ -41,7 +41,7 @@ export default function ConsultationBanner() {
       <div className="relative z-10 w-full flex flex-col items-center justify-center h-full px-4">
         <h2
           id="consult-banner-heading"
-          className="text-white text-xl md:text-3xl lg:text-4xl text-center mb-10 leading-tight"
+          className="text-white text-xl md:text-3xl text-center mb-10 leading-tight"
         >
           {"Let’s discuss making\nsomething together"}
         </h2>
@@ -51,7 +51,7 @@ export default function ConsultationBanner() {
           className="text-white font-poppins text-xl sm:text-2xl flex items-center gap-2 cursor-pointer hover:opacity-80 transition no-underline focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 rounded-md"
           aria-label="Apply for consultation"
         >
-          Apply for consultation <span className="text-3xl" aria-hidden="true">&#8594;</span>
+          Apply for consultation <span className="text-xl" aria-hidden="true">&#8594;</span>
         </Link>
       </div>
     </section>

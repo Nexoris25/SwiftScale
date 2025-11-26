@@ -33,9 +33,10 @@ const UploadedBlobPath = "/asset/image/blob-2.webp";
 // =====================================================
 const DesignSlider: React.FC = () => {
   const slides = [
-    { type: "video", src: "/assets/design-service-1.mp4" },
+    
     { type: "image", src: DImage2, alt: "Design Service 2" },
     { type: "image", src: DImage3, alt: "Design Service 3" },
+    { type: "video", src: "/assets/design-service-1.mp4" },
     { type: "video", src: "/assets/design-service-4.mp4" }
   ];
 
@@ -54,26 +55,26 @@ const DesignSlider: React.FC = () => {
       aria-roledescription="carousel"
     >
       <div className="w-full">
-        {slides[current].type === "video" ? (
-          <video
-            src={slides[current].src}
-            className="w-full h-[300px] object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        ) : (
-          <Image
-            src={slides[current].src}
-            alt={slides[current].alt ?? ""}
-            width={900}
-            height={600}
-            className="w-full h-[300px] object-cover"
-            loading="lazy"
-          />
-        )}
-      </div>
+  {slides[current].type === "image" ? (
+    <Image
+      src={slides[current].src}
+      alt={slides[current].alt ?? ""}
+      width={900}
+      height={600}
+      className="w-full h-[300px] object-cover"
+      loading="lazy"
+    />
+  ) : (
+    <video
+      src={slides[current].src}
+      className="w-full h-[300px] object-cover"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+  )}
+</div>
 
       {/* Arrows */}
       <button
@@ -174,7 +175,7 @@ export const DesignServices: React.FC = () => {
       <div className="relative z-10 flex flex-col items-center gap-4 w-full">
         <h1
           id="design-services-heading"
-          className="text-black dark:text-white text-xl md:text-4xl lg:text-5xl mb-4 text-center"
+          className="text-black dark:text-white text-xl md:text-4xl mb-4 text-center"
         >
           Design Services
         </h1>
@@ -269,16 +270,7 @@ export const DesignServices: React.FC = () => {
 
         {/* Desktop grid */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-8 mt-2 p-8 w-full max-w-7xl z-10">
-          <div className="rounded-xl overflow-hidden">
-            <video
-              src={Video1}
-              className="w-full lg:h-[340px] object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
+          
 
           <div className="rounded-xl overflow-hidden">
             <Image
@@ -297,6 +289,16 @@ export const DesignServices: React.FC = () => {
               width={560}
               height={420}
               className="w-full lg:h-[340px]  object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden">
+            <video
+              src={Video1}
+              className="w-full lg:h-[340px] object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </div>
 

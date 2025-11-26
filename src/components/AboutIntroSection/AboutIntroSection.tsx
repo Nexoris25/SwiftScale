@@ -27,14 +27,14 @@ export default function AboutIntroSection() {
           About Swiftscale Consult
         </h4>
 
-        <h1
+        <h2
           id="about-intro-heading"
-          className="font-monument-ultrabold text-3xl sm:text-4xl md:text-4xl max-[350px]:text-2xl text-black dark:text-white leading-tight mb-6 max-lg:text-center"
+          className="font-monument-ultrabold text-3xl max-[350px]:text-2xl text-black dark:text-white leading-tight mb-6 lg:mt-4 max-lg:text-center"
         >
           Propelling Small-scale Businesses to New Heights
-        </h1>
+        </h2>
 
-        <p className="font-poppins text-base sm:text-lg md:text-xl text-black dark:text-white leading-relaxed max-w-xl mb-8 max-lg:text-center">
+        <p className="font-poppins text-base text-black dark:text-white leading-relaxed max-w-xl mb-8 max-lg:text-center">
           At Swiftscale, we are more than a company. We are a multi-service powerhouse built to help businesses, brands, and individuals grow, scale, and succeed.
         </p>
 

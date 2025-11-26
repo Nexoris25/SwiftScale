@@ -34,7 +34,7 @@ const MobileAppShowcase: React.FC = () => {
                     Mobile Development
                 </h2>
 
-                <p className="text-black dark:text-white/80 text-base md:text-lg leading-relaxed max-w-xl max-lg:mx-auto">
+                <p className="text-black dark:text-white/80 text-base leading-relaxed max-w-xl max-lg:mx-auto">
                     From MVPs to enterprise products, we create fast, reliable mobile experiences with clean
                     architectures, modern tooling, and an emphasis on performance, accessibility, and long term maintainability.
                 </p>

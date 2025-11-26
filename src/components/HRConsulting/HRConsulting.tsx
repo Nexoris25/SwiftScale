@@ -82,7 +82,7 @@ export const HRConsulting: React.FC = () => {
           HR Consulting
         </h1>
 
-        <p className="text-black dark:text-white/80 mt-6 text-base md:text-lg leading-relaxed max-w-2xl">
+        <p className="text-black dark:text-white/80 mt-6 text-base leading-relaxed max-w-2xl">
           We provide tailored HR strategies that align people, culture, and business goals
           - helping your organization attract, retain, and grow top talent.
         </p>

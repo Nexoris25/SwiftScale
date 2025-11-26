@@ -112,7 +112,7 @@ function LandingHero(props: ILandingHeroProps) {
       <Image
         src="/asset/image/hero-landing.webp"
         alt="SwiftScale business transformation hero image"
-        priority
+        fetchPriority="high"
         width={1920}
         height={1080}
         // Applying responsive sizing and full-bleed on mobile

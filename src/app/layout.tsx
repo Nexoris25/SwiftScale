@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import { Manrope, Roboto } from "next/font/google";
+import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import React, { PropsWithChildren } from "react";
 import { ThemeProvider } from 'next-themes'; 
@@ -9,40 +9,10 @@ import JsonLd from "@/components/SEO/JsonLd";
 
 import { Metadata, Viewport } from "next"; 
 
-// --- Font Definitions ---
-const roboto = Roboto({
-    weight: ['300', '400', '500', '700', '900'],
-    subsets: ["latin"],
-    variable: '--font-roboto',
-    display: 'swap',
-});
-
 const manrope = Manrope({ 
     weight: ['300', '400', '500', '700', '800'],
     subsets: ["latin"],
     variable: '--font-manrope',
-    display: 'swap',
-});
-
-const monumentExtended = localFont({
-    src: [
-        {
-            path: '../../public/fonts/MonumentExtended-Regular.otf',
-            weight: '400',
-            style: 'normal',
-        },
-        {
-            path: '../../public/fonts/MonumentExtended-Bold.woff',
-            weight: '700',
-            style: 'normal',
-        },
-        {
-            path: '../../public/fonts/MonumentExtended-Ultrabold.otf',
-            weight: '900',
-            style: 'normal',
-        },
-    ],
-    variable: '--font-monument',
     display: 'swap',
 });
 
@@ -107,10 +77,10 @@ export default async function RootLayout({ children }: PropsWithChildren) {
     };
 
     return (
-        <html lang="en" className={`${manrope.variable} ${roboto.variable} ${monumentExtended.variable}`}>
+        <html lang="en" className={`${manrope.variable}`}>
             
             <body
-                className={`${roboto.className} antialiased min-h-screen bg-white text-black dark:bg-custom-black dark:text-white`}
+                className={`${manrope.className} antialiased min-h-screen bg-white text-black dark:bg-custom-black dark:text-white`}
             >
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                     <div

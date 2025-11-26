@@ -21,12 +21,12 @@ export default function FunFactSection() {
             <div className="flex flex-col lg:flex-col max-md:text-center w-full md:w-auto">
                 <h2
                     id="fun-fact-heading"
-                    className="text-xl md:text-3xl lg:text-4xl text-black dark:text-white mb-3 sm:mb-4"
+                    className="text-xl md:text-3xl text-black dark:text-white mb-3 sm:mb-4"
                 >
                     Fun Fact
                 </h2>
 
-                <p className="font-poppins text-sm sm:text-base md:text-lg text-black dark:text-white max-w-sm">
+                <p className="font-poppins text-base text-black dark:text-white max-w-sm">
                     We blend strategy, design, and engineering to deliver outcomes, not just outputs. Here are a few numbers we are proud of.
                 </p>
             </div>
@@ -49,7 +49,7 @@ export default function FunFactSection() {
                         role="listitem"
                     >
                         {/* Main Number */}
-                        <span className="text-primary dark:text-white text-xl md:text-3xl lg:text-4xl font-semibold">
+                        <span className="text-primary dark:text-white text-xl md:text-3xl font-semibold">
                             {value}
                         </span>
 
@@ -58,7 +58,7 @@ export default function FunFactSection() {
                             <span className="text-primary dark:text-white text-lg sm:text-xl md:text-2xl -mt-1">
                                 +
                             </span>
-                            <span className="font-poppins text-black dark:text-white text-base max-lg:hidden">
+                            <span className="text-black dark:text-white text-base max-lg:hidden">
                                 {label}
                             </span>
                         </div>

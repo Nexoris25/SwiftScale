@@ -84,7 +84,7 @@ export default function CoreServicesSection() {
 
       <h2
         id="core-services-heading"
-        className="text-black dark:text-white font-monument-ultrabold text-3xl sm:text-4xl md:text-4xl max-lg:text-2xl mb-12 text-center tracking-wide"
+        className="text-black dark:text-white font-monument-ultrabold text-3xl max-lg:text-2xl mb-12 text-center tracking-wide"
       >
         5 Core Services
       </h2>
@@ -129,12 +129,12 @@ export default function CoreServicesSection() {
                 className="relative z-10 p-6 flex flex-col justify-end h-full"
               >
                 {/* Heading */}
-                <h3 className="text-white text-xl md:text-2xl mb-2">
+                <h3 className="text-white text-lg mb-2">
                   {service.title}
                 </h3>
 
                 <p
-                  className="text-white text-base leading-relaxed line-clamp-3 opacity-90"
+                  className="text-white text-sm leading-relaxed line-clamp-3 opacity-90"
                 >
                   {service.description}
                 </p>

@@ -7,7 +7,7 @@ import JsonLd from "@/components/SEO/JsonLd";
 import { useTheme } from "next-themes";
 
 // images
-const Banner = "/asset/image/new-seo-consulting.webp";
+const Banner = "/asset/image/seo-hero-banner.webp";
 const UploadedBlobPath = "/asset/image/seo-blob.webp";
 
 // icons (Dark Mode)

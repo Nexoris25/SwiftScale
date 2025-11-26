@@ -44,7 +44,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
         {/* Logo Section - Visible on all screens */}
         <div className='flex items-center justify-start flex-row gap-4'>
           <Link onClick={() => setIsMobileMenuOpen(false)} href='/' aria-label='SwiftScale home' className='flex items-center justify-center flex-row gap-2 text-xs focus:outline-none cursor-pointer focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 rounded-md no-underline text-inherit'>
-            <LogoDark className={`h-10 w-auto lg:h-14 cursor-pointer lg:w-auto dark:block hidden`} aria-hidden="true" /><LogoWhite id="logo-white" className={`h-10 w-auto lg:h-14 lg:w-auto dark:hidden block`} aria-hidden="true" />
+            <LogoDark className={`h-10 w-auto lg:h-12 cursor-pointer lg:w-auto dark:block hidden`} aria-hidden="true" /><LogoWhite id="logo-white" className={`h-10 w-auto lg:h-14 lg:w-auto dark:hidden block`} aria-hidden="true" />
           </Link>
         </div>
 

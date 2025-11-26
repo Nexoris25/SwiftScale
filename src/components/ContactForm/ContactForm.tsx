@@ -103,18 +103,18 @@ export default function ContactFormSection() {
       <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* LEFT SIDE */}
         <div>
-          <h4 className="font-poppins text-base md:text-lg text-black max-lg:text-center dark:text-white mb-2">
+          <h3 className="font-poppins text-base md:text-lg text-black max-lg:text-center dark:text-white mb-2">
             Swiftscale Consult
-          </h4>
+          </h3>
 
-          <h2
+          <h3
             id="contact-form-heading"
-            className="font-monument-ultrabold max-lg:text-center text-3xl md:text-5xl text-black dark:text-white mb-6 leading-tight"
+            className="font-monument-ultrabold max-lg:text-center text-3xl text-black dark:text-white mb-6 leading-tight"
           >
             Keep In Touch
-          </h2>
+          </h3>
 
-          <p className="font-poppins text-base md:text-lg text-black max-lg:text-center dark:text-white mb-8">
+          <p className="font-poppins text-base text-black max-lg:text-center dark:text-white mb-8">
             Have questions, ideas, or a challenge we can solve? Let’s talk. Our
             team is ready to respond quickly and help you move forward.
           </p>
@@ -190,7 +190,6 @@ export default function ContactFormSection() {
             <button
                             type="submit"
                             disabled={status.loading}
-                            // Ensured all border/outline/ring styles are removed
                             className="bg-[#6A01E1] text-white font-poppins cursor-pointer px-10 py-3 rounded-full text-lg hover:bg-purple-700 transition-colors duration-300
                                        border-none outline-none ring-0 focus:ring-0 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
                         >

@@ -43,7 +43,7 @@ export const ImpactServices: React.FC = () => (
 
     <h2
       id="impact-services-heading"
-      className="text-black dark:text-white text-xl md:text-3xl lg:text-4xl text-center mb-2"
+      className="text-black dark:text-white text-xl md:text-3xl text-center mb-2"
     >
       Proven Result, Real Impact
     </h2>
@@ -72,7 +72,7 @@ export const ImpactServices: React.FC = () => (
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span
               id="uiux-title"
-              className="text-2xl lg:text-3xl text-white font-monument-ultrabold mb-2"
+              className="text-2xl text-white mb-2"
             >
               UI/UX Design
             </span>
@@ -100,7 +100,7 @@ export const ImpactServices: React.FC = () => (
         >
           <span
             id="graphics-title"
-            className="text-2xl lg:text-3xl font-monument-ultrabold mb-2"
+            className="text-2xl mb-2"
           >
             Graphics Design
           </span>
@@ -123,7 +123,7 @@ export const ImpactServices: React.FC = () => (
         >
           <span
             id="threed-title"
-            className="text-2xl lg:text-3xl font-monument-ultrabold mb-2"
+            className="text-2xl mb-2"
           >
             3D Design
           </span>
@@ -144,7 +144,7 @@ export const ImpactServices: React.FC = () => (
           <div className="flex flex-col w-2/3 max-lg:w-full py-10 justify-end h-full items-start">
             <span
               id="branding-title"
-              className="text-2xl text-white lg:text-3xl font-monument-ultrabold mb-2"
+              className="text-2xl text-white mb-2"
             >
               Branding
             </span>
