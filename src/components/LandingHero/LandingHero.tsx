@@ -108,20 +108,23 @@ function LandingHero(props: ILandingHeroProps) {
           
           <div className="w-full flex justify-center items-center py-4 sm:py-8">
       <Image
-        src="/asset/image/hero-landing.webp"
-        alt="SwiftScale business transformation hero image"
-        fetchPriority="high"
-        width={1920}
-        height={1080}
-        // Applying responsive sizing and full-bleed on mobile
-        className={`
-          object-cover w-full aspect-[16/9] 
-          max-h-[280px] md:max-h-[380px] lg:max-h-[580px]
-          /* Full width on mobile, on larger screens */
-          rounded-none sm:rounded-2xl
-        `}
-      />
-    </div>
+  src="/asset/image/hero-landing.webp"
+  alt="SwiftScale business transformation hero image"
+  fetchPriority="high"
+  width={1920}
+  height={1080}
+  sizes="
+    (max-width: 640px) 100vw,
+    (max-width: 1024px) 90vw,
+    735px
+  "
+  className="
+    object-cover w-full aspect-[16/9]
+    max-h-[280px] md:max-h-[380px] lg:max-h-[580px]
+    rounded-none sm:rounded-2xl
+  "
+/>
+  </div>
 
 
       {/* Logos */}
