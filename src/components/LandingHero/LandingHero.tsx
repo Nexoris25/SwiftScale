@@ -27,8 +27,6 @@ import NDark from "@/asset/svg/n-white.svg";
 
 import Image from "next/image";
 
-// Correct static import for Next.js 15
-import HeroLandingImg from "@/asset/image/hero-landing.webp";
 
 export interface ILandingHeroProps {}
 

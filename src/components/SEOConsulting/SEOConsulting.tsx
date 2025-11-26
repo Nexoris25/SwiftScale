@@ -7,7 +7,7 @@ import JsonLd from "@/components/SEO/JsonLd";
 import { useTheme } from "next-themes";
 
 // images
-const Banner = "/asset/image/seo-hero-banner.webp";
+const Banner = "/asset/image/seo-banner.webp";
 const UploadedBlobPath = "/asset/image/seo-blob.webp";
 
 // icons (Dark Mode)
@@ -155,7 +155,7 @@ export const SEOConsulting: React.FC = () => {
   >
     <Image
       src={Banner}
-      alt="SEO Consulting Dashboard Analysis"
+      alt="SEO Consulting Service"
       fill
       priority
       className="object-cover object-top"
