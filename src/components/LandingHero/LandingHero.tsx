@@ -75,7 +75,7 @@ function LandingHero(props: ILandingHeroProps) {
           </p>
 
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="mt-4 bg-primary text-white px-6 py-3 rounded-full 
                        hover:bg-purple-700 cursor-pointer transition-colors duration-300 
                        text-center w-full max-md:w-full md:w-auto no-underline hover:no-underline

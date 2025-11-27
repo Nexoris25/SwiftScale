@@ -65,7 +65,7 @@ export default function FAQSection() {
                     </p>
 
                    <button
-  onClick={() => navigate.push("/contact")}
+  onClick={() => navigate.push("/contact#contact-form")}
   className="
     bg-[#6A01E1] text-white max-lg:w-full font-poppins
     px-6 sm:px-8 py-2.5 rounded-full text-base sm:text-lg

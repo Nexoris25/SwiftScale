@@ -50,7 +50,10 @@ export default async function Page() {
                 {/* FAQ Section */}
                 <FAQSection />
 
-                <ContactFormSection />
+                <section id="contact-form">
+                  <ContactFormSection />
+                </section>
+               
 
                 <ContactMap />
             </div>

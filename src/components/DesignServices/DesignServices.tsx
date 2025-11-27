@@ -188,7 +188,7 @@ export const DesignServices: React.FC = () => {
         {/* CTA Button */}
         <button
           type="button"
-          onClick={() => navigate.push("/contact")}
+          onClick={() => navigate.push("/contact#contact-form")}
           aria-label="Get in touch with SwiftScale design team"
           className="
             bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700

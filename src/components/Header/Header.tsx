@@ -72,7 +72,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
               </div>
             )}
           </div>
-          <div onClick={() => navigate.push("/contact")} className='font-poppins cursor-pointer my-auto bg-primary text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300'>
+          <div onClick={() => navigate.push("/contact#contact-form")} className='cursor-pointer my-auto bg-primary text-white px-5 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300'>
             Get in Touch
           </div>
           <div onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')} className='cursor-pointer px-4'>

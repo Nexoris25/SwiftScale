@@ -82,17 +82,19 @@ export const HRConsulting: React.FC = () => {
           HR Consulting
         </h1>
 
-        <p className="text-black dark:text-white/80 mt-6 text-base leading-relaxed max-w-2xl">
+        <p className="text-black dark:text-white/80 my-6 text-base leading-relaxed max-w-2xl">
           We provide tailored HR strategies that align people, culture, and business goals
           - helping your organization attract, retain, and grow top talent.
         </p>
 
         <button
+          type="button"
+          onClick={() => navigate.push("/contact#contact-form")}
+          aria-label="Get in touch with SwiftScale design team"
           className="
-            mt-8 px-8 py-3 cursor-pointer rounded-full
-            bg-primary text-white
-            hover:bg-purple-700 transition-colors duration-300
-            border-0 outline-none focus:outline-none focus:ring-0
+            bg-primary text-white px-5 max-lg:w-full py-3 rounded-full hover:bg-purple-700
+            transition-colors duration-300 cursor-pointer text-center
+            outline-none focus:outline-none focus:ring-0 active:outline-none border-0
           "
         >
           Get in Touch

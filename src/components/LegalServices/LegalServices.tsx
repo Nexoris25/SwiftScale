@@ -110,7 +110,7 @@ export const LegalServices: React.FC = () => {
         {/* ---------- Button (cleaned + moved upward) ---------- */}
         <button
           type="button"
-          onClick={() => navigate.push("/contact")}
+          onClick={() => navigate.push("/contact#contact-form")}
           className="bg-primary text-white px-6 py-3 rounded-full max-lg:w-full mt-1 
           transition-colors duration-300 cursor-pointer hover:bg-purple-700 
           outline-none focus:outline-none focus-visible:outline-none border-none"

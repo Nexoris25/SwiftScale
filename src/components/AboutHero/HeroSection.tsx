@@ -61,7 +61,7 @@ Book a session with us today.
 
         {/* Button: Removed redundant rounded-full at the end. */}
         <button
-          onClick={() => router.push("/contact")}
+          onClick={() => router.push("/contact#contact-form")}
           aria-label="Get in touch with SwiftScale"
           className="mt-8 w-fit rounded-full border bg-[#6A01E1] px-8 py-2 font-poppins text-base text-white cursor-pointer transition-colors duration-300 hover:bg-purple-700 max-lg:mx-auto max-lg:w-full sm:text-lg outline-none focus-visible:ring-4 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-[#6A01E1]"
         >

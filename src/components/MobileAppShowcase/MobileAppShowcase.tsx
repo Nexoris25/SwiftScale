@@ -3,6 +3,7 @@
 import React from "react";
 import JsonLd from "@/components/SEO/JsonLd";
 import Image from "next/image";
+import Link from "next/link";
 // migrated
 const MobileAppShowcaseImage = "/asset/image/dev-service-phones.webp";
 
@@ -39,20 +40,21 @@ const MobileAppShowcase: React.FC = () => {
                     architectures, modern tooling, and an emphasis on performance, accessibility, and long term maintainability.
                 </p>
 
-                {/* Button with corrected width */}
-                <button
-                    type="button"
-                    aria-label="Get in touch about mobile development"
-                    className="
-                        flex justify-center items-center gap-1 border-0 cursor-pointer
+                {/* Button */}
+            <Link
+            href="/contact#contact-form"
+            className=" flex justify-center items-center gap-1 border-0 cursor-pointer
                         bg-primary text-white rounded-full
                         px-6 py-3 transition-colors duration-300
+                        hover:bg-primary/90 focus:ring-4 focus:ring-primary/50
+                        
+                        w-44
                         max-sm:w-full max-sm:py-2 max-sm:mx-auto
-                        max-w-44
+                        lg:mx-0 no-underline
                     "
-                >
-                    <div className="my-auto flex">Get in Touch</div>
-                </button>
+          >
+            Get in Touch
+          </Link>
             </div>
 
             {/* Responsive Image */}

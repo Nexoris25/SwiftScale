@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 // REMOVED: import JsonLd from "@/components/SEO/JsonLd"; to fix path resolution error
 // REMOVED: import Image from "next/image"; to fix module resolution error
@@ -71,22 +72,20 @@ const WebDashboard: React.FC = () => {
                 </p>
 
                 {/* Get in Touch Button */}
-                <button
-                    type="button"
-                    aria-label="Get in touch about web development services"
-                    className="
-                        flex justify-center items-center gap-1 border-0 cursor-pointer
+                 <Link
+            href="/contact#contact-form"
+            className=" flex justify-center items-center gap-1 border-0 cursor-pointer
                         bg-primary text-white rounded-full
                         px-6 py-3 transition-colors duration-300
                         hover:bg-primary/90 focus:ring-4 focus:ring-primary/50
                         
                         w-44
                         max-sm:w-full max-sm:py-2 max-sm:mx-auto
-                        lg:mx-0
+                        lg:mx-0 no-underline
                     "
-                >
-                    <span className="my-auto flex">Get in Touch</span>
-                </button>
+          >
+            Get in Touch
+          </Link>
             </div>
         </section>
     );

@@ -105,7 +105,7 @@ export const SEOConsulting: React.FC = () => {
 
           <button
             type="button"
-            onClick={() => navigate.push("/contact")}
+            onClick={() => navigate.push("/contact#contact-form")}
             // Added cursor-pointer explicitly
             className={`${BRAND_PURPLE} text-white font-medium px-8 py-3 rounded-full hover:bg-purple-700 transition-all duration-300 shadow-lg border-none outline-none ring-0 focus:ring-0 focus:outline-none cursor-pointer`}
             aria-label="Get in touch about SEO consulting"

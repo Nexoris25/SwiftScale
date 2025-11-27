@@ -106,7 +106,7 @@ export const SoftwareDevelopmentServices: React.FC = () => {
           {/* CTA Button */}
           <button
             type="button"
-            onClick={() => navigate.push("/contact")}
+            onClick={() => navigate.push("/contact#contact-form")}
             aria-label="Get in touch about software development"
             className="
               flex justify-center items-center lg:mt-4
