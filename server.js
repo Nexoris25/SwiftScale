@@ -1,13 +1,16 @@
 const { createServer } = require('http');
-const next = require('next');
+const path = require('path');
 
-const app = next({ dev: false });
-const handle = app.getRequestHandler();
 
-app.prepare().then(() => {
-  createServer((req, res) => {
-    handle(req, res);
-  }).listen(process.env.PORT || 3000, () => {
-    console.log('Next.js server running...');
-  });
+const app = require('./.next/standalone/server.js');
+
+
+const handler = app.getRequestHandler();
+
+const port = process.env.PORT || 3000;
+
+createServer((req, res) => {
+  app.getRequestHandler()(req, res);
+}).listen(port, () => {
+  console.log(`Next.js standalone server running on port ${port}`);
 });
