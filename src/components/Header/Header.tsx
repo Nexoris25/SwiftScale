@@ -63,7 +63,7 @@ function Header({ className, style }: { className?: string; style?: React.CSSPro
             {(isDropdownOpen && !isMobileMenuOpen) && (
               <div id='services-menu' role='menu' onMouseLeave={() => setIsDropdownOpen(false)} className='absolute top-10 bg-custom-white dark:bg-custom-black shadow-lg rounded-md z-10 w-[280px] p-10'>
                 <ul className='mt-2 ml-4 list-none flex flex-col gap-4 align-middle'>
-                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/hr-consultation">HR Consultating</Link></li>
+                  <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/hr-consultation">HR Consulting</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/software-development">Software Development</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/design">Design</Link></li>
                   <li className='cursor-pointer hover:text-primary'><Link className='no-underline text-inherit cursor-pointer' href="/legal-services">Legal Services</Link></li>

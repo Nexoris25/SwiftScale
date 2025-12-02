@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint",
     "convert-images": "node scripts/convert-images.js",
     "migrate-images": "node scripts/migrate-images.js",
